@@ -1,0 +1,63 @@
+#Rescue {
+    width: 70%;
+}
+
+#dSeries {
+    width: 110%;
+}
+
+#Primitive {
+    width: 100%;
+}
+
+#Models {
+    position: relative;
+
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: auto auto auto;
+
+    justify-content: space-around;
+
+}
+
+.Model {
+    position: inherit;
+
+    transition: all 800ms;
+
+    /* margin: auto; */
+    margin-bottom: 0px;
+    margin-top: auto;
+
+    /* background-color: red; */
+    overflow: hidden;
+
+    height: auto;
+}
+
+.Model:hover {
+    transform-origin: center;
+
+    transform: scale(1.2);
+}
+
+.model-with-description {
+    font-family: dDin;
+    font-size: 2em;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: white;
+    align-items: center;
+}
+
+.model-with-description > p {
+    margin-bottom: 0;
+    margin-top: auto;
+}
+
+.sub-header {
+    font-size: large;
+}

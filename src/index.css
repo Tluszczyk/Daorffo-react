@@ -7,7 +7,59 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+:root {
+  --orange: #ff8500;
+  --grey: black
+    /* #2c2c2c */
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/* Fonts */
+@font-face {
+  font-family: dDin;
+  src: url("../public/resources/fonts/d-din/D-DIN.otf");
+  font-style: normal;
+}
+@font-face {
+  font-family: dDin-bold;
+  src: url("../public/resources/fonts/d-din/D-DIN-Bold.otf");
+}
+@font-face {
+  font-family: dDin-italic;
+  src: url("../public/resources/fonts/d-din/D-DIN-Italic.otf");
+}
+/* END Fonts */
+
+.dinF {
+  font-family: dDin;
+  color: white;
+}
+
+.sectionH {
+  font-size: 2em;
+  font-size: normal;
+}
+
+.filtering {
+  position: absolute;
+
+  top: inherit;
+  left: inherit;
+
+  width: 100%;
+  height: 100%;
+
+  z-index: -1;
+}
+
+.textSpan {
+  font-size: 1.2em;
+}
+
+.dark {
+  background-color: rgba(0, 0, 0, 0.6);
 }

@@ -1,0 +1,11 @@
+.summarisingSpan {
+    font-family: dDin-bold;
+    color: var(--orange);
+}
+
+#Summarising {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}

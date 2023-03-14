@@ -1,0 +1,41 @@
+:root {
+    --orange: #ff8500;
+    --grey: black; /* #2c2c2c */
+}
+
+* { text-align: center; }
+.pointerCursor { cursor: pointer; }
+.drop-item:hover { color: var(--orange); }
+.nav-item:hover { color: var(--orange); }
+
+.upperContainer {
+  width: 100%;
+
+  position: fixed;
+  top: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  align-items: center;
+
+  z-index: 11;
+}
+
+.upperLogoD {
+    width: 90vw;
+    height: 100px;
+
+    display: flex;
+    flex-direction: row;
+
+    align-self: center;
+    align-items: center;
+
+    border-bottom: 2px solid white;
+}
+
+.hide-upperLogoD > .upperLogoD {
+	display: none;
+}

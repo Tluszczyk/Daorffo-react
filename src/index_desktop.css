@@ -1,0 +1,10 @@
+@media (min-width: 768px) {
+  .sectionP {
+      width: 60%;
+      text-align: left;
+      font-size: 1.2em;
+  }
+  .desktop-invisible, .desktop-invisible>* {
+      display: none !important;
+  }
+}

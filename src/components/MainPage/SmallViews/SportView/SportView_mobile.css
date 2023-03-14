@@ -1,0 +1,10 @@
+@media (max-width: 768px) {
+    #sport>* {
+        grid-column-start: 1;
+    }
+
+    #sportSpan {
+        width: 100%;
+        justify-content: center;
+    }
+}

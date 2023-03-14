@@ -1,0 +1,10 @@
+@media (min-width: 768px) {
+    #sportSpan {
+        justify-self: end;
+    }
+
+    #sportI {
+        margin-right: 0;
+        margin-left: auto;
+    }
+}

@@ -1,0 +1,15 @@
+@media (min-width: 768px) {
+    .navbar {
+        position: relative;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+        font-size: 1.1em;
+
+        width: 90vw;
+
+        background-color: rgba(105, 105, 105, 0.5);
+    }
+}

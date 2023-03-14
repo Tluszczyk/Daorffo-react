@@ -1,0 +1,10 @@
+@media (max-width: 768px) {
+    #applicability>* {
+        grid-column-start: 1;
+    }
+
+    #applicationsSpan {
+        width: 100%;
+        justify-content: center;
+    }
+}

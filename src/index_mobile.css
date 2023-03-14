@@ -1,0 +1,10 @@
+@media (max-width: 768px) {
+    .sectionP {
+        width: 90%;
+        text-align: left;
+    }
+
+    .mobile-invisible, .mobile-invisible>* {
+      display: none !important;
+  }
+}

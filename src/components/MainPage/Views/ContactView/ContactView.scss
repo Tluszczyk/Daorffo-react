@@ -1,0 +1,80 @@
+#Contact {
+    object-fit: cover;
+
+    position: relative;
+
+    z-index: 0;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("../../../../../public/resources/MainPage/Views/ContactView/img.jpg");
+}
+
+#Contacts {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    width: 100%;
+}
+
+.mediaDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    justify-self: center;
+
+    width: 30%;
+}
+
+#mediaList {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+}
+
+#IGmedia {
+    $base-src: "../../../../../public/resources/MainPage/Views/ContactView/MediaDiv/IG/icon-";
+    
+    background-image: url($base-src + "inactive.png");
+    &:hover{ background-image: url($base-src + "active.png"); }
+}
+
+#FBmedia {
+    $base-src: "../../../../../public/resources/MainPage/Views/ContactView/MediaDiv/FB/icon-";
+
+    background-image: url($base-src + "inactive.png");
+    &:hover{ background-image: url($base-src + "active.png"); }
+}
+
+#YTmedia {
+    $base-src: "../../../../../public/resources/MainPage/Views/ContactView/MediaDiv/YT/icon-";
+
+    background-image: url($base-src + "inactive.png");
+    &:hover{ background-image: url($base-src + "active.png"); }
+}
+
+.mediaItem {
+    background-size: 40px;
+    background-repeat: no-repeat;
+
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+}
+
+#mail>a {
+    font-family: dDin;
+    color: var(--orange);
+    text-decoration: none;
+}
+
+.address {
+    display: grid;
+    grid-template-rows: auto auto auto;
+}
