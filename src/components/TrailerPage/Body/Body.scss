@@ -1,4 +1,4 @@
-#body {
+#trailer-body {
     width: 100%;
     height: auto;
 
@@ -24,21 +24,6 @@
     }
 }
 
-.level-0 {
-    > :first-child { width: 100%; }
-    > :last-child { width: 0%; }
-}
-
-.level-1 {
-    > :first-child { width: 50%; }
-    > :last-child { width: 50%; }
-}
-
-.level-2 {
-    > :first-child { width: 30%; }
-    > :last-child { width: 70%; }
-}
-
 .trailer-layout-left {
     display: flex;
     flex-direction: row;
@@ -56,9 +41,15 @@
     justify-content: flex-start;
     align-items: center;
 
+    overflow: hidden;
+
     width: 100%;
 
     z-index: 0;
+}
+
+.trailer-layout-right {
+    overflow: hidden;
 }
 
 #goBack {

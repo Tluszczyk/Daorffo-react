@@ -11,10 +11,8 @@ interface ContactViewProps extends StylableProps {}
 
 const ContactView = forwardRef((props: ContactViewProps, ref) => {
     return (
-        <View {...props} ref={ref as RefObject<HTMLDivElement>}  id="Contact">
+        <View className='snap-scroll-start' {...props} ref={ref as RefObject<HTMLDivElement>}  id="Contact" headertitle='Contact'>
             <div className="filtering dark"></div>
-
-            <h1>Contact</h1>
 
             <div id="Contacts">
 

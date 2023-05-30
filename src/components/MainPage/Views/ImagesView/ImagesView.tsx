@@ -5,9 +5,8 @@ import View from "../../../common/View/View";
 import WholeWidthImage from '../../../common/WholeWidthImage/WholeWidthImage';
  
 const ImagesView = () =>
-        <View id="Images">
-            <h1>Instagram</h1>
-        <WholeWidthImage id="0" parentSrc='resources/MainPage/Views/ImagesView/' />
+        <View className="snap-scroll-start" id="Images" headertitle="Instagram">
+            <WholeWidthImage id="0" parentsrc='resources/MainPage/Views/ImagesView/' />
         </View>;
  
 export default ImagesView;

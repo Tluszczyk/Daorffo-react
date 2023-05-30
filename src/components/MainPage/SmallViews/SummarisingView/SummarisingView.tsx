@@ -1,9 +1,17 @@
-import SmallView from "../../../common/SmallView/SmallView";
+import React from "react";
+import { WrapperProps } from "../../../../common/commonProps";
+import View from "../../../common/View/View";
 
 import "./SummarisingView.css";
 
-const SummarisingView = () => 
-    <SmallView>
+interface SummarisingViewProps extends WrapperProps {
+    wholeWidthImage: React.ReactNode;
+}
+
+const SummarisingView = (props: SummarisingViewProps) => 
+    <View className="snap-scroll-start" id="SummarisingView">
+        {props.wholeWidthImage}
+
         <h3 className="sectionH">What we believe is what we practice!</h3>
         <span className="sectionP">
             There is no place for coincidences! Years of travelling around Europe and beyond gave us an experience to take decisions
@@ -15,6 +23,6 @@ const SummarisingView = () =>
             Let’s cooperate and help us create the trailer that will fit your needs, as well as it fit ours! Never hesitate to
             express your opinion. We just want to deliver the product that was <span className="summarisingSpan">made with passion</span> and will be <br /> <span className="summarisingSpan">used with passion!</span> <br/> <br/>
         </span>
-    </SmallView>
+    </View>
  
 export default SummarisingView;

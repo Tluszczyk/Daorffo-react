@@ -35,6 +35,10 @@
         background-color: black;
     }
 
+    .mobile-nav-opened {
+        border-right: 1px solid var(--orange);
+    }
+
     .nav-item {
         text-decoration: none;
         margin: 20px;

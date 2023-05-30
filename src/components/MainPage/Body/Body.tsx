@@ -1,6 +1,7 @@
 import React, { RefObject, useRef } from 'react'
 
-import './Body.css'
+import './Body_desktop.scss'
+import './Body.scss'
 
 import MainNavbar from "../MainNavbar/MainNavbar";
 
@@ -36,12 +37,13 @@ export function Body() {
             <MainView />
             <ShowroomView ref={showroomViewRef}/>
             <WhyView ref={whyViewRef}/>
-            <WholeWidthImage id="0" parentSrc='resources/MainPage/' />
+            <WholeWidthImage id="topr" parentsrc='resources/MainPage/' />
             <ApplicabilityView />
-            <WholeWidthImage id="1" parentSrc='resources/MainPage/' />
+            <WholeWidthImage className="snap-scroll-center" id="dessert" parentsrc='resources/MainPage/' />
             <SportView />
-            <WholeWidthImage id="2" parentSrc='resources/MainPage/' />
-            <SummarisingView />
+            <SummarisingView
+                wholeWidthImage={<WholeWidthImage id="chassis" parentsrc='resources/MainPage/' />} 
+            />
             <ImagesView />
             <ContactView ref={contactViewRef} />
         </div>

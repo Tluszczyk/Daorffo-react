@@ -1,11 +1,11 @@
-import SmallView from "../../../common/SmallView/SmallView";
+import View from "../../../common/View/View"
 
 import "./SportView.css"
 import "./SportView_desktop.css"
 import "./SportView_mobile.css"
 
 const SportView = () => 
-    <SmallView>
+    <View className="snap-scroll-center" id="sportView">
         <div id="sport">
             <div id="sportSpan">
                 <h3 className="sectionH">We are going off the road!</h3>
@@ -17,8 +17,8 @@ const SportView = () =>
                     All trailers are customizable in terms of the choice of shock absorbers. Choose from our dumper selection.
                 </span>
             </div>
-            <img id="sportI" src="/public/resources/MainPage/SmallViews/SportView/img.png" alt=""/>
+            <img id="sportI" src="/resources/MainPage/SmallViews/SportView/img.png" alt=""/>
         </div>
-    </SmallView>
+    </View>
  
 export default SportView;

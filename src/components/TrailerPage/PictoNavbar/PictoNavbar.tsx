@@ -22,6 +22,7 @@ const PictoNavbar = (props: PictoNavbarProps) => {
 
     var pictoItems = pictoItemsDescriptions.map((description, index) => <PictoNavItem
         id={index.toString()} description={description}
+        key={index}
         onClick={() => { 
             setLevel(1)
             props.setOpenedSection(index)

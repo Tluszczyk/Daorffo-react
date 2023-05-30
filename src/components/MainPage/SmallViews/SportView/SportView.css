@@ -9,6 +9,8 @@
 }
 
 #sport {
+    width: 100%;
+
     display: grid;
 
     grid-template-columns: auto auto;
@@ -22,7 +24,7 @@
 
 #sportI {
     width: 100%;
-    height: auto;
+    /* height: auto; */
 
     min-width: 200px;
 }

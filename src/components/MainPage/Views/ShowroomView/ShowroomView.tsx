@@ -30,8 +30,7 @@ const ShowroomView = forwardRef((props: ShowroomViewProps, ref) => {
     </Link>)
 
     return (
-        <View {...props} ref={ref as RefObject<HTMLDivElement>}  id="Showroom">
-            <h1 className='dDin'>Showroom</h1>
+        <View {...props} ref={ref as RefObject<HTMLDivElement>} className='snap-scroll-start' id="Showroom" headertitle='Showroom'>
 
             <div id="Models"> {models} </div>
         </View>

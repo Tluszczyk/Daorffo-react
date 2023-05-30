@@ -1,11 +1,11 @@
-import SmallView from "../../../common/SmallView/SmallView";
+import View from "../../../common/View/View";
 
 import "./ApplicabilityView.css";
 import "./ApplicabilityView_desktop.css";
 import "./ApplicabilityView_mobile.css";
 
 const ApplicabilityView = () => 
-    <SmallView>
+    <View className="snap-scroll-center" id="applicabilityView">
         <div id="applicability">
             <img id="applicationsI" src="resources/MainPage/SmallViews/ApplicabilityView/img.png" alt="" />
             <div id="applicationsSpan">
@@ -18,6 +18,6 @@ const ApplicabilityView = () =>
                 </span>
             </div>
         </div>
-    </SmallView>
+    </View>
  
 export default ApplicabilityView;

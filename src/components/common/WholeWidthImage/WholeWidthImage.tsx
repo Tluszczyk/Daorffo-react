@@ -2,14 +2,14 @@ import { WrapperProps } from "../../../common/commonProps";
 import "./WholeWidthImage.css";
 
 interface WholeWidthImageProps extends WrapperProps {
-    parentSrc: string
+    parentsrc: string
 }
  
 const WholeWidthImage = (props: WholeWidthImageProps) => <img 
-        className="wholeWidthImage" 
-        src={props.parentSrc +"WholeWidthImages/WholeWidthImage-"+props.id+"/img.png"}
-        alt=""
         {...props} 
+        className={"wholeWidthImage" + (props.className ? " " + props.className : "")}
+        src={props.parentsrc +"WholeWidthImages/WholeWidthImage-"+props.id+"/img.png"}
+        alt=""
     />
  
 export default WholeWidthImage;

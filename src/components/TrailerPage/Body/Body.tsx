@@ -16,6 +16,8 @@ import TrailerSubview4 from '../TrailerSubviews/TrailerSubview4/TrailerSubview4'
 import { useLevel } from '../services/LevelProvider'; 
 
 import './Body.scss'
+import './Body_desktop.scss'
+import './Body_mobile.scss'
 
 const useSharedLevel = () => useBetween(useLevel);
 
@@ -51,7 +53,7 @@ export function Body() {
      */
     var gallerySubgalleriesItemCount = [[2],[2],[2,3,2,3,2],[2],[2]]
 
-    var openedTrailerSubview = getLevel() == 0 ? 
+    var openedTrailerSubview = getLevel() === 0 ? 
         <MainSubview></MainSubview> : [
         <TrailerSubview0></TrailerSubview0>,
         <TrailerSubview1></TrailerSubview1>,
@@ -61,7 +63,7 @@ export function Body() {
     ][openedSection]
 
     return (
-        <div className='dinF' id='body'>
+        <div className='dinF' id='trailer-body'>
             <MainNavbar className='desktop-invisible hide-upperLogoD'></MainNavbar>
 
             <div className={`trailer-layout level-${getLevel()}`}>
