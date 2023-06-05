@@ -1,9 +1,9 @@
 @media (min-width: 768px) {
-    body {
+    body:has(#main-body) {
         overflow: hidden;
     }
 
-    #body {
+    #main-body {
         height: 100%;
   
         scroll-snap-type: y mandatory;

@@ -1,15 +1,3 @@
-#Rescue {
-    width: 70%;
-}
-
-#dSeries {
-    width: 110%;
-}
-
-#Primitive {
-    width: 100%;
-}
-
 #Models {
     position: relative;
 
@@ -27,11 +15,9 @@
 
     transition: all 800ms;
 
-    /* margin: auto; */
     margin-bottom: 0px;
     margin-top: auto;
 
-    /* background-color: red; */
     overflow: hidden;
 
     height: auto;

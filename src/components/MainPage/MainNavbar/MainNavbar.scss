@@ -1,13 +1,9 @@
-:root {
-    --orange: #ff8500;
-    --grey: black; /* #2c2c2c */
-}
-
+@use 'src/common/colors';
 
 * { text-align: center; }
 .pointerCursor { cursor: pointer; }
-.drop-item:hover { color: var(--orange); }
-.nav-item:hover { color: var(--orange); }
+.drop-item:hover { color: colors.$default-orange; }
+.nav-item:hover { color: colors.$default-orange; }
 
 .upperContainer {
   width: 100%;

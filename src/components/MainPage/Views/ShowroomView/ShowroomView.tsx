@@ -11,12 +11,21 @@ import { StylableProps } from '../../../../common/commonProps';
 interface ShowroomViewProps extends StylableProps {}
 
 const ShowroomView = forwardRef((props: ShowroomViewProps, ref) => {
-    const modelNames = ['Rescue', 'dSeries', 'Primitive']
-    const descriptions = ['Rescue', 'd1 Trailer', 'd1 Chassis']
-    const subHeaders = ['concept 2019', 'd.series 2021', 'd.series 2021']
+    const modelNames = ['ec', 'unit', 'dSeries']
+    const descriptions = [
+        'Life Chariot MEDEVAC', 
+        'Unit 1', 
+        'D1 Trailer'
+    ]
+    const subHeaders = [
+        'Medical Evacuation Trailer',
+        'U1 Modular Base Trailer', 
+        'Expedition Set Up'
+    ]
 
     const models = modelNames.map((name, index) => <Link
         to={`/${name}`} className="model-with-description" 
+        key={index}
     >
         <img 
             id={name} className='Model'

@@ -28,7 +28,7 @@ export function Body() {
     const contactViewScroll     = buildScroll(contactViewRef);
 
     return (
-        <div className='dinF' id='body'>
+        <div className='dinF' id='main-body'>
             <MainNavbar
                 showroomViewScroll={showroomViewScroll}
                 whyViewScroll={whyViewScroll}

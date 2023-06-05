@@ -2,13 +2,15 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 import './App.css';
 
-import {Body as MainBody} from './components/MainPage/Body/Body';
-import {Body as DSeriesBody} from './components/TrailerPage/Body/Body'
+import {Body as Main} from './components/MainPage/Body/Body';
+import {Body as DSeries} from './components/TrailerPage/Body/Body'
+import {Body as Shop} from './components/ShopPage/Body/Body'
 
 const App = () => <Router>
     <Routes>
-        <Route path='/' element={<MainBody />} />
-        <Route path='dSeries' element={<DSeriesBody />} />
+        <Route path='/' element={<Main />} />
+        <Route path='dSeries' element={<DSeries />} />
+        <Route path='shop' element={<Shop />} />
     </Routes>
 </Router>
 

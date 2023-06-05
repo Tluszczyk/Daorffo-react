@@ -1,0 +1,11 @@
+@use 'src/common/colors';
+
+.soon-div {
+	pointer-events: none;
+
+	color: colors.$default-orange;
+	background-color: rgba($color: colors.$default-grey, $alpha: .5);
+
+	border-radius: 5px;
+	padding: 5px;
+}
