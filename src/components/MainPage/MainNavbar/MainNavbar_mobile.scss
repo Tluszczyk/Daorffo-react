@@ -2,6 +2,10 @@
 
 @media (max-width: 768px) {
 
+    .main-navbar {
+        background-color: black;
+    }
+
     .mobile-nav-opened {
         border-right: 1px solid colors.$dark-theme-secondary;
     }
