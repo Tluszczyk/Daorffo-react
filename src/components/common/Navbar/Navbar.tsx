@@ -39,10 +39,7 @@ const Navbar = (props: NavbarProps) => {
         navbar.classList.toggle("mobile-nav-opened");
     }
 
-    var classname   = 'upperContainer ' 
-                    + props.className;
-
-    return <div className={classname}>
+    return <div className="upperContainer">
         { mobile &&
             <div className="hamburgerD hamburgerD-closed" onClick={toggleMobileNavbar} >
                 <img id="hamburger" src={`resources/MainPage/MainNavbar/Hamburger/icon-${mobileNavbar ? 'active' : 'inactive'}.png`} alt="" />
@@ -58,7 +55,7 @@ const Navbar = (props: NavbarProps) => {
                     (props.logoMobileSrc ?? props.logoDefaultSrc) :
                     (props.logoDesktopSrc ?? props.logoDefaultSrc)
                 } 
-                alt="" 
+                alt=""
             />
         </a>
 
