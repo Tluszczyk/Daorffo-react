@@ -1,3 +1,14 @@
-$default-black: black;
-$default-grey: #151515;
-$default-orange: #ff8500;
+$dark-theme-main: black;
+$dark-theme-secondary: #ff8500;
+$dark-theme-tertiary:  #151515;
+
+$light-theme-main: white;
+$light-theme-secondary: #0071BC;
+$light-theme-secondary-hover: #005994;
+$light-theme-tertiary: #151515;
+
+$dark: (
+    main: $dark-theme-main,
+    secondary: $dark-theme-secondary,
+    tertiary: $dark-theme-tertiary
+)

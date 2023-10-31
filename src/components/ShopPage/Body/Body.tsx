@@ -15,7 +15,7 @@ interface BodyProps {}
 export const Body = (props: BodyProps) => {
 	return (
 		<div id="shop-body">
-			<Navbar logoSrc="resources/ShopPage/LogoSHOP.png" logoLink='/' />
+			<Navbar logoDefaultSrc="resources/ShopPage/LogoSHOP.png" logoLink='/' />
 
 			<div className="page" id="shop-page">
 				<ShopList>

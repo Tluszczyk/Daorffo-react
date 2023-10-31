@@ -1,0 +1,126 @@
+@media (max-width: 768px) {
+	#unit-main-page {
+		padding-top: 20vh;
+		padding-bottom: 10vh;
+	}
+	
+	#u1-image-and-logo-container {
+		grid-template-rows: 60% 40%;
+		grid-template-columns: auto;
+	}
+
+	#u1-parameters-container {
+		grid-template-rows: auto auto;
+		grid-template-columns: auto;
+	}
+
+	#u1-description-container {
+		grid-template-rows: auto auto auto;
+		grid-template-columns: auto;
+
+		width: 90%;
+	}
+
+	#u1-description-logo-container {
+		display: none;
+	}
+
+	#u1-logo {
+		width: 100%;
+		height: 100%;
+		
+		object-fit: contain;
+
+		content: url(../../../../public/resources/UnitPage/U1-image-and-logo-container/U1-Logo-long.png);
+	}
+
+	#u1-drawbar-container {
+		grid-row: 2;
+
+		grid-template-rows: auto;
+		grid-template-columns: auto auto;
+
+		width: 90%;
+		/* margin: auto; */
+	}
+
+	#u1-parameters-description-container {
+		grid-row: 1;
+	}
+
+	.u1-parameters-description-parameters-horizontal-container {
+		grid-template-rows: 50% 50%;
+		gap: 10px;
+	}
+
+	.u1-parameters-description-parameters {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	#u1-features-container {
+		grid-template-rows: 1fr 1fr 3fr;
+		grid-template-columns: auto;
+
+		width: 90%;
+	}
+
+	#u1-features-image-container {
+		grid-row: 2;
+	}
+
+	#u1-features-description-container {
+		justify-content: center;
+		grid-row: 1;
+	}
+
+	#u1-features-list-container {
+		grid-row: 3;
+		font-size: .7em;
+	}
+
+	#u1-summary-container {
+		grid-template-rows: auto auto auto auto;
+		grid-template-columns: 50% 50%;
+	}
+
+	#u1-summary-image-container {
+		grid-row: 1;
+		grid-column: 1;
+	}
+
+	#u1-summary-description-container {
+		grid-row: 1;
+		grid-column: 2;
+	}
+
+	#u1-summary-description-list {
+		height: 80%;
+		width: 80%;
+
+		justify-content: space-around;
+		align-items: flex-end;
+	}
+
+	.u1-summary-description-list-item {
+		font-size: 1em;
+		text-align: end;
+	}
+
+	#u1-summary-footer-container {
+		grid-row: 2;
+		grid-column: span 2;
+
+		margin-top: 40px;
+		gap: 50px;
+	}
+
+	#u1-summary-price-description {
+		font-size: 3em;
+	}
+
+	#u1-summary-contact-description {
+		font-size: 3em;
+	}
+}

@@ -8,7 +8,7 @@
     border: solid 1px white;
     border-radius: 15px;
 
-    background-color: colors.$default-grey;
+    background-color: colors.$dark-theme-tertiary;
     color: white;
 }
 
@@ -49,7 +49,7 @@
 }
 
 .shop-list-item-button-link {
-    background-color: colors.$default-grey;
+    background-color: colors.$dark-theme-tertiary;
     color: white;
     border: 1px solid white;
     border-radius: 7px;
@@ -61,8 +61,8 @@
 
 .shop-list-item-button-link:hover {
     background-color: white;
-    color: colors.$default-grey;
-    border: 1px solid colors.$default-grey;
+    color: colors.$dark-theme-tertiary;
+    border: 1px solid colors.$dark-theme-tertiary;
     border-radius: 7px;
 
     padding: 10px;
@@ -75,7 +75,7 @@
 }
 
 .shop-list-item-button-link a:hover {
-    color: colors.$default-grey;
+    color: colors.$dark-theme-tertiary;
     text-decoration: none;
 }
 

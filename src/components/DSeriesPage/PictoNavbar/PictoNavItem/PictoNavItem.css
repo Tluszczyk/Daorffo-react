@@ -1,0 +1,13 @@
+.forDescription {
+    font-size: 1.1em;
+    color: rgba(255, 255, 255, 0.3);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.forDescription:hover {
+    color: var(--orange);
+}

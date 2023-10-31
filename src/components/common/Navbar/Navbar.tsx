@@ -7,8 +7,14 @@ import './Navbar_mobile.css'
 import {WrapperProps} from "../../../common/commonProps";
 
 interface NavbarProps extends WrapperProps {
-    logoSrc: string;
+    logoDefaultSrc: string;
+    logoDesktopSrc?: string;
+    logoMobileSrc?: string;
+    
     logoLink?: string;
+
+    theme?: "dark" | "light";
+
     transparent?: boolean;
 }
  
@@ -44,7 +50,16 @@ const Navbar = (props: NavbarProps) => {
         }
 
         <a className="upperLogoD" href={props.logoLink}>
-            <img id="upperLogo" className="pointerCursor" src={props.logoSrc} alt="" />
+            <img 
+                id="upperLogo" 
+                className="pointerCursor" 
+                src={
+                    mobile ?
+                    (props.logoMobileSrc ?? props.logoDefaultSrc) :
+                    (props.logoDesktopSrc ?? props.logoDefaultSrc)
+                } 
+                alt="" 
+            />
         </a>
 
         <div className={`navbar ${props.className ?? ""}`}>

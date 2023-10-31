@@ -3,7 +3,7 @@
 .shop-body {
     overflow-x: hidden;
 
-    background-color: black;
+    background-color: colors.$dark-theme-main;;
 
     position: absolute;
     top: 0px;
@@ -13,10 +13,6 @@
     height: auto;
 
     z-index: -1;
-
-    * {
-        background-color: red;
-    }
 }
 
 .page {
@@ -33,7 +29,7 @@
     left: 0px;
     top: 0px;
 
-    background-color: colors.$default-black;
+    background-color: colors.$dark-theme-main;
 }
 
 .shop-footer {
@@ -44,5 +40,5 @@
 .shop-footer a {
     font-size: 2em;
     text-decoration: none;
-    color: colors.$default-orange;
+    color: colors.$dark-theme-secondary;
 }

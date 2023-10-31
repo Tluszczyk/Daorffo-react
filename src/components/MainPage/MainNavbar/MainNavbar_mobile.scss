@@ -1,42 +1,9 @@
+@use '../../../common/colors';
+
 @media (max-width: 768px) {
-    .upperContainer {
-        display: grid;
-        grid-template-columns: auto auto;
-
-        background-color: black;
-    }
-
-    .upperLogoD { 
-        justify-content: flex-end;
-    }
-    #upperLogo {
-        height: 80%;
-
-        margin-right: -10px;
-    }
-
-    .navbar {
-        position: fixed;
-        left: 0;
-        top: 0;
-
-        transition: width 500ms;
-
-        padding-top: 100px;
-
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-
-        font-size: 1.1em;
-
-        height: calc( 100vh - 100px );
-
-        background-color: black;
-    }
 
     .mobile-nav-opened {
-        border-right: 1px solid var(--orange);
+        border-right: 1px solid colors.$dark-theme-secondary;
     }
 
     .nav-item {
@@ -73,7 +40,6 @@
 
         transition: height 700ms ease;
 
-        height: 0;
         overflow: hidden;
     }
 
@@ -84,57 +50,8 @@
         cursor: pointer;
     }
 
-    .opened {
+    .nav-dropdown-opened {
         height: calc(5 * (-4px + 1em + 15px) - 5px );
         margin-bottom: 25px;
     } /* Trochę hardcoded, ale działa */
-
-    .hamburgerD {
-        position: fixed;
-        top: 0;
-        left: 0;
-
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-
-        align-items: center;
-
-        height: 100px;
-        width: 100px;
-
-        z-index: 100;
-    }
-
-    .hamburgerD-closed {
-        left: 0;
-        transition: 500ms left ease;
-    }
-
-    .hamburgerD-opened {
-        left: calc(25vw - 50px);
-        transition: 500ms left ease;
-    }
-
-    #hamburger {
-        height: 1.5em;
-        width: auto;
-
-        object-fit: cover;
-
-        margin-left: -10px;
-    }
-
-    .backgroundImage {
-        position: absolute;
-
-        width: 100vw;
-        height: 100%;
-
-        object-fit: cover;
-
-        opacity: 80%;
-
-        z-index: 0;
-    }
 }

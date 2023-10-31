@@ -1,0 +1,68 @@
+@media (max-width: 768px) {
+    .upper-container {
+        position: fixed;
+
+        top: 0;
+        left: 0;
+
+        width: 100vw;
+        height: auto;
+
+        /* z-index: 1; */
+    }
+
+    .pictogramsD-wrapper {
+        width: 100vw;
+        height: auto;
+
+        background: linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0), 
+            rgba(0, 0, 0, 0.7), 
+            rgba(0,0,0,1)
+        );
+    }
+
+    .pictogramsD {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        width: 85vw;
+        height: 80px;
+
+        margin: auto;
+    }
+
+    .logoD-wrapper {
+        width: 100vw;
+        background-color: black;
+    }
+
+    .logoD {
+        margin: auto;
+        
+        width: 90%;
+        height: 100px;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+
+        border-bottom: 1px solid white;
+    }
+
+    #logo {
+        background-image: url("/../public/resources/TrailerPage/PictoNavbar/Logo/Mobile/icon-inactive.png");
+        & :hover {background-image: url("/../public/resources/TrailerPage/PictoNavbar/Logo/Mobile/icon-active.png");}
+        
+        background-repeat: no-repeat;
+        background-position: center;
+
+        height: 90px;
+
+        margin-right: 10px;
+    }
+}

@@ -33,8 +33,10 @@ const SoonInfoTip = (props: SoonInfoTipProps) => {
 		onMouseEnter={onMouseEnter}
 		onMouseMove={onMouseMove}
 		onMouseLeave={onMouseLeave}
-		>
-		{props.children}
+	>
+		<div className="soon-info-tip-children-wrapper">
+			{props.children}
+		</div>
 
 		{show &&
 			<div className="soon-div" style={{

@@ -1,38 +1,15 @@
 @use 'src/common/colors';
 
-* { text-align: center; }
+.main-navbar * { text-align: center; }
 .pointerCursor { cursor: pointer; }
-.drop-item:hover { color: colors.$default-orange; }
-.nav-item:hover { color: colors.$default-orange; }
+.drop-item:hover { color: colors.$dark-theme-secondary; }
+.nav-item:hover { color: colors.$dark-theme-secondary }
 
-.upperContainer {
-  width: 100%;
-
-  position: fixed;
-  top: 0;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  align-items: center;
-
-  z-index: 11;
+.nav-dropdown-opened {
+    height: calc(5 * (-4px + 1.1em + 15px) - 15px);
+    margin-bottom: 25px;
 }
 
-.upperLogoD {
-    width: 90vw;
-    height: 100px;
-
-    display: flex;
-    flex-direction: row;
-
-    align-self: center;
-    align-items: center;
-
-    border-bottom: 2px solid white;
-}
-
-.hide-upperLogoD > .upperLogoD {
-	display: none;
+.nav-dropdown-closed {
+    height: 0;
 }

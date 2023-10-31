@@ -51,7 +51,6 @@
 
         transition: height 700ms ease;
 
-        height: 0;
         overflow: hidden;
     }
 
@@ -66,17 +65,4 @@
         height: calc(5 * (-4px + 1em + 15px) - 5px );
         margin-bottom: 25px;
     } /* Trochę hardcoded, ale działa */
-
-    .backgroundImage {
-        position: absolute;
-
-        width: 100vw;
-        height: 120vh;
-
-        object-fit: cover;
-
-        opacity: 80%;
-
-        z-index: 0;
-    }
 }

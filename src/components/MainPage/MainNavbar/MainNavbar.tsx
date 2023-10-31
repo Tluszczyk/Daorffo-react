@@ -19,7 +19,7 @@ function MainNavbar(props: MainNavbarProps) {
     const [openedDropdown, setOpenedDropdown] = useState(false);
 
     var dropItRef = 
-        <div className={`drop-content ${openedDropdown ? 'opened' : 'closed'}`} id="drop-it" >
+        <div className={`drop-content ${openedDropdown ? 'nav-dropdown-opened' : 'nav-dropdown-closed'}`} id="drop-it" >
             <div className="drop-item pointerCursor" id="goToWhy" onClick={props.whyViewScroll}> why? </div>
             <Link className='drop-item' to='/'> <SoonInfoTip> mission </SoonInfoTip> </Link>
             <Link className="drop-item" to='/'> <SoonInfoTip> team </SoonInfoTip> </Link>
@@ -40,7 +40,7 @@ function MainNavbar(props: MainNavbarProps) {
         </div>
 
     return (
-        <Navbar className='mobile-nav-closed' logoSrc='resources/MainPage/MainNavbar/Logo/icon-inactive.png' logoLink='/'>
+        <Navbar className='main-navbar mobile-nav-closed' logoDefaultSrc='resources/MainPage/MainNavbar/Logo/icon-inactive.png' logoLink='/'>
             {navDropdown}
             <div className="nav-item pointerCursor" id="goToTrailers" onClick={props.showroomViewScroll}> trailers </div>
             <Link className="nav-item" to='shop'> shop </Link>
