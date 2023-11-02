@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Daorffo-react/static/css/main.2962f081.css",
-    "main.js": "/Daorffo-react/static/js/main.aa0db4ab.js",
+    "main.js": "/Daorffo-react/static/js/main.42fbe104.js",
     "static/media/img.jpg": "/Daorffo-react/static/media/img.46e3a7b8c93bd758566b.jpg",
     "static/media/D-DIN-Italic.otf": "/Daorffo-react/static/media/D-DIN-Italic.95a6ef2d9bd0881a85b1.otf",
     "static/media/D-DIN-Bold.otf": "/Daorffo-react/static/media/D-DIN-Bold.7bb4b1a4a4621668d12a.otf",
@@ -11,10 +11,10 @@
     "static/media/U1-Logo-short.png": "/Daorffo-react/static/media/U1-Logo-short.c1b67f477e842ac2338e.png",
     "index.html": "/Daorffo-react/index.html",
     "main.2962f081.css.map": "/Daorffo-react/static/css/main.2962f081.css.map",
-    "main.aa0db4ab.js.map": "/Daorffo-react/static/js/main.aa0db4ab.js.map"
+    "main.42fbe104.js.map": "/Daorffo-react/static/js/main.42fbe104.js.map"
   },
   "entrypoints": [
     "static/css/main.2962f081.css",
-    "static/js/main.aa0db4ab.js"
+    "static/js/main.42fbe104.js"
   ]
 }
