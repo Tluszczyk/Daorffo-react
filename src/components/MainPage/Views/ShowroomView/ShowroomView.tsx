@@ -7,7 +7,6 @@ import "./ShowroomView_mobile.css";
 
 import View from "../../../common/View/View";
 import { StylableProps } from '../../../../common/commonProps';
-import SoonInfoTip from '../../../common/SoonInfoTip/SoonInfoTip';
  
 interface ShowroomViewProps extends StylableProps {}
 
