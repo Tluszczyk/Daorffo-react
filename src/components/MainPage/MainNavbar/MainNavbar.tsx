@@ -39,8 +39,10 @@ function MainNavbar(props: MainNavbarProps) {
             {dropItRef}
         </div>
 
+    var navbarClass = "main-navbar mobile-nav-closed"
+
     return (
-        <Navbar className='main-navbar mobile-nav-closed' logoDefaultSrc='resources/MainPage/MainNavbar/Logo/icon-inactive.png' logoLink='/'>
+        <Navbar className={props.className} navbarClassName={navbarClass} logoDefaultSrc='resources/MainPage/MainNavbar/Logo/icon-inactive.png' logoLink='/'>
             {navDropdown}
             <div className="nav-item pointerCursor" id="goToTrailers" onClick={props.showroomViewScroll}> trailers </div>
             <Link className="nav-item" to='shop'> shop </Link>
