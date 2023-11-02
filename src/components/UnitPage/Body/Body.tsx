@@ -158,7 +158,7 @@ export const Body = (props: BodyProps) => {
 							</span>
 						</div>
 
-						<a id="u1-summary-contact-button-container" href="">
+						<a id="u1-summary-contact-button-container" href=".">
 							<div id="u1-summary-contact-button">
 								<span id="u1-summary-contact-button-header">contact us</span>
 								<span id="u1-summary-contact-button-text">for more details</span>
