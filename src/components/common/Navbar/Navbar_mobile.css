@@ -18,6 +18,8 @@
     }
 
     .upperContainer {
+        position: absolute;
+
         display: grid;
         grid-template-columns: auto auto;
 
@@ -25,7 +27,7 @@
         /* background-color: black; */
     }
 
-    .upperLogoD { 
+    .upperLogoD {
         justify-content: flex-end;
     }
     

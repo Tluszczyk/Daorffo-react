@@ -7,7 +7,7 @@ import {Body as DSeries} from './components/DSeriesPage/Body/Body'
 import {Body as Shop} from './components/ShopPage/Body/Body'
 import {Body as Unit} from './components/UnitPage/Body/Body'
 
-const App = () => <Router>
+const App = () => <Router basename={process.env.PUBLIC_URL}>
     <Routes>
         <Route path='/' element={<Main />} />
         <Route path='dSeries' element={<DSeries />} />

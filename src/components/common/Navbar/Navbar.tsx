@@ -10,6 +10,8 @@ interface NavbarProps extends WrapperProps {
     logoDefaultSrc: string;
     logoDesktopSrc?: string;
     logoMobileSrc?: string;
+
+    navbarClassName?: string;
     
     logoLink?: string;
 
@@ -39,10 +41,10 @@ const Navbar = (props: NavbarProps) => {
         navbar.classList.toggle("mobile-nav-opened");
     }
 
-    var classname   = 'upperContainer ' 
-                    + props.className;
+    var upperContainerClass = props.className ?? "";
+    var navbarClass = props.navbarClassName ?? "";
 
-    return <div className={classname}>
+    return <div className={`upperContainer ${upperContainerClass}`}>
         { mobile &&
             <div className="hamburgerD hamburgerD-closed" onClick={toggleMobileNavbar} >
                 <img id="hamburger" src={`resources/MainPage/MainNavbar/Hamburger/icon-${mobileNavbar ? 'active' : 'inactive'}.png`} alt="" />
@@ -58,11 +60,11 @@ const Navbar = (props: NavbarProps) => {
                     (props.logoMobileSrc ?? props.logoDefaultSrc) :
                     (props.logoDesktopSrc ?? props.logoDefaultSrc)
                 } 
-                alt="" 
+                alt=""
             />
         </a>
 
-        <div className={`navbar ${props.className ?? ""}`}>
+        <div className={`navbar ${navbarClass}`}>
             { props.children }
         </div>
     </div>
