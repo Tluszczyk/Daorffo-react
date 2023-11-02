@@ -15,7 +15,7 @@ interface BodyProps {}
 export const Body = (props: BodyProps) => {
 	return (
 		<div id="shop-body">
-			<Navbar logoDefaultSrc="resources/ShopPage/LogoSHOP.png" logoLink='/' />
+			<Navbar logoDefaultSrc="resources/ShopPage/LogoSHOP.png" logoLink='' />
 
 			<div className="page" id="shop-page">
 				<ShopList>
@@ -42,7 +42,7 @@ export const Body = (props: BodyProps) => {
 						id="D1"
 						title="Da Orffo | D1 Trailer"
 						price="from 16 000 € net"
-						aboutLink="/dSeries"
+						aboutLink="dSeries"
 						descriptionContent={
 							<ul>
                                 <li>expedition set up on U1 chassis</li>
@@ -59,7 +59,7 @@ export const Body = (props: BodyProps) => {
 						id="U1"
 						title="Da Orffo | Unit 1 Trailer"
 						price="from 10500 € net"
-						aboutLink="/unit"
+						aboutLink="unit"
 						descriptionContent={
 							<>
 								<ul>
