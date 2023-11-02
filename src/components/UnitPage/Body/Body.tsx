@@ -17,7 +17,7 @@ export const Body = (props: BodyProps) => {
 				logoDefaultSrc="resources/UnitPage/Logo/U1-Logo.png" 
 				logoDesktopSrc="resources/UnitPage/Logo/U1-Logo.png"
 				logoMobileSrc="resources/UnitPage/Logo/U1-Logo-mobile.png"
-				logoLink="/"
+				logoLink="."
 			/>
 
 			<div id="unit-main-page">
