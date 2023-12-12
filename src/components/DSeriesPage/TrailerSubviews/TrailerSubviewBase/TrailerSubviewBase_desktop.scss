@@ -1,15 +1,17 @@
 @media (min-width: 768px) {
     .trailer-subview {
         display: flex;
-        flex-direction: row;
-        justify-content: space-around;
+        flex-direction: column;
+        justify-content: flex-start;
+
+        margin-top: 130px;
     }
 
     .textSpan {
         text-align: start;
 
         img {
-            width: min-content;
+            // width: min-content;
             max-width: 300px;
         }
 

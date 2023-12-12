@@ -31,8 +31,8 @@ const PictoNavbar = (props: PictoNavbarProps) => {
     />)
 
     return <>
-        <div className="upperContainer">
-            <div className={`picto-navbar picto-level-${getLevel()}`}>
+        <div className={`upper-container level-${getLevel()}`}>
+            <div className={`picto-navbar level-${getLevel()}`}>
                 <div className="logoD-wrapper">
                     <div className="logoD">
                         <Link to="/" id="logo-item">

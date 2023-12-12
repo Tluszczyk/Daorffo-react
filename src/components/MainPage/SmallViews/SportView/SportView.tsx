@@ -17,7 +17,7 @@ const SportView = () =>
                     All trailers are customizable in terms of the choice of shock absorbers. Choose from our dumper selection.
                 </span>
             </div>
-            <img id="sportI" src="/resources/MainPage/SmallViews/SportView/img.png" alt=""/>
+            <img id="sportI" src="resources/MainPage/SmallViews/SportView/img.png" alt=""/>
         </div>
     </View>
  

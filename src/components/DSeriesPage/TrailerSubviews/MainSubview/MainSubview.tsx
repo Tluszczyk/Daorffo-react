@@ -8,7 +8,7 @@ interface MainSubviewProps {}
  
 const MainSubview = (props: MainSubviewProps) => {
     return <>
-        <TrailerSubviewBase>
+        <TrailerSubviewBase id="main-trailer-subview">
             <span className="textSpan">
                 <img src="resources/TrailerPage/TrailerSubviews/MainSubview/img-0.png" alt="" />
                 <p>
