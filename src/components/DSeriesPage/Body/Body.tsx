@@ -68,15 +68,17 @@ export function Body() {
 
             <div className={`trailer-layout level-${getLevel()}`}>
                 <div className='trailer-layout-left'>
-                    <div id='goBack' className='mobile-invisible trailer-layout-left-left' onClick={goBackLambda}>
-                        <div className='floatingDiv'>
-                            <img
-                                id="backArrow"
-                                alt='backarrow'
-                                src={goBackSrc}
-                                onMouseEnter={() => setGoBackSrc(goBackAnactive)}
-                                onMouseLeave={() => setGoBackSrc(goBackInactive)}
-                            />
+                    <div className="trailer-layout-left-left">
+                        <div id='goBack' className='mobile-invisible trailer-layout-left-left' onClick={goBackLambda}>
+                            <div className='floatingDiv'>
+                                <img
+                                    id="backArrow"
+                                    alt='backarrow'
+                                    src={goBackSrc}
+                                    onMouseEnter={() => setGoBackSrc(goBackAnactive)}
+                                    onMouseLeave={() => setGoBackSrc(goBackInactive)}
+                                />
+                            </div>
                         </div>
                     </div>
                     <div className='trailer-layout-left-right'>
@@ -88,13 +90,10 @@ export function Body() {
                 </div>
 
                 <div className='trailer-layout-right'>
-                    {
-                        getLevel() !== 0 &&
-                        <GalleryView
-                            galleryId={openedSection}
-                            subgalleriesItemCount={gallerySubgalleriesItemCount[openedSection]}
-                        />
-                    }
+                    <GalleryView
+                        galleryId={openedSection}
+                        subgalleriesItemCount={gallerySubgalleriesItemCount[openedSection]}
+                    />
                 </div>
             </div>
         </div>
