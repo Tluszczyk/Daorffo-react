@@ -13,6 +13,7 @@ interface MainNavbarProps extends WrapperProps {
     showroomViewScroll?: () => void;
     whyViewScroll?: () => void;
     contactViewScroll?: () => void;
+    transparent?: boolean;
 }
 
 function MainNavbar(props: MainNavbarProps) {
@@ -42,7 +43,7 @@ function MainNavbar(props: MainNavbarProps) {
     var navbarClass = "main-navbar"
 
     return (
-        <Navbar className={props.className} navbarClassName={navbarClass} logoDefaultSrc='resources/MainPage/MainNavbar/Logo/icon-inactive.png' logoLink='.'>
+        <Navbar className={props.className} navbarClassName={navbarClass} logoDefaultSrc='resources/MainPage/MainNavbar/Logo/icon-inactive.png' logoLink='.' transparent={props.transparent}>
             {navDropdown}
             <Link className="nav-item pointerCursor" id="goToTrailers" to="/" onClick={props.showroomViewScroll}> trailers </Link>
             <Link className="nav-item" to='shop'> shop </Link>

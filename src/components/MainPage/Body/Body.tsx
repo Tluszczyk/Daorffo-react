@@ -33,6 +33,7 @@ export function Body() {
                 showroomViewScroll={showroomViewScroll}
                 whyViewScroll={whyViewScroll}
                 contactViewScroll={contactViewScroll}
+                transparent
             />
             <MainView />
             <ShowroomView ref={showroomViewRef}/>
