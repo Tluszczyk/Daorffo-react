@@ -20,6 +20,14 @@
         height: auto;
 
         z-index: 20;
+
+        &.transparent {
+            background-color: transparent;
+        }
+
+        &:not(.transparent) {
+            background-color: #000000;
+        }
     }
 
     .picto-navbar {

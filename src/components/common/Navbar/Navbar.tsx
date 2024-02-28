@@ -33,6 +33,10 @@ const Navbar = (props: NavbarProps) => {
 
     var openedClassName = opened ? "opened" : "closed";
 
+    if (props.transparent) {
+        upperContainerClass += " transparent";
+    }
+
     return <div id="navbar-wrapper" className={openedClassName} onClick={e=>{if(opened) setOpened(false)}}>
         <div className={`upperContainer ${upperContainerClass}`}>
             { mobile &&

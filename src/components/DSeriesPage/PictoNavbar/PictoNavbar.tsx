@@ -12,6 +12,7 @@ import { useLevel } from "../services/LevelProvider"
 interface PictoNavbarProps {
     getOpenedSection: () => number;
     setOpenedSection: (id: number) => void;
+    transparent?: boolean;
 }
 
 const useSharedLevel = () => useBetween(useLevel);
@@ -34,7 +35,7 @@ const PictoNavbar = (props: PictoNavbarProps) => {
     />)
 
     return <>
-        <div className={`upper-container level-${getLevel()}`}>
+        <div className={`upper-container level-${getLevel()} ${props.transparent}`}>
             <div className={`picto-navbar level-${getLevel()}`}>
                 <div className="logoD-wrapper">
                     <div className="logoD">
