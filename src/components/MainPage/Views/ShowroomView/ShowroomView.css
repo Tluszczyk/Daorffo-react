@@ -13,7 +13,7 @@
 .Model {
     position: inherit;
 
-    transition: all 800ms;
+    transition: all .5s;
 
     margin-bottom: 0px;
     margin-top: auto;

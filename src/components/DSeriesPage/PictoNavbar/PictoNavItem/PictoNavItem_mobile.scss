@@ -19,4 +19,8 @@
 
         object-fit: contain;
     }
+
+    .forDescription.active {
+        color: var(--orange);
+    }
 }

@@ -10,11 +10,21 @@
         &.level-1 {
             > :first-child { width: 50%; }
             > :last-child { width: 50%; }
+
+            .trailer-subview {
+                transition: opacity .5s ease-in-out;
+                opacity: 1;
+            }
         }
         
         &.level-2 {
-            > :first-child { width: 30%; }
-            > :last-child { width: 70%; }
+            > :first-child { width: 20%; }
+            > :last-child { width: 80%; }
+
+            .trailer-subview {
+                transition: opacity .5s ease-in-out;
+                opacity: 0;
+            }
         }
     }
 }

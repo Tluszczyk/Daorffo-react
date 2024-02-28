@@ -3,19 +3,19 @@
         position: fixed;
         top: 0;
 
-        transition: width 1s ease-in-out;
+        transition: width .5s ease-in-out;
 
-        &.level-0 {
+        &.level-0, &.level-1, &.level-2 {
             width: 100%;
         }
 
-        &.level-1 {
-            width: 90%;
-        }
+        // &.level-1 {
+        //     width: 90%;
+        // }
 
-        &.level-2 {
-            width: 10%;
-        }
+        // &.level-2 {
+        //     width: 10%;
+        // }
 
         height: auto;
 
@@ -29,7 +29,7 @@
         align-items: center;
 
         > div {
-            transition: width 1s ease-in-out;//, opacity 1s ease-in-out;
+            transition: width .5s ease-in-out;//, opacity 1s ease-in-out;
         }
 
         // border-bottom: 1px solid white;

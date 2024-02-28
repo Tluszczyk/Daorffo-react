@@ -22,9 +22,16 @@ import './Body_mobile.scss'
 const useSharedLevel = () => useBetween(useLevel);
 
 export function Body() {
-    const { decLevel, getLevel } = useSharedLevel()
+    const [mobile, setMobile] = useState(false)
+    const checkForMobile = () => setMobile(window.innerWidth <= 768);
+
+    window.addEventListener('resize', checkForMobile);
+    window.addEventListener('load', checkForMobile);
+
+    const { decLevel, getLevel, setLevel } = useSharedLevel()
 
     const [openedSection, setOpenedSection] = useState(0);
+    const getOpenedSection = () => openedSection;
 
     const goBackBase = "resources/TrailerPage/Body/backArrow/icon-"
     const goBackInactive = goBackBase + "inactive.png"
@@ -81,15 +88,16 @@ export function Body() {
                             </div>
                         </div>
                     </div>
-                    <div className='trailer-layout-left-right'>
+                    <div className='trailer-layout-left-right' onClick={mobile ? undefined : decLevel}>
                         <PictoNavbar
+                            getOpenedSection={getOpenedSection}
                             setOpenedSection={setOpenedSection}
                         />
                         {openedTrailerSubview}
                     </div>
                 </div>
 
-                <div className='trailer-layout-right'>
+                <div className='trailer-layout-right' onClick={()=>setLevel(2)}>
                     <GalleryView
                         galleryId={openedSection}
                         subgalleriesItemCount={gallerySubgalleriesItemCount[openedSection]}
