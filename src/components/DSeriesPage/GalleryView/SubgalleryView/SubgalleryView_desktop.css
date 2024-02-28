@@ -1,3 +1,11 @@
 @media (min-width: 768px) {
-    
+    .gallery-item {
+        transition: opacity .5s ease-in-out;
+
+        opacity: .7;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
 }

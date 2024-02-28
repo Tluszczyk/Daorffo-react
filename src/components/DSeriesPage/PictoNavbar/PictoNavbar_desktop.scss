@@ -3,14 +3,18 @@
         position: fixed;
         top: 0;
 
-        transition: width 1s ease-in-out;
+        transition: width .5s ease-in-out;
 
         &.level-0 {
             width: calc(100% - 100px);
         }
 
-        &.level-1, &.level-2 {
-            width: calc(50% - 100px)
+        &.level-1 {
+            width: calc(50% - 100px);
+        }
+
+        &.level-2 {
+            width: calc(20% - 100px)
         }
 
         height: auto;
@@ -24,7 +28,7 @@
         justify-content: space-around;
 
         > div {
-            transition: width 1s ease-in-out, opacity 1s ease-in-out;
+            transition: width .5s ease-in-out, opacity .5s ease-in-out;
         }
 
         border-bottom: 1px solid white;
@@ -39,7 +43,7 @@
             }
         }
 
-        &.level-1, .level-2 {
+        &.level-1, &.level-2 {
             >:first-child { 
                 width: 0%;
                 opacity: 0; 

@@ -10,6 +10,7 @@ import "./PictoNavbar_mobile.scss"
 import { useLevel } from "../services/LevelProvider"
 
 interface PictoNavbarProps {
+    getOpenedSection: () => number;
     setOpenedSection: (id: number) => void;
 }
 
@@ -23,11 +24,13 @@ const PictoNavbar = (props: PictoNavbarProps) => {
     var pictoItems = pictoItemsDescriptions.map((description, index) => <PictoNavItem
         id={index.toString()} description={description}
         key={index}
-        onClick={() => { 
+        onClick={e => { 
             setLevel(1)
             props.setOpenedSection(index)
+            e.stopPropagation()
         }}
         parentSrc="resources/TrailerPage/PictoNavbar/"
+        active={getLevel() > 0 && index === props.getOpenedSection()}
     />)
 
     return <>

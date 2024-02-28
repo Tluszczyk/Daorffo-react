@@ -20,7 +20,7 @@
 
     > div {
         min-height: 100%;
-        transition: width 1s ease-in-out;
+        transition: width .5s ease-in-out;
     }
 }
 
@@ -41,7 +41,7 @@
     justify-content: flex-start;
     align-items: center;
 
-    overflow: hidden;
+    // overflow: hidden;
 
     width: 100%;
 

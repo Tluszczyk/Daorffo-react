@@ -1,4 +1,11 @@
 @media (min-width: 768px) {
+    .level-2 .forDescription:not(.active) {
+        display: none;
+    }
+
+    .level-1 .forDescription {
+        display: block;
+    }
 
     .forDescription>p {
         margin-top: 0.5em;
