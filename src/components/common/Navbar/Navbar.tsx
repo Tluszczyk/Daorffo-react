@@ -4,6 +4,8 @@ import './Navbar.scss'
 import './Navbar_desktop.scss'
 import './Navbar_mobile.scss'
 
+import {onScrollTransform, resizeTransform, translateTransform} from '../../../common/onScrollTransforms';
+
 import {WrapperProps} from "../../../common/commonProps";
 
 interface NavbarProps extends WrapperProps {
@@ -37,6 +39,11 @@ const Navbar = (props: NavbarProps) => {
         upperContainerClass += " transparent";
     }
 
+    window.addEventListener('scroll', onScrollTransform.bind(null, 0, 500, [
+        {querySelector: "#upperLogoLink", transform: resizeTransform, TRANSFORM_PARAMETERS: [1,.5]},
+        {querySelector: "#upperLogoLink", transform: translateTransform, TRANSFORM_PARAMETERS: [0,250,"px",0,-50,"px"]},
+    ]));
+
     return <div id="navbar-wrapper" className={openedClassName} onClick={e=>{if(opened) setOpened(false)}}>
         <div className={`upperContainer ${upperContainerClass}`}>
             { mobile &&
@@ -45,7 +52,7 @@ const Navbar = (props: NavbarProps) => {
                 </div>
             }
 
-            <a className="upperLogoD" href={props.logoLink}>
+            <a id="upperLogoLink" className="upperLogoD" href={props.logoLink}>
                 <img 
                     id="upperLogo" 
                     className="pointerCursor" 
