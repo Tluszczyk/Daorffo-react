@@ -1,18 +1,17 @@
 @media (max-width: 768px) {
     .trailer-layout {
-        &.level-0, &.level-1, &.level-2 {
-            > :first-child { width: 100%; }
-            > :last-child { width: 0%; height: 0; }
-        }
-        
-        // &.level-1 {
-        //     > :first-child { width: 90%; }
-        //     > :last-child { width: 10%; }
-        // }
-        
-        // &.level-2 {
-        //     > :first-child { width: 10%; }
-        //     > :last-child { width: 90%; } 
-        // }
+        height: 100vh;
+        grid-template-columns: 100%;
+        gap: 20px;
+
+        padding-top: 200px;
+    }
+
+    .trailer-layout-mid {
+        grid-column: 1 / span 1;
+    }
+    
+    .trailer-layout-right {
+        grid-column: 1 / span 1;
     }
 }

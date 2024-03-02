@@ -7,6 +7,7 @@ import SubgalleryView from "./SubgalleryView/SubgalleryView"
 interface GalleryViewProps {
     galleryId:              number
     subgalleriesItemCount:  number[]
+    onClick:                () => void
 }
  
 const GalleryView = (props: GalleryViewProps) => {
@@ -18,13 +19,13 @@ const GalleryView = (props: GalleryViewProps) => {
                 galleryId={props.galleryId}
                 subgalleryId={subgalleryId}
                 itemCount={itemCount}
+                onClick={props.onClick}
+                key={subgalleryId}
             />
         )
     }
     
-    return <div className={`gallery-${props.galleryId}`}>
-        {subgalleries}
-    </div>
+    return subgalleries
 }
  
 export default GalleryView;

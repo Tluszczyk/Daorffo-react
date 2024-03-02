@@ -58,15 +58,14 @@ export function Body() {
      * 
      * Then gallerySubgalleriesItemCount = [[4],[2,3]]
      */
-    var gallerySubgalleriesItemCount = [[2],[2],[2,3,2,3,2],[2],[2]]
+    var gallerySubgalleriesItemCount = [[2],[2,3],[2,3,2,3,2],[2],[2]]
 
-    var openedTrailerSubview = getLevel() === 0 ? 
-        <MainSubview></MainSubview> : [
-        <TrailerSubview0></TrailerSubview0>,
-        <TrailerSubview1></TrailerSubview1>,
-        <TrailerSubview2></TrailerSubview2>,
-        <TrailerSubview3></TrailerSubview3>,
-        <TrailerSubview4></TrailerSubview4>
+    var openedTrailerSubview = getLevel() === 0 ? MainSubview({}) : [
+        TrailerSubview0({onClick: mobile ? undefined : decLevel}),
+        TrailerSubview1({onClick: mobile ? undefined : decLevel}),
+        TrailerSubview2({onClick: mobile ? undefined : decLevel}),
+        TrailerSubview3({onClick: mobile ? undefined : decLevel}),
+        TrailerSubview4({onClick: mobile ? undefined : decLevel})
     ][openedSection]
 
     return (
@@ -74,35 +73,35 @@ export function Body() {
             <MainNavbar className='desktop-invisible hide-upperLogoD'></MainNavbar>
 
             <div className={`trailer-layout level-${getLevel()}`}>
-                <div className='trailer-layout-left'>
-                    <div className="trailer-layout-left-left">
-                        <div id='goBack' className='mobile-invisible trailer-layout-left-left' onClick={goBackLambda}>
-                            <div className='floatingDiv'>
-                                <img
-                                    id="backArrow"
-                                    alt='backarrow'
-                                    src={goBackSrc}
-                                    onMouseEnter={() => setGoBackSrc(goBackAnactive)}
-                                    onMouseLeave={() => setGoBackSrc(goBackInactive)}
-                                />
-                            </div>
-                        </div>
-                    </div>
-                    <div className='trailer-layout-left-right' onClick={mobile ? undefined : decLevel}>
-                        <PictoNavbar
-                            getOpenedSection={getOpenedSection}
-                            setOpenedSection={setOpenedSection}
+
+                <div id='goBack' className='mobile-invisible trailer-layout-left' onClick={goBackLambda}>
+                    <div className='floatingDiv'>
+                        <img
+                            id="backArrow"
+                            alt='backarrow'
+                            src={goBackSrc}
+                            onMouseEnter={() => setGoBackSrc(goBackAnactive)}
+                            onMouseLeave={() => setGoBackSrc(goBackInactive)}
                         />
-                        {openedTrailerSubview}
                     </div>
                 </div>
 
-                <div className='trailer-layout-right' onClick={()=>setLevel(2)}>
-                    <GalleryView
-                        galleryId={openedSection}
-                        subgalleriesItemCount={gallerySubgalleriesItemCount[openedSection]}
-                    />
-                </div>
+                <PictoNavbar
+                    className='trailer-layout-mid'
+                    getOpenedSection={getOpenedSection}
+                    setOpenedSection={setOpenedSection}
+                />
+                
+                {openedTrailerSubview}
+
+                {
+                    GalleryView({
+                        galleryId: openedSection,
+                        subgalleriesItemCount: gallerySubgalleriesItemCount[openedSection],
+                        onClick: ()=>setLevel(2)
+                    })
+                }
+
             </div>
         </div>
     )

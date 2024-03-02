@@ -2,24 +2,22 @@
     .upper-container {
         position: fixed;
         top: 0;
-
-        transition: width .5s ease-in-out;
+        left: 100px;
+        margin-top: 0;
 
         &.level-0 {
             width: calc(100% - 100px);
         }
 
         &.level-1 {
-            width: calc(50% - 100px);
+            width: calc(.5*(100% - 100px));
         }
 
         &.level-2 {
-            width: calc(20% - 100px)
+            width: calc(.2*(100% - 100px))
         }
 
         height: auto;
-
-        z-index: 20;
 
         &.transparent {
             background-color: transparent;

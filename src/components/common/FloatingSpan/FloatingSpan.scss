@@ -1,0 +1,16 @@
+.floating-span {
+    padding: 100px 0;
+
+    top: 130px;
+
+    align-self: start;
+
+    position: -webkit-sticky;
+    position: sticky;      
+    
+    height: min-content;
+}
+
+.text-span {
+    font-size: 1.2em;
+}
