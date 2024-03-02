@@ -7,9 +7,11 @@ import "./PictoNavbar.css"
 import "./PictoNavbar_desktop.scss"
 import "./PictoNavbar_mobile.scss"
 
+import { StylableProps } from "../../../common/commonProps"
+
 import { useLevel } from "../services/LevelProvider"
 
-interface PictoNavbarProps {
+interface PictoNavbarProps extends StylableProps{
     getOpenedSection: () => number;
     setOpenedSection: (id: number) => void;
     transparent?: boolean;
@@ -35,13 +37,12 @@ const PictoNavbar = (props: PictoNavbarProps) => {
     />)
 
     return <>
-        <div className={`upper-container level-${getLevel()} ${props.transparent}`}>
+        <div className={`level-${getLevel()} ${props.className} upper-container ${props.transparent}`}>
             <div className={`picto-navbar level-${getLevel()}`}>
                 <div className="logoD-wrapper">
                     <div className="logoD">
                         <Link to="/" id="logo-item">
                             <img id="logo" alt="" />
-                            {/* <div id="logo" /> */}
                         </Link>
                     </div>
                 </div>

@@ -2,3 +2,7 @@
     background-size: cover;
     width: 200px;
 }
+
+.upper-container {
+    z-index: 1;
+}

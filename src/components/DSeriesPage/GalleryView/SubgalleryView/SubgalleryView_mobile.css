@@ -1,2 +1,12 @@
 @media (max-width: 768px) {
+    .subgallery {
+        size-adjust: 100%;
+    }
+
+    .gallery-item {
+        width: 100%;
+        height: auto;
+
+        margin: 0;
+    }
 }

@@ -7,7 +7,7 @@ import "./PictoNavItem_mobile.scss"
 interface PictoNavItemProps extends WrapperProps {
     parentSrc: string
     description: string
-    onClick: (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => void
+    // onClick: (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => void
     active: boolean
 }
  
