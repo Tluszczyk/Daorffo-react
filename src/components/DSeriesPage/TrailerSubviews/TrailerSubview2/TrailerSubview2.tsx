@@ -3,7 +3,9 @@ import "./TrailerSubview2_desktop.css"
 import "./TrailerSubview2_mobile.css"
 
 import OrangeSpan from "../../../common/OrangeSpan/OrangeSpan"
+
 import FloatingSpan from "../../../common/FloatingSpan/FloatingSpan"
+import FloatingNabvar from "../../../common/FloatingNabvar/FloatingNabvar"
 
 import { WrapperProps } from "../../../../common/commonProps"
 
@@ -79,7 +81,16 @@ const TrailerSubview2 = (props: TrailerSubview2Props) => {
         <OrangeSpan>Small storage space</OrangeSpan> at your service. We like to fit there small extinguisher and a camping flashlight.
     </FloatingSpan>
 
-    return [overviewSpan, kitchenSpan, toolsSpan, inventorySpan, baggageSpan]
+    var floatingNavbar = <FloatingNabvar 
+        className="trailer-layout-left"
+        itemsClassName="trailer-layout-left"
+        id="trailer-subview-2-navbar" key={5} 
+        iconsSrcs="resources/TrailerPage/TrailerSubviews/TrailerSubview0/FloatingNavbar" 
+        itemsCount={5}
+        subviewIndex={2}
+    />
+    
+    return [overviewSpan, kitchenSpan, toolsSpan, inventorySpan, baggageSpan, floatingNavbar]
 }
  
 export default TrailerSubview2;
