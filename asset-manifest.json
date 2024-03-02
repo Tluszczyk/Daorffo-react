@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/Daorffo-react/static/css/main.5c9688df.css",
-    "main.js": "/Daorffo-react/static/js/main.dc943fcd.js",
+    "main.css": "/Daorffo-react/static/css/main.2ee4bcd9.css",
+    "main.js": "/Daorffo-react/static/js/main.3da16c6e.js",
     "static/media/img.jpg": "/Daorffo-react/static/media/img.46e3a7b8c93bd758566b.jpg",
     "static/media/D-DIN-Italic.otf": "/Daorffo-react/static/media/D-DIN-Italic.95a6ef2d9bd0881a85b1.otf",
     "static/media/D-DIN-Bold.otf": "/Daorffo-react/static/media/D-DIN-Bold.7bb4b1a4a4621668d12a.otf",
     "static/media/D-DIN.otf": "/Daorffo-react/static/media/D-DIN.31d456695bd8dea72c8a.otf",
-    "static/media/icon-active.png": "/Daorffo-react/static/media/icon-active.c264ff2b894acf82d637.png",
     "static/media/icon-inactive.png": "/Daorffo-react/static/media/icon-inactive.ca7a6283a235048996be.png",
+    "static/media/icon-active.png": "/Daorffo-react/static/media/icon-active.c264ff2b894acf82d637.png",
     "static/media/U1-Logo-short.png": "/Daorffo-react/static/media/U1-Logo-short.c1b67f477e842ac2338e.png",
     "index.html": "/Daorffo-react/index.html",
-    "main.5c9688df.css.map": "/Daorffo-react/static/css/main.5c9688df.css.map",
-    "main.dc943fcd.js.map": "/Daorffo-react/static/js/main.dc943fcd.js.map"
+    "main.2ee4bcd9.css.map": "/Daorffo-react/static/css/main.2ee4bcd9.css.map",
+    "main.3da16c6e.js.map": "/Daorffo-react/static/js/main.3da16c6e.js.map"
   },
   "entrypoints": [
-    "static/css/main.5c9688df.css",
-    "static/js/main.dc943fcd.js"
+    "static/css/main.2ee4bcd9.css",
+    "static/js/main.3da16c6e.js"
   ]
 }
