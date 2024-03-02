@@ -1,5 +1,5 @@
 // modules
-import { useRef, useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 // components
 
@@ -67,7 +67,7 @@ const FloatingNavbarItem = (props: FloatingNavbarItemProps) => {
         const observer = new IntersectionObserver(handleIntersection, {
             threshold: 0.1
         });
-        
+
         if (target) {
             observer.observe(target);
         }
