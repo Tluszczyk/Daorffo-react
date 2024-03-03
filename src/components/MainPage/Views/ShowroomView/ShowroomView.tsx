@@ -12,6 +12,8 @@ interface ShowroomViewProps extends StylableProps {}
 
 const ShowroomView = forwardRef((props: ShowroomViewProps, ref) => {
     const modelNames = ['ec', 'unit', 'dSeries']
+    const links = ['https://www.behance.net/gallery/186589061/The-Life-Chariot-MEDEVAC-Trailer', '/unit', '/dSeries']
+    const targets = ['_blank', '_self', '_self']
     const descriptions = [
         'Life Chariot MEDEVAC', 
         'Unit 1', 
@@ -24,7 +26,8 @@ const ShowroomView = forwardRef((props: ShowroomViewProps, ref) => {
     ]
 
     const models = modelNames.map((name, index) => <Link
-            to={`/${name}`} className="model-with-description" 
+            className="model-with-description" 
+            to={links[index]} target={targets[index]}
             key={index}
         >
             <img 
