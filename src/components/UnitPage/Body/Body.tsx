@@ -12,7 +12,7 @@ interface BodyProps {}
 
 export const Body = (props: BodyProps) => {
 	return (
-		<div className="unit-body">
+		<div className="daorffo-font-regular font-black unit-body">
 			<Navbar 
 				logoDefaultSrc="resources/UnitPage/Logo/U1-Logo.png" 
 				logoDesktopSrc="resources/UnitPage/Logo/U1-Logo.png"

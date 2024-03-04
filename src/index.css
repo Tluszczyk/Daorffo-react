@@ -22,25 +22,32 @@ code {
 }
 
 /* Fonts */
-@font-face {
-  font-family: dDin;
-  src: url("../public/resources/fonts/d-din/D-DIN.otf");
+.daorffo-font-regular * {
+  font-family: "Barlow", sans-serif;
+  font-weight: 400;
   font-style: normal;
 }
-@font-face {
-  font-family: dDin-bold;
-  src: url("../public/resources/fonts/d-din/D-DIN-Bold.otf");
-}
-@font-face {
-  font-family: dDin-italic;
-  src: url("../public/resources/fonts/d-din/D-DIN-Italic.otf");
-}
-/* END Fonts */
 
-.dinF {
-  font-family: dDin;
+.daorffo-font-medium * {
+  font-family: "Barlow", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.daorffo-font-bold * {
+  font-family: "Barlow", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.font-white {
   color: white;
 }
+
+.font-black {
+  color: black;
+}
+/* End Fonts */
 
 .sectionH {
   font-size: 2em;

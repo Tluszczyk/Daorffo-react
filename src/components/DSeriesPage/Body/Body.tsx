@@ -69,7 +69,7 @@ export function Body() {
     ][openedSection]
 
     return (
-        <div className='dinF' id='trailer-body'>
+        <div className='daorffo-font-regular font-white' id='trailer-body'>
             <MainNavbar className='desktop-invisible hide-upperLogoD'></MainNavbar>
 
             <div className={`trailer-layout level-${getLevel()}`}>

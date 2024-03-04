@@ -30,7 +30,6 @@
 }
 
 .model-with-description {
-    font-family: dDin;
     font-size: 2em;
     display: flex;
     flex-direction: column;
