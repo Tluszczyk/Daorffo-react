@@ -14,7 +14,7 @@ interface BodyProps {}
 
 export const Body = (props: BodyProps) => {
 	return (
-		<div id="shop-body">
+		<div id="shop-body" className="daorffo-font-regular font-white">
 			<Navbar logoDefaultSrc="resources/ShopPage/LogoSHOP.png" logoLink='.' />
 
 			<div className="page" id="shop-page">

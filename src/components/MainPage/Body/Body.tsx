@@ -28,7 +28,7 @@ export function Body() {
     const contactViewScroll     = buildScroll(contactViewRef);
 
     return (
-        <div className='dinF' id='main-body'>
+        <div className='daorffo-font-regular font-white' id='main-body'>
             <MainNavbar
                 showroomViewScroll={showroomViewScroll}
                 whyViewScroll={whyViewScroll}
