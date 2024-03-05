@@ -13,6 +13,8 @@ import "./Body_mobile.scss";
 interface BodyProps {}
 
 export const Body = (props: BodyProps) => {
+	window.scrollTo({top: 0, behavior: 'smooth'})
+	
 	return (
 		<div id="shop-body" className="daorffo-font-regular font-white">
 			<Navbar 

@@ -27,6 +27,8 @@ export function Body() {
     const whyViewScroll         = buildScroll(whyViewRef);
     const contactViewScroll     = buildScroll(contactViewRef);
 
+    window.scrollTo({top: 0, behavior: 'smooth'})
+
     return (
         <div className='daorffo-font-regular font-white' id='main-body'>
             <MainNavbar
