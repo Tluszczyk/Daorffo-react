@@ -80,7 +80,7 @@ const Navbar = (props: NavbarProps) => {
                 </a>
                 {
                     !mobile && props.upperNameImgSrc &&
-                    <img id="upperName" className="mobile-invisible pointerCursor" src={props.resourcesParentSrc+props.upperNameImgSrc} alt="Image not found" />
+                    <img id="upperName" className="mobile-invisible pointerCursor" src={props.resourcesParentSrc+props.upperNameImgSrc} alt="not found" />
                 }
             </div>
 
