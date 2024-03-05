@@ -12,12 +12,16 @@ interface BodyProps {}
 
 export const Body = (props: BodyProps) => {
 	return (
-		<div className="daorffo-font-regular font-black unit-body">
+		<div className="daorffo-font-regular font-black" id="unit-body">
 			<Navbar 
-				logoDefaultSrc="resources/UnitPage/Logo/U1-Logo.png" 
-				logoDesktopSrc="resources/UnitPage/Logo/U1-Logo.png"
-				logoMobileSrc="resources/UnitPage/Logo/U1-Logo-mobile.png"
+				id="unit-navbar"
+				resourcesParentSrc="resources/UnitPage"
+				logoDefaultSrc="/Logo/U1-Logo.png" 
+				logoDesktopSrc="/Logo/U1-Logo.png"
+				logoMobileSrc="/Logo/U1-Logo-mobile.png"
 				logoLink="."
+				upperNameImgSrc="/Logo/U1-Logo-name.png"
+				theme="light"
 			/>
 
 			<div id="unit-main-page">

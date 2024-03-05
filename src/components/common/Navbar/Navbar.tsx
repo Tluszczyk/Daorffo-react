@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import './Navbar.scss'
 import './Navbar_desktop.scss'
@@ -9,6 +9,10 @@ import {onScrollTransform, resizeTransform, translateTransform} from '../../../c
 import {WrapperProps} from "../../../common/commonProps";
 
 interface NavbarProps extends WrapperProps {
+    id: string;
+
+    resourcesParentSrc: string;
+
     logoDefaultSrc: string;
     logoDesktopSrc?: string;
     logoMobileSrc?: string;
@@ -16,14 +20,16 @@ interface NavbarProps extends WrapperProps {
     navbarClassName?: string;
     
     logoLink?: string;
+    upperNameImgSrc?: string;
+    addLogoTransitions?: boolean;
 
-    theme?: "dark" | "light";
+    theme: "dark" | "light";
 
     transparent?: boolean;
 }
  
 const Navbar = (props: NavbarProps) => {
-    const [mobile, setMobile] = useState(false)
+    const [mobile, setMobile] = useState(window.innerWidth <= 768)
     const checkForMobile = () => setMobile(window.innerWidth <= 768);
     const [opened, setOpened] = useState(false);
 
@@ -39,31 +45,44 @@ const Navbar = (props: NavbarProps) => {
         upperContainerClass += " transparent";
     }
 
-    window.addEventListener('scroll', onScrollTransform.bind(null, 0, 500, [
-        {querySelector: "#upperLogoLink", transform: resizeTransform, TRANSFORM_PARAMETERS: [1,.5]},
-        {querySelector: "#upperLogoLink", transform: translateTransform, TRANSFORM_PARAMETERS: [0,250,"px",0,-50,"px"]},
-    ]));
+    useEffect(() => {
+        const transformLogoHandler = onScrollTransform.bind(null, 0, 500, [
+            {querySelector: "#upperLogoLink", transform: resizeTransform, TRANSFORM_PARAMETERS: [1,.5]},
+            {querySelector: "#upperLogoLink", transform: translateTransform, TRANSFORM_PARAMETERS: [0,250,"px",0,-50,"px"]},
+        ])
+      
+        if ((mobile ?? false) && (props.addLogoTransitions ?? false)) {
+            window.addEventListener('scroll', transformLogoHandler);
+        }
 
-    return <div id="navbar-wrapper" className={openedClassName} onClick={e=>{if(opened) setOpened(false)}}>
+        return () => window.removeEventListener('scroll', transformLogoHandler);
+      }, [mobile, props.addLogoTransitions]);
+
+    return <div id={props.id} className={`navbar-wrapper ${openedClassName} ${props.theme}`} onClick={e=>{if(opened) setOpened(false)}}>
         <div className={`upperContainer ${upperContainerClass}`}>
             { mobile &&
                 <div className={`hamburgerD hamburgerD-${openedClassName}`} onClick={() => setOpened(!opened)} >
-                    <img id="hamburger" src={`resources/MainPage/MainNavbar/Hamburger/icon-${opened ? 'active' : 'inactive'}.png`} alt="" />
+                    <img id="hamburger" src={props.resourcesParentSrc+`/Hamburger/icon-${opened ? 'active' : 'inactive'}.png`} alt="" />
                 </div>
             }
 
-            <a id="upperLogoLink" className="upperLogoD" href={props.logoLink}>
-                <img 
-                    id="upperLogo" 
-                    className="pointerCursor" 
-                    src={
-                        mobile ?
-                        (props.logoMobileSrc ?? props.logoDefaultSrc) :
-                        (props.logoDesktopSrc ?? props.logoDefaultSrc)
-                    } 
-                    alt=""
-                />
-            </a>
+            <div className="upperLogoD">
+                <a id="upperLogoLink" href={props.logoLink}>
+                    <img 
+                        id="upperLogo" 
+                        className="pointerCursor" 
+                        src={ props.resourcesParentSrc + (
+                            (mobile ?? false) ? 
+                            (props.logoMobileSrc ?? props.logoDefaultSrc) :
+                            (props.logoDesktopSrc ?? props.logoDefaultSrc)
+                        )} 
+                    />
+                </a>
+                {
+                    !mobile && props.upperNameImgSrc &&
+                    <img id="upperName" className="mobile-invisible pointerCursor" src={props.resourcesParentSrc+props.upperNameImgSrc} alt="Image not found" />
+                }
+            </div>
 
             <div className={`navbar ${navbarClass} mobile-nav-${openedClassName}`}>
                 { props.children }
