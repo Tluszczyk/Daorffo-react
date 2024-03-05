@@ -1,12 +1,11 @@
 import { useState, useEffect } from 'react'
-import { useNavigate } from 'react-router-dom';
 import { useBetween } from 'use-between';
 
-import MainNavbar from '../../MainPage/MainNavbar/MainNavbar'
+// import MainNavbar from '../../MainPage/MainNavbar/MainNavbar'
+import TrailerNavbar from '../TrailerNavbar/TrailerNavbar';
 import PictoNavbar from '../PictoNavbar/PictoNavbar';
 import GalleryView from '../GalleryView/GalleryView';
 
-import MainSubview from '../TrailerSubviews/MainSubview/MainSubview';
 import TrailerSubview0 from '../TrailerSubviews/TrailerSubview0/TrailerSubview0';
 import TrailerSubview1 from '../TrailerSubviews/TrailerSubview1/TrailerSubview1';
 import TrailerSubview2 from '../TrailerSubviews/TrailerSubview2/TrailerSubview2';
@@ -19,7 +18,7 @@ import './Body.scss'
 import './Body_desktop.scss'
 import './Body_mobile.scss'
 
-const useSharedLevel = () => useBetween(useLevel);
+const useSharedLevel = (minLevel: number, maxLevel: number) => useBetween(useLevel.bind(null, minLevel, maxLevel));
 
 export function Body() {
     const [mobile, setMobile] = useState(false)
@@ -28,21 +27,10 @@ export function Body() {
     window.addEventListener('resize', checkForMobile);
     window.addEventListener('load', checkForMobile);
 
-    const { decLevel, getLevel, setLevel } = useSharedLevel()
+    const { decLevel, getLevel, setLevel } = useSharedLevel(1,2)
 
     const [openedSection, setOpenedSection] = useState(0);
     const getOpenedSection = () => openedSection;
-
-    const goBackBase = "resources/TrailerPage/Body/backArrow/icon-"
-    const goBackInactive = goBackBase + "inactive.png"
-    const goBackAnactive = goBackBase + "active.png"
-    const [goBackSrc, setGoBackSrc] = useState(goBackInactive)
-    const navigate = useNavigate();
-
-    var goBackLambda = () => {
-        if (getLevel() === 0) navigate('/', {replace:true});
-        else decLevel()
-    }
 
     /**
      * You have to define how many files does Gallery resources directory contain
@@ -60,7 +48,7 @@ export function Body() {
      */
     var gallerySubgalleriesItemCount = [[2],[2,3],[2,3,2,3,2],[2],[2]]
 
-    var openedTrailerSubview = getLevel() === 0 ? MainSubview({}) : [
+    var openedTrailerSubview = [
         TrailerSubview0({onClick: mobile ? undefined : decLevel}),
         TrailerSubview1({onClick: mobile ? undefined : decLevel}),
         TrailerSubview2({onClick: mobile ? undefined : decLevel}),
@@ -74,25 +62,13 @@ export function Body() {
 
     return (
         <div className='daorffo-font-regular font-white' id='trailer-body'>
-            <MainNavbar 
+            <TrailerNavbar 
                 id='trailer-navbar'
                 resourcesParentSrc='resources/MainPage/MainNavbar'
                 className='desktop-invisible hide-upperLogoD' 
             />
 
             <div className={`trailer-layout level-${getLevel()}`}>
-
-                <div id='goBack' className='mobile-invisible trailer-layout-left' onClick={goBackLambda}>
-                    <div className='floatingDiv'>
-                        <img
-                            id="backArrow"
-                            alt='backarrow'
-                            src={goBackSrc}
-                            onMouseEnter={() => setGoBackSrc(goBackAnactive)}
-                            onMouseLeave={() => setGoBackSrc(goBackInactive)}
-                        />
-                    </div>
-                </div>
 
                 <PictoNavbar
                     className='trailer-layout-mid'
