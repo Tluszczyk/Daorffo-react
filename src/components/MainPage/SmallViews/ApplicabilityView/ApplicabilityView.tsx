@@ -7,7 +7,7 @@ import "./ApplicabilityView_mobile.css";
 const ApplicabilityView = () => 
     <View className="snap-scroll-center" id="applicabilityView">
         <div id="applicability">
-            <img id="applicationsI" src="resources/MainPage/SmallViews/ApplicabilityView/img.png" alt="" />
+            <img id="applicationsI" src="resources/MainPage/SmallViews/ApplicabilityView/img.png" alt="not found" />
             <div id="applicationsSpan">
                 <h3 className="sectionH">Our SUT is always leveled!</h3>
                 <span className="sectionP">

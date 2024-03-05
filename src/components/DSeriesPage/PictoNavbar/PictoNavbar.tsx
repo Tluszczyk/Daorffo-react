@@ -42,7 +42,7 @@ const PictoNavbar = (props: PictoNavbarProps) => {
                 <div className="logoD-wrapper">
                     <div className="logoD">
                         <Link to="/" id="logo-item">
-                            <img id="logo" alt="" />
+                            <img id="logo" alt="not found" />
                         </Link>
                     </div>
                 </div>

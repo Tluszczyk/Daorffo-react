@@ -8,7 +8,7 @@ interface MainSubviewProps {}
  
 const MainSubview = (props: MainSubviewProps) => {
     var overviewSpan = <FloatingSpan className="trailer-layout-mid" id="trailer-subview-main-span-0" key={0}>
-        <img id="trailer-subview-main-span-0-logo" src="resources/TrailerPage/TrailerSubviews/MainSubview/img-0.png" alt="" />
+        <img id="trailer-subview-main-span-0-logo" src="resources/TrailerPage/TrailerSubviews/MainSubview/img-0.png" alt="not found" />
         <p id="trailer-subview-main-span-0-paragraph">
             D1 is our main product and a fulfillment of our dream, that we have been working on for past couple of years. <br/><br/>
 
@@ -20,7 +20,7 @@ const MainSubview = (props: MainSubviewProps) => {
 
             Take a look around. If you have more questions, contact us!
         </p>
-        <img id="trailer-subview-main-span-0-trailerimg" alt="" src="resources/TrailerPage/TrailerSubviews/MainSubview/img-1.png" />
+        <img id="trailer-subview-main-span-0-trailerimg" alt="not found" src="resources/TrailerPage/TrailerSubviews/MainSubview/img-1.png" />
     </FloatingSpan>
 
     return [overviewSpan]

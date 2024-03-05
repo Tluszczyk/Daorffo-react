@@ -92,7 +92,7 @@ const FloatingNavbarItem = (props: FloatingNavbarItemProps) => {
 
     return (
         <div className={`floating-navbar-item ${props.className}`} id={props.id} style={props.style} onClick={handleClick}>
-            <img className="floating-navbar-item-icon" src={iconSrc} alt="" />
+            <img className="floating-navbar-item-icon" src={iconSrc} alt="not found" />
         </div>
     );
 };
