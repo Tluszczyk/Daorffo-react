@@ -72,7 +72,11 @@ export function Body() {
 
     return (
         <div className='daorffo-font-regular font-white' id='trailer-body'>
-            <MainNavbar className='desktop-invisible hide-upperLogoD'></MainNavbar>
+            <MainNavbar 
+                id='trailer-navbar'
+                resourcesParentSrc='resources/MainPage/MainNavbar'
+                className='desktop-invisible hide-upperLogoD' 
+            />
 
             <div className={`trailer-layout level-${getLevel()}`}>
 

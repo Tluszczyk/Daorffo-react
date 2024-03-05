@@ -10,6 +10,9 @@ import Navbar from "../../common/Navbar/Navbar";
 import { WrapperProps } from '../../../common/commonProps';
 
 interface MainNavbarProps extends WrapperProps {
+    id: string;
+    resourcesParentSrc: string;
+
     showroomViewScroll?: () => void;
     whyViewScroll?: () => void;
     contactViewScroll?: () => void;
@@ -42,8 +45,8 @@ function MainNavbar(props: MainNavbarProps) {
 
     return (
         <Navbar 
-            id="main-navbar"
-            resourcesParentSrc='resources/MainPage/MainNavbar'
+            id={props.id}
+            resourcesParentSrc={props.resourcesParentSrc}
             className={props.className}
             logoDefaultSrc='/Logo/icon-inactive.png' 
             logoLink='.' 

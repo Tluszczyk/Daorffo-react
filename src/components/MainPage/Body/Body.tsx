@@ -30,6 +30,8 @@ export function Body() {
     return (
         <div className='daorffo-font-regular font-white' id='main-body'>
             <MainNavbar
+                id='main-navbar'
+                resourcesParentSrc='resources/MainPage/MainNavbar'
                 showroomViewScroll={showroomViewScroll}
                 whyViewScroll={whyViewScroll}
                 contactViewScroll={contactViewScroll}

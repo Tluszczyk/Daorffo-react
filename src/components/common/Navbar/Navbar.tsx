@@ -48,7 +48,7 @@ const Navbar = (props: NavbarProps) => {
     useEffect(() => {
         const transformLogoHandler = onScrollTransform.bind(null, 0, 500, [
             {querySelector: "#upperLogoLink", transform: resizeTransform, TRANSFORM_PARAMETERS: [1,.5]},
-            {querySelector: "#upperLogoLink", transform: translateTransform, TRANSFORM_PARAMETERS: [0,250,"px",0,-50,"px"]},
+            {querySelector: "#upperLogoLink", transform: translateTransform, TRANSFORM_PARAMETERS: [0,50,"%",0,-50,"%"]},
         ])
       
         if ((mobile ?? false) && (props.addLogoTransitions ?? false)) {
