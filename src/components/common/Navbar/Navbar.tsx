@@ -76,6 +76,7 @@ const Navbar = (props: NavbarProps) => {
                             (props.logoMobileSrc ?? props.logoDefaultSrc) :
                             (props.logoDesktopSrc ?? props.logoDefaultSrc)
                         )} 
+                        alt="not found"
                     />
                 </a>
                 {
