@@ -1,3 +1,31 @@
+.dark {
+    & .upperContainer:not(.transparent) {
+        background-color: black;
+    }
+
+    & .upperContainer.transparent {
+        background-color: transparent;
+    }
+
+    & .upperLogoD {
+        border-bottom: solid 2px white;
+    }
+}
+
+.light {
+    & .upperContainer:not(.transparent) {
+        background-color: white;
+    }
+
+    & .upperContainer.transparent {
+        background-color: transparent;
+    }
+
+    & .upperLogoD {
+        border-bottom: solid 2px black;
+    }
+}
+
 .upperContainer {
     width: 100%;
   
@@ -11,14 +39,6 @@
     align-items: center;
   
     z-index: 11;
-
-    &:not(.transparent) {
-        background-color: #000000;
-    }
-
-    &.transparent {
-        background-color: transparent;
-    }
 }
   
 .upperLogoD {
@@ -30,11 +50,21 @@
 
     align-self: center;
     align-items: center;
-
-    /* TODO: Make it a variable */
-    border-bottom: 2px solid white;
 }
   
 .hide-upperLogoD > .upperLogoD {
     display: none;
+}
+
+.upperLogo {
+    max-height: 100%;
+    object-fit: contain;
+}
+
+#upperLogoLink {
+    height: 100%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

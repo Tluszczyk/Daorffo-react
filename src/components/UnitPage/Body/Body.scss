@@ -1,10 +1,10 @@
 @use "../../../common/colors";
 
-body:has(.unit-body) {
+body:has(#unit-body) {
 	background-color: colors.$light-theme-main;
 }
 
-.unit-body {
+#unit-body {
 	overflow-x: hidden;
 
 	background-color: colors.$light-theme-main;

@@ -68,6 +68,8 @@ export function Body() {
         TrailerSubview4({onClick: mobile ? undefined : decLevel})
     ][openedSection]
 
+    window.scrollTo({top: 0, behavior: 'smooth'})
+
     return (
         <div className='daorffo-font-regular font-white' id='trailer-body'>
             <MainNavbar className='desktop-invisible hide-upperLogoD'></MainNavbar>

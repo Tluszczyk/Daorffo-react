@@ -1,6 +1,6 @@
 @use 'src/common/colors';
 
-.main-navbar * { text-align: center; }
+#main-navbar * { text-align: center; }
 .pointerCursor { cursor: pointer; }
 .drop-item:hover { color: colors.$dark-theme-secondary; }
 .nav-item:hover { color: colors.$dark-theme-secondary }
