@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom';
 import { useBetween } from 'use-between';
 
@@ -68,7 +68,9 @@ export function Body() {
         TrailerSubview4({onClick: mobile ? undefined : decLevel})
     ][openedSection]
 
-    window.scrollTo({top: 0, behavior: 'smooth'})
+    useEffect(() => {
+        window.scrollTo({top: 0, behavior: 'smooth'})
+    }, [openedSection])
 
     return (
         <div className='daorffo-font-regular font-white' id='trailer-body'>
