@@ -62,7 +62,7 @@ const Navbar = (props: NavbarProps) => {
         <div className={`upperContainer ${upperContainerClass}`}>
             { mobile &&
                 <div className={`hamburgerD hamburgerD-${openedClassName}`} onClick={() => setOpened(!opened)} >
-                    <img id="hamburger" src={props.resourcesParentSrc+`/Hamburger/icon-${opened ? 'active' : 'inactive'}.png`} alt="" />
+                    <img id="hamburger" src={props.resourcesParentSrc+`/Hamburger/icon-${opened ? 'active' : 'inactive'}.png`} alt="not found" />
                 </div>
             }
 
