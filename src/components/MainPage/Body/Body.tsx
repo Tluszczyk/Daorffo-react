@@ -48,7 +48,7 @@ export function Body(props: MainBodyProps) {
 
     useEffect(() => {
         document.title = props.pageTitle;
-    }, []);
+    }, [props.pageTitle]);
 
     return (
         <div className='daorffo-font-regular font-white' id='main-body'>

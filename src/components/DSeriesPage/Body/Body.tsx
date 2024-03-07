@@ -66,7 +66,7 @@ export function Body(props: TrailerBodyProps) {
 
     useEffect(() => {
         document.title = props.pageTitle;
-    }, []);
+    }, [props.pageTitle]);
 
     return (
         <div className='daorffo-font-regular font-white' id='trailer-body'>

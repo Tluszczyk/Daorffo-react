@@ -20,7 +20,7 @@ export const Body = (props: ShopBodyProps) => {
 	
 	useEffect(() => {
 		document.title = props.pageTitle;
-	}, []);
+	}, [props.pageTitle]);
 
 	return (
 		<div id="shop-body" className="daorffo-font-regular font-white">

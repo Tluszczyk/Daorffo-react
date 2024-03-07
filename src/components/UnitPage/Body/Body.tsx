@@ -18,7 +18,7 @@ export const Body = (props: UnitBodyProps) => {
 
 	useEffect(() => {
         document.title = props.pageTitle;
-    }, []);
+    }, [props.pageTitle]);
 	
 	return (
 		<div className="daorffo-font-regular font-black" id="unit-body">
