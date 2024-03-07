@@ -9,10 +9,10 @@ import {Body as Unit} from './components/UnitPage/Body/Body'
 
 const App = () => <Router basename={process.env.PUBLIC_URL}>
     <Routes>
-        <Route path='/' element={<Main />} />
-        <Route path='dSeries' element={<DSeries />} />
-        <Route path='shop' element={<Shop />} />
-        <Route path='unit' element={<Unit />} />
+        <Route path='/' element={<Main pageTitle='Da orffo'/>} />
+        <Route path='dSeries' element={<DSeries pageTitle='Da orffo | DSeries'/>} />
+        <Route path='shop' element={<Shop pageTitle='Da orffo | Shop'/>} />
+        <Route path='unit' element={<Unit pageTitle='Da orffo | USeries'/>} />
     </Routes>
 </Router>
 

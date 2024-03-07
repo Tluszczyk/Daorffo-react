@@ -20,7 +20,11 @@ import './Body_mobile.scss'
 
 const useSharedLevel = () => useBetween(useLevel);
 
-export function Body() {
+interface TrailerBodyProps {
+    pageTitle: string
+}
+
+export function Body(props: TrailerBodyProps) {
     const [mobile, setMobile] = useState(false)
     const checkForMobile = () => setMobile(window.innerWidth <= 768);
 
@@ -59,6 +63,10 @@ export function Body() {
     useEffect(() => {
         window.scrollTo({top: 0, behavior: 'smooth'})
     }, [openedSection])
+
+    useEffect(() => {
+        document.title = props.pageTitle;
+    }, []);
 
     return (
         <div className='daorffo-font-regular font-white' id='trailer-body'>

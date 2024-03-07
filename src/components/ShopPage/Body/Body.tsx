@@ -1,4 +1,5 @@
 // modules
+import { useEffect } from "react";
 
 // components
 import Navbar from "../../common/Navbar/Navbar";
@@ -10,11 +11,17 @@ import "./Body.scss";
 import "./Body_desktop.scss";
 import "./Body_mobile.scss";
 
-interface BodyProps {}
+interface ShopBodyProps {
+    pageTitle: string
+}
 
-export const Body = (props: BodyProps) => {
+export const Body = (props: ShopBodyProps) => {
 	window.scrollTo({top: 0, behavior: 'smooth'})
 	
+	useEffect(() => {
+		document.title = props.pageTitle;
+	}, []);
+
 	return (
 		<div id="shop-body" className="daorffo-font-regular font-white">
 			<Navbar 

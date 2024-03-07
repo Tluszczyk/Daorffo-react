@@ -17,7 +17,11 @@ import SummarisingView from '../SmallViews/SummarisingView/SummarisingView';
 import ImagesView from '../Views/ImagesView/ImagesView';
 import ContactView from '../Views/ContactView/ContactView';
 
-export function Body() {
+interface MainBodyProps {
+    pageTitle: string
+}
+
+export function Body(props: MainBodyProps) {
     const [urlParameter] = useState(window.location.href.split('#')[1] ?? '');
 
     const showroomViewRef = useRef<null | HTMLDivElement>(null);
@@ -42,6 +46,9 @@ export function Body() {
         }
     }, [urlParameter, showroomViewScroll, whyViewScroll, contactViewScroll])
 
+    useEffect(() => {
+        document.title = props.pageTitle;
+    }, []);
 
     return (
         <div className='daorffo-font-regular font-white' id='main-body'>

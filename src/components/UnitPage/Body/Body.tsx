@@ -1,4 +1,5 @@
 // modules
+import { useEffect } from "react";
 
 // components
 
@@ -8,10 +9,16 @@ import "./Body.scss";
 import "./Body_desktop.scss";
 import "./Body_mobile.scss";
 
-interface BodyProps {}
+interface UnitBodyProps {
+    pageTitle: string
+}
 
-export const Body = (props: BodyProps) => {
+export const Body = (props: UnitBodyProps) => {
 	window.scrollTo({top: 0, behavior: 'smooth'})
+
+	useEffect(() => {
+        document.title = props.pageTitle;
+    }, []);
 	
 	return (
 		<div className="daorffo-font-regular font-black" id="unit-body">
