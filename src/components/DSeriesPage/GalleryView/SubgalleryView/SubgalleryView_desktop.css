@@ -4,14 +4,4 @@
         flex-direction: column;
         align-items: center;
     }
-
-    .gallery-item {
-        transition: opacity .5s ease-in-out;
-
-        opacity: .7;
-
-        &:hover {
-            opacity: 1;
-        }
-    }
 }
