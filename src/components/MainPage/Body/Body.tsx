@@ -1,4 +1,4 @@
-import React, { RefObject, useRef } from 'react'
+import { useState, RefObject, useRef, useEffect } from 'react'
 
 import './Body_desktop.scss'
 import './Body.scss'
@@ -18,16 +18,30 @@ import ImagesView from '../Views/ImagesView/ImagesView';
 import ContactView from '../Views/ContactView/ContactView';
 
 export function Body() {
+    const [urlParameter] = useState(window.location.href.split('#')[1] ?? '');
+
     const showroomViewRef = useRef<null | HTMLDivElement>(null);
     const whyViewRef = useRef<null | HTMLDivElement>(null);
     const contactViewRef = useRef<null | HTMLDivElement>(null); 
 
     const buildScroll = (ref: RefObject<null | HTMLDivElement>) => () => ref.current?.scrollIntoView({behavior: "smooth"});
+
     const showroomViewScroll    = buildScroll(showroomViewRef);
     const whyViewScroll         = buildScroll(whyViewRef);
     const contactViewScroll     = buildScroll(contactViewRef);
-
+    
     window.scrollTo({top: 0, behavior: 'smooth'})
+    
+    useEffect(() => {
+        if (urlParameter === 'Showroom') {
+            showroomViewScroll();
+        } else if (urlParameter === 'Why') {
+            whyViewScroll();
+        } else if (urlParameter === 'Contact') {
+            contactViewScroll();
+        }
+    }, [urlParameter, showroomViewScroll, whyViewScroll, contactViewScroll])
+
 
     return (
         <div className='daorffo-font-regular font-white' id='main-body'>

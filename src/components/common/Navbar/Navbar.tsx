@@ -25,6 +25,9 @@ interface NavbarProps extends WrapperProps {
 
     theme: "dark" | "light";
 
+    hamburgerAlwaysVisible?: boolean;
+    desktopDirection?: "horisontal" | "vertical";
+
     transparent?: boolean;
 }
  
@@ -60,7 +63,7 @@ const Navbar = (props: NavbarProps) => {
 
     return <div id={props.id} className={`navbar-wrapper ${openedClassName} ${props.theme}`} onClick={e=>{if(opened) setOpened(false)}}>
         <div className={`upperContainer ${upperContainerClass}`}>
-            { mobile &&
+            { ((props.hamburgerAlwaysVisible ?? false) || mobile) &&
                 <div className={`hamburgerD hamburgerD-${openedClassName}`} onClick={() => setOpened(!opened)} >
                     <img id="hamburger" src={props.resourcesParentSrc+`/Hamburger/icon-${opened ? 'active' : 'inactive'}.png`} alt="not found" />
                 </div>
@@ -85,7 +88,7 @@ const Navbar = (props: NavbarProps) => {
                 }
             </div>
 
-            <div className={`navbar ${navbarClass} mobile-nav-${openedClassName}`}>
+            <div className={`navbar ${navbarClass} nav-${openedClassName} desktop-nav-${props.desktopDirection}`}>
                 { props.children }
             </div>
         </div>

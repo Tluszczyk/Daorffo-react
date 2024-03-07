@@ -1,30 +1,30 @@
-import {useState} from 'react';
-import { Link } from 'react-router-dom';
-import SoonInfoTip from '../../common/SoonInfoTip/SoonInfoTip';
+// modules
+import { useState } from "react";
 
-import './MainNavbar.scss';
-import './MainNavbar_mobile.scss';
-import './MainNavbar_desktop.scss';
-
+// components
+import { Link } from "react-router-dom";
+import SoonInfoTip from "../../common/SoonInfoTip/SoonInfoTip";
+import { WrapperProps } from "../../../common/commonProps";
 import Navbar from "../../common/Navbar/Navbar";
-import { WrapperProps } from '../../../common/commonProps';
 
-interface MainNavbarProps extends WrapperProps {
-    id: string;
+// styles
+import "./TrailerNavbar.scss";
+import "./TrailerNavbar_desktop.scss";
+import "./TrailerNavbar_mobile.scss";
+
+interface TrailerNavbarProps extends WrapperProps {
+	id: string;
     resourcesParentSrc: string;
 
-    showroomViewScroll?: () => void;
-    whyViewScroll?: () => void;
-    contactViewScroll?: () => void;
     transparent?: boolean;
 }
 
-function MainNavbar(props: MainNavbarProps) {
+const TrailerNavbar = (props: TrailerNavbarProps) => {
     const [openedDropdown, setOpenedDropdown] = useState(false);
 
     var dropItRef = 
         <div className={`drop-content ${openedDropdown ? 'nav-dropdown-opened' : 'nav-dropdown-closed'}`} id="drop-it" >
-            <Link className="drop-item pointerCursor" to="#Why" onClick={props.whyViewScroll} > why? </Link>
+            <div className="drop-item pointerCursor" id="goToWhy"> why? </div>
             <Link className='drop-item' to='/'> <SoonInfoTip> mission </SoonInfoTip> </Link>
             <Link className="drop-item" to='/'> <SoonInfoTip> team </SoonInfoTip> </Link>
             <Link className="drop-item" to='/'> <SoonInfoTip> story </SoonInfoTip> </Link>
@@ -43,9 +43,9 @@ function MainNavbar(props: MainNavbarProps) {
             {dropItRef}
         </div>
 
-    return (
+	return (
         <Navbar 
-            id={props.id}
+            id="trailer-navbar"
             resourcesParentSrc={props.resourcesParentSrc}
             className={props.className}
             logoDefaultSrc='/Logo/icon-inactive.png' 
@@ -53,15 +53,17 @@ function MainNavbar(props: MainNavbarProps) {
             addLogoTransitions
             transparent={props.transparent}
             theme="dark"
-            desktopDirection='horisontal'
+
+            desktopDirection="vertical"
+            hamburgerAlwaysVisible
         >
             {navDropdown}
-            <Link className="nav-item pointerCursor" id="goToTrailers" to="#Showroom" onClick={props.showroomViewScroll}> trailers </Link>
+            <Link className="nav-item pointerCursor" to="/#Showroom" > trailers </Link>
             <Link className="nav-item" to='shop'> shop </Link>
             <Link className="nav-item" to='/'> <SoonInfoTip> adventure </SoonInfoTip> </Link>
-            <Link className="nav-item scrollDown pointerCursor" to="#Contact" onClick={props.contactViewScroll}> contact </Link>
+            <Link className="nav-item scrollDown pointerCursor" to="/#Contact" > contact </Link>
         </Navbar>
     )
-}
+};
 
-export default MainNavbar
+export default TrailerNavbar;

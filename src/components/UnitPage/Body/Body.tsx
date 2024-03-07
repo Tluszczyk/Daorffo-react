@@ -24,6 +24,9 @@ export const Body = (props: BodyProps) => {
 				logoLink="."
 				upperNameImgSrc="/Logo/U1-Logo-name.png"
 				theme="light"
+
+				hamburgerAlwaysVisible
+				desktopDirection="vertical"
 			/>
 
 			<div id="unit-main-page">
@@ -67,7 +70,7 @@ export const Body = (props: BodyProps) => {
 						<div id="u1-parameters-description-image-container">
 							<img id="u1-parameters-description-image" src="resources/UnitPage/Parameters/U1-render-side.png" alt="Not found" />
 						</div>
-						<div className="u1-parameters-description-parameters-horizontal-container">
+						<div className="u1-parameters-description-parameters-horisontal-container">
 							<div className="u1-parameters-description-parameters-vertical-container">
 								<div className="u1-parameters-description-parameters">
 									<div className="u1-parameters-description-parameters-header"><b>Trailer Weight net:</b></div>

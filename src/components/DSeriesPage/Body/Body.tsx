@@ -65,7 +65,7 @@ export function Body() {
             <TrailerNavbar 
                 id='trailer-navbar'
                 resourcesParentSrc='resources/MainPage/MainNavbar'
-                className='desktop-invisible hide-upperLogoD' 
+                className='hide-upperLogoD' 
             />
 
             <div className={`trailer-layout level-${getLevel()}`}>
