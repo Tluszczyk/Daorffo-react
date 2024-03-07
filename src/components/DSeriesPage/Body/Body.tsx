@@ -1,12 +1,11 @@
-import { useState } from 'react'
-import { useNavigate } from 'react-router-dom';
+import { useState, useEffect } from 'react'
 import { useBetween } from 'use-between';
 
-import MainNavbar from '../../MainPage/MainNavbar/MainNavbar'
+// import MainNavbar from '../../MainPage/MainNavbar/MainNavbar'
+import TrailerNavbar from '../TrailerNavbar/TrailerNavbar';
 import PictoNavbar from '../PictoNavbar/PictoNavbar';
 import GalleryView from '../GalleryView/GalleryView';
 
-import MainSubview from '../TrailerSubviews/MainSubview/MainSubview';
 import TrailerSubview0 from '../TrailerSubviews/TrailerSubview0/TrailerSubview0';
 import TrailerSubview1 from '../TrailerSubviews/TrailerSubview1/TrailerSubview1';
 import TrailerSubview2 from '../TrailerSubviews/TrailerSubview2/TrailerSubview2';
@@ -33,17 +32,6 @@ export function Body() {
     const [openedSection, setOpenedSection] = useState(0);
     const getOpenedSection = () => openedSection;
 
-    const goBackBase = "resources/TrailerPage/Body/backArrow/icon-"
-    const goBackInactive = goBackBase + "inactive.png"
-    const goBackAnactive = goBackBase + "active.png"
-    const [goBackSrc, setGoBackSrc] = useState(goBackInactive)
-    const navigate = useNavigate();
-
-    var goBackLambda = () => {
-        if (getLevel() === 0) navigate('/', {replace:true});
-        else decLevel()
-    }
-
     /**
      * You have to define how many files does Gallery resources directory contain
      * for example if the gallery directory looks like this
@@ -53,14 +41,14 @@ export function Body() {
      *      GalleryItem-0          GalleryItem-1
      *           |                /             \
      *       Subgallery-0      Subgallery-0    Subgallery-1
-     *     /    |   |   \       /       \       /   |   \
-     *     0    1   2    3      0        1     0    1    2
+     *      /   |   |   \       /       \       /   |   \
+     *     0    1   2    3     0         1     0    1    2
      * 
      * Then gallerySubgalleriesItemCount = [[4],[2,3]]
      */
     var gallerySubgalleriesItemCount = [[2],[2,3],[2,3,2,3,2],[2],[2]]
 
-    var openedTrailerSubview = getLevel() === 0 ? MainSubview({}) : [
+    var openedTrailerSubview = [
         TrailerSubview0({onClick: mobile ? undefined : decLevel}),
         TrailerSubview1({onClick: mobile ? undefined : decLevel}),
         TrailerSubview2({onClick: mobile ? undefined : decLevel}),
@@ -68,29 +56,19 @@ export function Body() {
         TrailerSubview4({onClick: mobile ? undefined : decLevel})
     ][openedSection]
 
-    window.scrollTo({top: 0, behavior: 'smooth'})
+    useEffect(() => {
+        window.scrollTo({top: 0, behavior: 'smooth'})
+    }, [openedSection])
 
     return (
         <div className='daorffo-font-regular font-white' id='trailer-body'>
-            <MainNavbar 
+            <TrailerNavbar 
                 id='trailer-navbar'
                 resourcesParentSrc='resources/MainPage/MainNavbar'
-                className='desktop-invisible hide-upperLogoD' 
+                className='hide-upperLogoD' 
             />
 
             <div className={`trailer-layout level-${getLevel()}`}>
-
-                <div id='goBack' className='mobile-invisible trailer-layout-left' onClick={goBackLambda}>
-                    <div className='floatingDiv'>
-                        <img
-                            id="backArrow"
-                            alt='backarrow'
-                            src={goBackSrc}
-                            onMouseEnter={() => setGoBackSrc(goBackAnactive)}
-                            onMouseLeave={() => setGoBackSrc(goBackInactive)}
-                        />
-                    </div>
-                </div>
 
                 <PictoNavbar
                     className='trailer-layout-mid'

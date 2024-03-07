@@ -1,8 +1,8 @@
 @media (min-width: 768px) {
-    .upperLogoD { justify-content: flex-start; }
-    #upperLogo { height: 100px; }
+    #main-navbar .upperLogoD { justify-content: flex-start; }
+    #main-navbar #upperLogo { height: 100px; }
 
-    .navbar {
+    #main-navbar.navbar {
         position: relative;
 
         display: flex;
@@ -16,52 +16,7 @@
         background-color: rgba(105, 105, 105, 0.5);
     }
 
-    .nav-item {
-        text-decoration: none;
-        margin: 20px;
-
-        color: white;
-    }
-
-    .nav-dropdown {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-
-        align-items: baseline;
-        margin: 0;
-    }
-
-    .drop-item {
-        margin: -4px 0 15px 0px;
-        text-decoration: none;
-
-        color: white;
-    }
-
-    .drop-content {
-        /* position: absolute; */
-
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-
-        border-left: 2px solid white;
-        padding-left: 5px;
-
-        transition: height .5s ease;
-
-        overflow: hidden;
-    }
-
-    #drop-what {
-        white-space: nowrap;
-        overflow: visible;
-
-        cursor: pointer;
-    }
-
-    .opened {
+    #main-navbar.opened {
         height: calc(5 * (-4px + 1em + 15px) - 5px );
         margin-bottom: 25px;
     } /* Trochę hardcoded, ale działa */

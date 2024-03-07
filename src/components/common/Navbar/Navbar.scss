@@ -68,3 +68,146 @@
     justify-content: center;
     align-items: center;
 }
+
+// From Mobile
+
+.navbar {
+    align-items: center;
+}
+
+.nav-item {
+    text-decoration: none;
+    margin: 20px;
+
+    color: white;
+}
+
+.nav-dropdown {
+    display: flex;
+    justify-content: flex-start;
+
+    .desktop-nav-vertical & {
+        flex-direction: column;
+    }
+
+    .desktop-nav-horizontal & {
+        flex-direction: row;
+    }
+
+    align-items: flex-start;
+    margin: 0;
+}
+
+.drop-item {
+    margin: -4px 0 15px 0px;
+    text-decoration: none;
+
+    color: white;
+}
+
+.drop-content {
+    /* position: absolute; */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    border-left: 2px solid white;
+    padding-left: 5px;
+
+    transition: height .5s ease;
+
+    overflow: hidden;
+}
+
+#drop-what {
+    white-space: nowrap;
+    overflow: visible;
+
+    cursor: pointer;
+}
+
+
+.desktop-nav-vertical.nav-closed {
+    width: 0;
+    overflow-x: hidden;
+}
+
+.desktop-nav-vertical.nav-opened { 
+    width: 50vw; 
+}
+
+.desktop-nav-vertical.nav-opened {
+    .light & {
+        border-right: 1px solid var(--blue);
+        background-color: var(--grey);
+    }
+
+    .dark & {
+        border-right: 1px solid var(--orange);
+        background-color: var(--grey);
+    }
+}
+
+.hamburgerD {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    align-items: center;
+
+    height: 100px;
+    width: 100px;
+
+    z-index: 2;
+}
+
+.hamburgerD-closed {
+    left: 0;
+    transition: 500ms left ease;
+}
+
+.hamburgerD-opened {
+    left: calc(25vw - 50px);
+    transition: 500ms left ease;
+}
+
+#hamburger {
+    height: 1.5em;
+    width: auto;
+
+    object-fit: cover;
+
+    margin-left: -10px;
+}
+
+.navbar-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    height: 100vh;
+    width: 100vw;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    z-index: 1000;
+
+    &.opened {
+        background-color: #5e5e5e70;
+        width: 100vw;
+        transition: background-color 700ms ease;
+    }
+
+    &.closed {
+        background-color: #5e5e5e00;
+        width: 0;
+        transition: background-color 700ms ease, width 700ms ease 700ms;
+    }
+}
