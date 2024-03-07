@@ -25,6 +25,9 @@ const PictoNavbar = (props: PictoNavbarProps) => {
     const { setLevel, getLevel } = useSharedLevel();
 
     const [logoHovered, setLogoHovered] = useState(false);
+    const [leftArrowHovered, setLeftArrowHovered] = useState(false);
+    const [rightArrowHovered, setRightArrowHovered] = useState(false);
+
     const [mobile, setMobile] = useState(window.innerWidth <= 768)
     const checkForMobile = () => setMobile(window.innerWidth <= 768);
 
@@ -45,11 +48,20 @@ const PictoNavbar = (props: PictoNavbarProps) => {
         active={getLevel() > 0 && index === props.getOpenedSection()}
     />)
 
-    var logoSrc = mobile ?
-        "resources/TrailerPage/PictoNavbar/Logo/Mobile/icon-inactive.png" :
-        logoHovered ?
-            "resources/TrailerPage/PictoNavbar/Logo/Desktop/icon-inactive.png" :
-            "resources/TrailerPage/PictoNavbar/Logo/Desktop/icon-active.png"
+    var logoSrc = "resources/TrailerPage/PictoNavbar/Logo/" + (mobile ? "Mobile/" : "Desktop/") + "icon-" + (logoHovered ? "active" : "inactive") + ".png"
+
+    var leftArrowSrc = "resources/TrailerPage/PictoNavbar/Arrows/left-" + (leftArrowHovered ? "active" : "inactive") + ".png"
+    var rightArrowSrc = "resources/TrailerPage/PictoNavbar/Arrows/right-" + (rightArrowHovered ? "active" : "inactive") + ".png"
+
+    var prevSection = () => {
+        var prevSection = (pictoItemsDescriptions.length + props.getOpenedSection() - 1) % pictoItemsDescriptions.length
+        props.setOpenedSection(prevSection)
+    }
+
+    var nextSection = () => {
+        var nextSection = (props.getOpenedSection() + 1) % pictoItemsDescriptions.length
+        props.setOpenedSection(nextSection)
+    }
 
     return <>
         <div className={`level-${getLevel()} ${props.className} upper-container ${props.transparent}`}>
@@ -67,7 +79,21 @@ const PictoNavbar = (props: PictoNavbarProps) => {
 
                 <div className="pictogramsD-wrapper">
                     <div className="pictogramsD">
+                        <img 
+                            id="picto-nav-arrow-left" className="picto-navbar-arrow" 
+                            src={leftArrowSrc} alt="not found" 
+                            onMouseEnter={() => setLeftArrowHovered(true)} onMouseLeave={() => setLeftArrowHovered(false)}
+                            onClick={prevSection}
+                        />
+
                         {pictoItems}
+                        
+                        <img 
+                            id="picto-nav-arrow-right" className="picto-navbar-arrow" 
+                            src={rightArrowSrc} alt="not found" 
+                            onMouseEnter={() => setRightArrowHovered(true)} onMouseLeave={() => setRightArrowHovered(false)}
+                            onClick={nextSection}
+                        />
                     </div>
                 </div>
             </div>

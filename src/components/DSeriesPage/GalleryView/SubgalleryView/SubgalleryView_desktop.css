@@ -1,4 +1,10 @@
 @media (min-width: 768px) {
+    .subgallery {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
     .gallery-item {
         transition: opacity .5s ease-in-out;
 

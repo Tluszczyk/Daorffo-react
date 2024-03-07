@@ -6,3 +6,7 @@
 .upper-container {
     z-index: 1;
 }
+
+.picto-navbar-arrow {
+    display: none;
+}
