@@ -18,7 +18,7 @@ import './Body.scss'
 import './Body_desktop.scss'
 import './Body_mobile.scss'
 
-const useSharedLevel = (minLevel: number, maxLevel: number) => useBetween(useLevel.bind(null, minLevel, maxLevel));
+const useSharedLevel = () => useBetween(useLevel);
 
 export function Body() {
     const [mobile, setMobile] = useState(false)
@@ -27,7 +27,7 @@ export function Body() {
     window.addEventListener('resize', checkForMobile);
     window.addEventListener('load', checkForMobile);
 
-    const { decLevel, getLevel, setLevel } = useSharedLevel(1,2)
+    const { decLevel, getLevel, setLevel } = useSharedLevel()
 
     const [openedSection, setOpenedSection] = useState(0);
     const getOpenedSection = () => openedSection;
@@ -41,8 +41,8 @@ export function Body() {
      *      GalleryItem-0          GalleryItem-1
      *           |                /             \
      *       Subgallery-0      Subgallery-0    Subgallery-1
-     *     /    |   |   \       /       \       /   |   \
-     *     0    1   2    3      0        1     0    1    2
+     *      /   |   |   \       /       \       /   |   \
+     *     0    1   2    3     0         1     0    1    2
      * 
      * Then gallerySubgalleriesItemCount = [[4],[2,3]]
      */

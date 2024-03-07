@@ -19,10 +19,10 @@ interface PictoNavbarProps extends StylableProps{
     transparent?: boolean;
 }
 
-const useSharedLevel = (minLevel: number, maxLevel: number) => useBetween(useLevel.bind(null, minLevel, maxLevel));
+const useSharedLevel = () => useBetween(useLevel);
  
 const PictoNavbar = (props: PictoNavbarProps) => {
-    const { setLevel, getLevel } = useSharedLevel(1,2);
+    const { setLevel, getLevel } = useSharedLevel();
 
     const [logoHovered, setLogoHovered] = useState(false);
     const [mobile, setMobile] = useState(window.innerWidth <= 768)
