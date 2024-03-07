@@ -34,7 +34,12 @@ interface NavbarProps extends WrapperProps {
 const Navbar = (props: NavbarProps) => {
     const [mobile, setMobile] = useState(window.innerWidth <= 768)
     const checkForMobile = () => setMobile(window.innerWidth <= 768);
+    
     const [opened, setOpened] = useState(false);
+    const [hamburgerHovered, setHamburgerHovered] = useState(false);
+    
+    const hamburgerHoverHandler = () => setHamburgerHovered(true);
+    const hamburgerUnhoverHandler = () => setHamburgerHovered(false);
 
     window.addEventListener('resize', checkForMobile);
     window.addEventListener('load', checkForMobile);
@@ -64,8 +69,8 @@ const Navbar = (props: NavbarProps) => {
     return <div id={props.id} className={`navbar-wrapper ${openedClassName} ${props.theme}`} onClick={e=>{if(opened) setOpened(false)}}>
         <div className={`upperContainer ${upperContainerClass}`}>
             { ((props.hamburgerAlwaysVisible ?? false) || mobile) &&
-                <div className={`hamburgerD hamburgerD-${openedClassName}`} onClick={() => setOpened(!opened)} >
-                    <img id="hamburger" src={props.resourcesParentSrc+`/Hamburger/icon-${opened ? 'active' : 'inactive'}.png`} alt="not found" />
+                <div className={`hamburgerD hamburgerD-${openedClassName}`} onClick={() => setOpened(!opened)} onMouseEnter={hamburgerHoverHandler} onMouseLeave={hamburgerUnhoverHandler} >
+                    <img id="hamburger" src={props.resourcesParentSrc+`/Hamburger/icon-${(opened || hamburgerHovered) ? 'active' : 'inactive'}.png`} alt="not found" />
                 </div>
             }
 
