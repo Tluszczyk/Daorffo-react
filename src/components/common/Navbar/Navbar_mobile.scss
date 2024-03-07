@@ -83,31 +83,4 @@
 
         margin-left: -10px;
     }
-
-    .navbar-wrapper {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-
-        height: 100vh;
-        width: 100vw;
-
-        position: fixed;
-        top: 0;
-        left: 0;
-
-        z-index: 1000;
-
-        &.opened {
-            background-color: #5e5e5e70;
-            width: 100vw;
-            transition: background-color 700ms ease;
-        }
-
-        &.closed {
-            background-color: #5e5e5e00;
-            width: 0;
-            transition: background-color 700ms ease, width 700ms ease 700ms;
-        }
-    }
 }
