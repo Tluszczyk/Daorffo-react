@@ -14,6 +14,7 @@ interface FloatingSpanProps extends WrapperProps {}
 const FloatingSpan = (props: FloatingSpanProps) => {
   return (
     <div className={`floating-span-container ${props.className}`} id={props.id} style={props.style} onClick={props.onClick}>
+      <div className="floating-span-container-filler"/>
       <span className="text-span floating-span">
         {props.children}
       </span>

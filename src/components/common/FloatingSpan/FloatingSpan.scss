@@ -1,6 +1,4 @@
 .floating-span {
-    padding: 100px 0;
-
     top: 130px;
 
     align-self: start;
@@ -13,4 +11,8 @@
 
 .text-span {
     font-size: 1.2em;
+}
+
+.floating-span-container-filler {
+    height: 130px;
 }
