@@ -1,13 +1,13 @@
 @use "../../../common/colors";
 
 body:has(#unit-body) {
-	background-color: colors.$light-theme-main;
+	background-color: colors.$light-theme-primary;
 }
 
 #unit-body {
 	overflow-x: hidden;
 
-	background-color: colors.$light-theme-main;
+	background-color: colors.$light-theme-primary;
 
 	position: absolute;
 	top: 0px;
@@ -28,7 +28,7 @@ body:has(#unit-body) {
 	flex-direction: column;
 	align-items: center;
 
-	background-color: colors.$light-theme-main;
+	background-color: colors.$light-theme-primary;
 }
   
 /* U1-IMAGE-AND-LOGO-CONTAINER */
@@ -326,7 +326,7 @@ body:has(#unit-body) {
 	background: colors.$light-theme-secondary;
 	box-shadow: 10px 10px 11px 3px rgba(0, 0, 0, 0.25);
 	border-radius: 23px;
-	color: colors.$light-theme-main;
+	color: colors.$light-theme-primary;
 
 	display: flex;
 

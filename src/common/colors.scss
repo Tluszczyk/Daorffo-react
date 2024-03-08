@@ -1,14 +1,14 @@
-$dark-theme-main: black;
+$dark-theme-primary: black;
 $dark-theme-secondary: #ff8500;
 $dark-theme-tertiary:  #151515;
 
-$light-theme-main: white;
+$light-theme-primary: white;
 $light-theme-secondary: #0071BC;
 $light-theme-secondary-hover: #005994;
 $light-theme-tertiary: #151515;
 
 $dark: (
-    main: $dark-theme-main,
+    main: $dark-theme-primary,
     secondary: $dark-theme-secondary,
     tertiary: $dark-theme-tertiary
 )

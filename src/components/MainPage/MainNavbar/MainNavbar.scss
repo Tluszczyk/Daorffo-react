@@ -2,8 +2,8 @@
 
 #main-navbar * { text-align: center; }
 .pointerCursor { cursor: pointer; }
-.drop-item:hover { color: colors.$dark-theme-secondary; }
-.nav-item:hover { color: colors.$dark-theme-secondary }
+#main-navbar .drop-item:hover { color: colors.$dark-theme-secondary; }
+#main-navbar .nav-item:hover { color: colors.$dark-theme-secondary }
 
 .nav-dropdown-opened {
     height: calc(5 * (-4px + 1.1em + 15px) - 15px);

@@ -1,0 +1,17 @@
+@use 'src/common/colors';
+
+#unit-navbar .drop-item {
+    color: colors.$light-theme-secondary;
+
+    &:hover {
+        color: colors.$light-theme-secondary-hover;
+    }
+}
+
+#unit-navbar .nav-item:hover { 
+    color: colors.$light-theme-secondary;
+
+    &:hover {
+        color: colors.$light-theme-secondary-hover;
+    }
+}

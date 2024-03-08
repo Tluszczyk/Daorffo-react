@@ -1,3 +1,5 @@
+@use 'src/common/colors';
+
 .dark {
     & .upperContainer:not(.transparent) {
         background-color: black;
@@ -9,6 +11,10 @@
 
     & .upperLogoD {
         border-bottom: solid 2px white;
+    }
+
+    & .nav-item {
+        color: white;
     }
 }
 
@@ -23,6 +29,10 @@
 
     & .upperLogoD {
         border-bottom: solid 2px black;
+    }
+
+    & .nav-item {
+        color: colors.$light-theme-secondary;
     }
 }
 
@@ -78,8 +88,6 @@
 .nav-item {
     text-decoration: none;
     margin: 20px;
-
-    color: white;
 }
 
 .nav-dropdown {
@@ -140,7 +148,7 @@
 .desktop-nav-vertical.nav-opened {
     .light & {
         border-right: 1px solid var(--blue);
-        background-color: var(--grey);
+        background-color: white;
     }
 
     .dark & {
