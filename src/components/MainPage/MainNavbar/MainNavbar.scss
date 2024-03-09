@@ -6,8 +6,7 @@
 #main-navbar .nav-item:hover { color: colors.$dark-theme-secondary }
 
 .nav-dropdown-opened {
-    height: calc(5 * (-4px + 1.1em + 15px) - 15px);
-    margin-bottom: 25px;
+    height: calc(5 * (1.1em) + 50px);
 }
 
 .nav-dropdown-closed {
