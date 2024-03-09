@@ -24,10 +24,15 @@
 
         flex-direction: row;
         justify-content: space-around;
+        align-items: flex-start;
 
         width: 90vw;
 
         background-color: rgba(105, 105, 105, 0.5);
+    }
+
+    .desktop-nav-horisontal .drop-content {
+        margin: 25px 0;
     }
 
     .upperLogo {
