@@ -48,7 +48,6 @@ const UnitNavbar = (props: UnitNavbarProps) => {
             className={props.className}
             logoDefaultSrc='/Logo/icon-inactive.png' 
             logoLink='.' 
-            addLogoTransitions
             transparent={props.transparent}
             upperNameImgSrc="/Logo/icon-name.png"
             theme="light"
