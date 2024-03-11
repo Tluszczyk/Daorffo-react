@@ -9,13 +9,18 @@
     }
 
     #Models {
-        margin: 50px 0px 0px 0px;
+        grid-template-columns: auto;
+        /* grid-template-rows: 20% 60% 20%; */
     }
 
     #Models > a {
-        grid-column-start: 2;
+        /* grid-column-start: 2; */
         margin: 20px 0;
     }
 
-    .Model { width: 50vw; }
+    #model-with-description-unit {
+        grid-row: 1 / 2;
+    }
+
+    .Model { width: 100%; }
 }

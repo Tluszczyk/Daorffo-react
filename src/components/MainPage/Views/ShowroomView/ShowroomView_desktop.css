@@ -1,15 +1,15 @@
 @media (min-width: 768px) {
     #Showroom {
         margin-top: 120vh;
-        padding: 10px 0 0 0;
     }
 
     #Models {
         margin: 150px 0px 0px 0px;
+        grid-template-columns: 30% 40% 30%;
     }
 
     .Model   {
-        width: 25vw;
-        height: auto;
+        width: 100%;
+        object-fit: contain;
     }
 }
