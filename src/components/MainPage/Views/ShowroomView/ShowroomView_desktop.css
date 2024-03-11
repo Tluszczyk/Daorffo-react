@@ -6,10 +6,11 @@
 
     #Models {
         margin: 150px 0px 0px 0px;
+        grid-template-columns: 30% 40% 30%;
     }
 
     .Model   {
-        width: 25vw;
-        height: auto;
+        width: 100%;
+        object-fit: contain;
     }
 }

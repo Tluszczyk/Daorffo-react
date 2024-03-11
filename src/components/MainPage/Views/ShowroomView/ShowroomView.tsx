@@ -26,6 +26,7 @@ const ShowroomView = forwardRef((props: ShowroomViewProps, ref) => {
     ]
 
     const models = modelNames.map((name, index) => <Link
+            id={`model-with-description-${name}`}
             className="model-with-description" 
             to={links[index]} target={targets[index]}
             key={index}
