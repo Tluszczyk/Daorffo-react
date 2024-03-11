@@ -1,12 +1,12 @@
-@media (min-width: 768px) {
-    .view-header {
-        position: sticky;
-        top: 3%;
-        width: 80%;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        text-align: end;
-        z-index: 11;
-    }
+.view-header {
+    width: 80%;
+    height: 100px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: end;
+    justify-content: center;
+
+    z-index: 11;
 }
