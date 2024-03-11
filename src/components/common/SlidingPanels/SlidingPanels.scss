@@ -1,0 +1,55 @@
+.sliding-panels {
+    position: absolute;
+    top: 0;
+
+    height: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    transition: all 0.5s ease;
+}
+
+.sliding-panels-container {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.panel-dots {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.panel-dot {
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+
+    border-radius: 50%;
+}
+
+.panel-dot-active {
+    background-color: #000;
+}
+
+.panel-dot-inactive {
+    background-color: #fff;
+}
