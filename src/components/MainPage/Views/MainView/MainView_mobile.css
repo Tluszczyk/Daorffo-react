@@ -1,6 +1,5 @@
 @media (max-width: 768px) {
     #MainView {
-        height: fit-content;
         padding-top: 100px;
     }
 
