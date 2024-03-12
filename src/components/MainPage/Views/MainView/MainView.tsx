@@ -9,7 +9,7 @@ import './MainView_mobile.css'
 import View from "../../../common/View/View";
  
 const MainView = () => {
-    const mobile = window.innerWidth < 768;
+    // const mobile = window.innerWidth < 768;
 
     return <View className='snap-scroll-start' id="MainView">
         {/* <img className="backgroundImage" src={`resources/MainPage/Views/MainView/bg-${mobile ? "mobile" : "desktop"}.jpg`} alt="not found"></img> */}
