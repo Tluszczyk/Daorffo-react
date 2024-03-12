@@ -1,5 +1,6 @@
 // modules
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
+import useSwipe from "../../../common/useSwipe";
 
 // components
 import SlidingPanel from "./SlidingPanel/SlidingPanel";
@@ -20,6 +21,14 @@ interface SlidingPanelsProps {
 const SlidingPanels = (props: SlidingPanelsProps) => {
 	const [activePanel, setActivePanel] = useState(0);
 
+	const setNextPanelActive = useCallback(() => {
+		setActivePanel((activePanel + 1) % props.links.length);
+	}, [activePanel, props.links.length])
+
+	const setPreviousPanelActive = useCallback(() => {
+		setActivePanel((activePanel - 1 + props.links.length) % props.links.length)
+	}, [activePanel, props.links.length]);
+
 	const numberOfPanels = props.links.length;
 
 	const panels = [];
@@ -37,14 +46,12 @@ const SlidingPanels = (props: SlidingPanelsProps) => {
 	}
 
 	useEffect(() => {
-		const timer = setInterval(() => {
-			setActivePanel((activePanel + 1) % numberOfPanels);
-		}, props.interval ?? 5000);
+		const timer = setInterval(setNextPanelActive, props.interval ?? 5000);
 
 		return () => {
 			clearInterval(timer);
 		};
-	}, [activePanel, numberOfPanels, props.interval]);
+	}, [activePanel, numberOfPanels, props.interval, setNextPanelActive]);
 
 	const panelDots = [];
 
@@ -58,8 +65,10 @@ const SlidingPanels = (props: SlidingPanelsProps) => {
 		);
 	}
 
+	const swipeHandlers = useSwipe({ onSwipedLeft: setNextPanelActive, onSwipedRight: setPreviousPanelActive });
+
 	return (
-		<div className="sliding-panels-container">
+		<div className="sliding-panels-container" {...swipeHandlers}>
 			<div className="sliding-panels" style={{ left: `${-activePanel*100}vw`}}>
 				{panels}
 			</div>
