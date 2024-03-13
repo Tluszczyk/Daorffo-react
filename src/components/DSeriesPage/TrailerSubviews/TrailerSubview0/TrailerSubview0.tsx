@@ -10,7 +10,7 @@ interface TrailerSubview0Props extends WrapperProps {}
  
 const TrailerSubview0 = (props: TrailerSubview0Props) => {
     var overviewSpan = <FloatingSpan className="trailer-layout-mid" id="trailer-subview-0-span-0" key={0} onClick={props.onClick}>
-        <img width="300" alt="No resource found" src="resources/TrailerPage/TrailerSubviews/TrailerSubview0/img-0.png"/>
+        <div><img width="300" alt="No resource found" src="resources/TrailerPage/TrailerSubviews/TrailerSubview0/img-0.png"/></div>
 
         <h3>About</h3>
 
