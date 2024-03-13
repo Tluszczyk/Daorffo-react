@@ -10,17 +10,6 @@
     & * {
         transition: all .5s ease-in-out;
     }
-
-    &.active {
-        & .subpage-button {
-            height: 80px;
-        }
-
-        & p {
-            height: 0;
-            opacity: 0;
-        }
-    }
 }
 
 .forDescription:hover {
