@@ -17,7 +17,7 @@ const SubgalleryView = (props: SubgalleryViewProps) => {
         let filename = parentPath + `${itemId}.jpg`
 
         images.push(
-            <div className="gallery-item-wrapper">
+            <div className="gallery-item-wrapper" key={itemId}>
                 <div className="gallery-item-filler"></div>
                 <img className="gallery-item" alt="file not found" src={filename} key={itemId} />
             </div>
