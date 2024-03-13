@@ -1,11 +1,13 @@
 @media (min-width: 768px) {
     #Showroom {
-        margin-top: 120vh;
+        margin-top: 100vh;
     }
 
     #Models {
-        margin: 150px 0px 0px 0px;
+        margin: auto;
         grid-template-columns: 30% 40% 30%;
+
+        width: 90%;
     }
 
     .Model   {
