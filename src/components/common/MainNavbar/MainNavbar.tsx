@@ -13,10 +13,17 @@ interface MainNavbarProps extends WrapperProps {
     id: string;
     resourcesParentSrc: string;
 
-    showroomViewScroll?: () => void;
-    whyViewScroll?: () => void;
-    contactViewScroll?: () => void;
+    showroomOnClick?: () => void;
+    whyOnClick?: () => void;
+    contactOnClick?: () => void;
+
+    theme?: "dark" | "light";
     transparent?: boolean;
+    desktopDirection?: "horisontal" | "vertical";
+
+    addLogoTransitions?: boolean;
+    hamburgerAlwaysVisible?: boolean;
+    upperNameVisible?: boolean;
 }
 
 function MainNavbar(props: MainNavbarProps) {
@@ -24,7 +31,7 @@ function MainNavbar(props: MainNavbarProps) {
 
     var dropItRef = 
         <div className={`drop-content ${openedDropdown ? 'nav-dropdown-opened' : 'nav-dropdown-closed'}`} id="drop-it" >
-            <Link className="drop-item pointerCursor" to="#Why" onClick={props.whyViewScroll} > why? </Link>
+            <Link className="drop-item pointerCursor" to="#Why" onClick={props.whyOnClick} > why? </Link>
             <Link className='drop-item' to='/'> <SoonInfoTip> mission </SoonInfoTip> </Link>
             <Link className="drop-item" to='/'> <SoonInfoTip> team </SoonInfoTip> </Link>
             <Link className="drop-item" to='/'> <SoonInfoTip> story </SoonInfoTip> </Link>
@@ -48,18 +55,23 @@ function MainNavbar(props: MainNavbarProps) {
             id={props.id}
             resourcesParentSrc={props.resourcesParentSrc}
             className={props.className}
+            
             logoDefaultSrc='/Logo/icon-inactive.png' 
             logoLink='.' 
-            addLogoTransitions
+            upperNameImgSrc={props.upperNameVisible ? '/Logo/icon-name.png' : undefined}
+
+            theme={props.theme ?? "dark"}
             transparent={props.transparent}
-            theme="dark"
-            desktopDirection='horisontal'
+            desktopDirection={props.desktopDirection ?? "horisontal"}
+            
+            addLogoTransitions={props.addLogoTransitions ?? false}
+            hamburgerAlwaysVisible={props.hamburgerAlwaysVisible ?? false}
         >
             {navDropdown}
-            <Link className="nav-item pointerCursor" id="goToTrailers" to="#Showroom" onClick={props.showroomViewScroll}> trailers </Link>
+            <Link className="nav-item pointerCursor" id="goToTrailers" to="#Showroom" onClick={props.showroomOnClick}> trailers </Link>
             <Link className="nav-item" to='shop'> shop </Link>
             <Link className="nav-item" to='/'> <SoonInfoTip> adventure </SoonInfoTip> </Link>
-            <Link className="nav-item scrollDown pointerCursor" to="#Contact" onClick={props.contactViewScroll}> contact </Link>
+            <Link className="nav-item scrollDown pointerCursor" to="#Contact" onClick={props.contactOnClick}> contact </Link>
         </Navbar>
     )
 }

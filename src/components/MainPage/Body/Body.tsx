@@ -3,7 +3,7 @@ import { useState, RefObject, useRef, useEffect } from 'react'
 import './Body_desktop.scss'
 import './Body.scss'
 
-import MainNavbar from "../MainNavbar/MainNavbar";
+import MainNavbar from "../../common/MainNavbar/MainNavbar";
 
 import MainView from '../Views/MainView/MainView';
 import ShowroomView from '../Views/ShowroomView/ShowroomView';
@@ -55,10 +55,14 @@ export function Body(props: MainBodyProps) {
             <MainNavbar
                 id='main-navbar'
                 resourcesParentSrc='resources/MainPage/MainNavbar'
-                showroomViewScroll={showroomViewScroll}
-                whyViewScroll={whyViewScroll}
-                contactViewScroll={contactViewScroll}
+
+                showroomOnClick={showroomViewScroll}
+                whyOnClick={whyViewScroll}
+                contactOnClick={contactViewScroll}
+                
                 transparent
+
+                addLogoTransitions
             />
             <MainView />
             <ShowroomView ref={showroomViewRef}/>
