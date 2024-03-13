@@ -1,8 +1,4 @@
 @media (max-width: 768px) {
-    #MainView {
-        padding-top: 100px;
-    }
-
     .backgroundImage {
         width: 100vw;
         height: 100vh;
