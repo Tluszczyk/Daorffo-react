@@ -11,7 +11,7 @@ interface TrailerSubview4Props extends WrapperProps {}
  
 const TrailerSubview4 = (props: TrailerSubview4Props) => {
     var drivingSpan = <FloatingSpan className="trailer-layout-mid" id="trailer-subview-4-span-0" key={0} onClick={props.onClick}>
-        <span className="h3">Driving Features</span> <br/>
+        <div className="h3">Driving Features</div> <br/>
 
         <OrangeSpan>Frame:</OrangeSpan> <br/> spatial frame, stainless, CNC cut, bent and welded - flexibility and high resistance to overload <br/> <br/>
 

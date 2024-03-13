@@ -11,7 +11,7 @@ interface TrailerSubview1Props extends WrapperProps {}
  
 const TrailerSubview1 = (props: TrailerSubview1Props) => {
     var cofferSpan = <FloatingSpan className="trailer-layout-mid" id="trailer-subview-1-span-0" key={0} onClick={props.onClick}>
-        <span className="h3">Upper Body Features</span> <br/>
+        <div className="h3">Upper Body Features</div> <br/>
         
         <OrangeSpan> Steel constructed coffer</OrangeSpan> makes the body durable and resistant to corrosion and temperature.
             The chest is sealed tight with replaceable <OrangeSpan>rubber gaskets</OrangeSpan>, which keep interior dry! <br/> <br/> <br/> <br/>
@@ -39,7 +39,7 @@ const TrailerSubview1 = (props: TrailerSubview1Props) => {
     </FloatingSpan>
 
     var baggageSpan = <FloatingSpan className="trailer-layout-mid" id="trailer-subview-1-span-1" key={1} onClick={props.onClick}>
-        <span className="h3"> Baggage Section</span> <br/>
+        <div className="h3"> Baggage Section</div> <br/>
         <span className="italic">…the last but not least.</span> <br/><br/><br/>
 
         <OrangeSpan>Two sliding drawers</OrangeSpan> for loose equipment like shoes, clothes, cooking pots and paper towel. <br/><br/>

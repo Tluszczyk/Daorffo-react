@@ -11,7 +11,7 @@ interface TrailerSubview3Props extends WrapperProps {}
  
 const TrailerSubview3 = (props: TrailerSubview3Props) => {
     var chassisSpan = <FloatingSpan className="trailer-layout-mid" id="trailer-subview-3-span-0" key={0} onClick={props.onClick}>
-        <span className="h3">Chassis Features</span> <br/>
+        <div className="h3">Chassis Features</div> <br/>
 
         <i>The most important part of the trailer. <br/> Never go far without solid and reliable chassis!
         <br/> After years of testing we came out with the solution that is well respected in the overland community. <br/>  <br/></i>
