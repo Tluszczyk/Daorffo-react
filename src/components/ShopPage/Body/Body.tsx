@@ -2,7 +2,6 @@
 import { useEffect } from "react";
 
 // components
-import Navbar from "../../common/Navbar/Navbar";
 import ShopList from "../ShopList/ShopList";
 import ShopListItem from "../ShopList/ShopListItem/ShopListItem";
 
