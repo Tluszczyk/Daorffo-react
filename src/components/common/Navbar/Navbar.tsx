@@ -13,14 +13,13 @@ interface NavbarProps extends WrapperProps {
 
     resourcesParentSrc: string;
 
-    logoDefaultSrc: string;
-    logoDesktopSrc?: string;
-    logoMobileSrc?: string;
+    logoHoverable?: boolean;
+    logoDeviceSensitive?: boolean;
+    upperNameVisible?: boolean;
 
     navbarClassName?: string;
     
     logoLink?: string;
-    upperNameImgSrc?: string;
     addLogoTransitions?: boolean;
 
     theme: "dark" | "light";
@@ -32,8 +31,13 @@ interface NavbarProps extends WrapperProps {
 }
  
 const Navbar = (props: NavbarProps) => {
-    const [mobile, setMobile] = useState(window.innerWidth <= 768)
+    const [mobile, setMobile] = useState(window.innerWidth <= 768);
     const checkForMobile = () => setMobile(window.innerWidth <= 768);
+
+    const [logoHovered, setLogoHovered] = useState(false);
+
+    const logoHoverHandler = () => setLogoHovered(true);
+    const logoUnhoverHandler = () => setLogoHovered(false);
     
     const [opened, setOpened] = useState(false);
     const [hamburgerHovered, setHamburgerHovered] = useState(false);
@@ -54,17 +58,23 @@ const Navbar = (props: NavbarProps) => {
     }
 
     useEffect(() => {
-        const transformLogoHandler = onScrollTransform.bind(null, 0, 500, [
+    const transformLogoHandler = onScrollTransform.bind(null, 0, 500, [
             {querySelector: "#upperLogoLink", transform: resizeTransform, TRANSFORM_PARAMETERS: [1,.5]},
             {querySelector: "#upperLogoLink", transform: translateTransform, TRANSFORM_PARAMETERS: [0,50,"%",0,-50,"%"]},
         ])
-      
+        
         if ((mobile ?? false) && (props.addLogoTransitions ?? false)) {
             window.addEventListener('scroll', transformLogoHandler);
         }
 
         return () => window.removeEventListener('scroll', transformLogoHandler);
-      }, [mobile, props.addLogoTransitions]);
+    }, [mobile, props.addLogoTransitions]);
+
+    var logoSrc =   props.resourcesParentSrc + '/Logo/' + 
+                    (props.logoDeviceSensitive ? (mobile ? 'mobile' : 'desktop') : 'default') + '-horisontal-' + 
+                    (props.logoHoverable ? (logoHovered ? 'active' : 'inactive') : 'default') + '.png';
+
+    var upperNameImgSrc = props.resourcesParentSrc + '/Logo/name.png';
 
     return <div id={props.id} className={`navbar-wrapper ${openedClassName} ${props.theme}`} onClick={e=>{if(opened) setOpened(false)}}>
         <div className={`upperContainer ${upperContainerClass}`}>
@@ -75,21 +85,17 @@ const Navbar = (props: NavbarProps) => {
             }
 
             <div className="upperLogoD">
-                <a id="upperLogoLink" href={props.logoLink}>
+                <a id="upperLogoLink" href={props.logoLink} onMouseEnter={logoHoverHandler} onMouseLeave={logoUnhoverHandler}>
                     <img 
                         id="upperLogo" 
                         className="pointerCursor" 
-                        src={ props.resourcesParentSrc + (
-                            (mobile ?? false) ? 
-                            (props.logoMobileSrc ?? props.logoDefaultSrc) :
-                            (props.logoDesktopSrc ?? props.logoDefaultSrc)
-                        )} 
+                        src={logoSrc}
                         alt="not found"
                     />
                 </a>
                 {
-                    !mobile && props.upperNameImgSrc &&
-                    <img id="upperName" className="mobile-invisible pointerCursor" src={props.resourcesParentSrc+props.upperNameImgSrc} alt="not found" />
+                    !mobile && (props.upperNameVisible ?? false) &&
+                    <img id="upperName" className="mobile-invisible pointerCursor" src={upperNameImgSrc} alt="not found" />
                 }
             </div>
 

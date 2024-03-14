@@ -54,15 +54,17 @@ export function Body(props: MainBodyProps) {
         <div className='daorffo-font-regular font-white' id='main-body'>
             <MainNavbar
                 id='main-navbar'
-                resourcesParentSrc='resources/MainPage/MainNavbar'
+                resourcesParentSrc='resources/MainPage'
 
                 showroomOnClick={showroomViewScroll}
                 whyOnClick={whyViewScroll}
                 contactOnClick={contactViewScroll}
                 
                 transparent
-
+                
                 addLogoTransitions
+                
+                logoHoverable
             />
             <MainView />
             <ShowroomView ref={showroomViewRef}/>

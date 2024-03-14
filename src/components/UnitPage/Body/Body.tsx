@@ -24,13 +24,14 @@ export const Body = (props: UnitBodyProps) => {
 		<div className="daorffo-font-regular font-black" id="unit-body">
 			<MainNavbar 
 				id="unit-navbar"
-				resourcesParentSrc="resources/UnitPage/UnitNavbar"
-				upperNameVisible
-
+				resourcesParentSrc="resources/UnitPage"
+				
 				theme="light"
 				desktopDirection="vertical"
 				
 				hamburgerAlwaysVisible
+				logoDeviceSensitive
+				upperNameVisible
 			/>
 
 			<div id="unit-main-page">

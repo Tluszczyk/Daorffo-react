@@ -24,12 +24,12 @@ export const Body = (props: ShopBodyProps) => {
 
 	return (
 		<div id="shop-body" className="daorffo-font-regular font-white">
-			<Navbar 
+			{/* <Navbar 
 				id="shop-navbar"
 				resourcesParentSrc="resources/ShopPage"
 				logoDefaultSrc="/LogoSHOP.png" 
 				logoLink='.' theme="dark" 
-			/>
+			/> */}
 
 			<div className="page" id="shop-page">
 				<ShopList>

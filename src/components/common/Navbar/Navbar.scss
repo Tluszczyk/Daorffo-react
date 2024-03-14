@@ -15,10 +15,18 @@
 
     & .nav-item {
         color: white;
+
+        &:hover {
+            color: colors.$dark-theme-secondary;
+        }
     }
 
     & .drop-item {
         color: white;
+
+        &:hover {
+            color: colors.$dark-theme-secondary;
+        }
     }
 
     & .drop-content {
@@ -41,10 +49,18 @@
 
     & .nav-item {
         color: colors.$light-theme-secondary;
+
+        &:hover {
+            color: colors.$light-theme-secondary;
+        }
     }
 
     & .drop-item {
         color: colors.$light-theme-secondary;
+
+        &:hover {
+            color: colors.$light-theme-secondary;
+        }
     }
 
     & .drop-content {
@@ -99,6 +115,7 @@
 
 .navbar {
     align-items: center;
+    & * { text-align: center; }
 }
 
 .nav-item {
@@ -115,7 +132,7 @@
         align-items: center;
     }
 
-    .desktop-nav-horizontal & {
+    .desktop-nav-horisontal & {
         flex-direction: row;
         align-items: flex-start;
     }

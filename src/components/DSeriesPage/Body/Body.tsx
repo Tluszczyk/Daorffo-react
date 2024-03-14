@@ -71,10 +71,11 @@ export function Body(props: TrailerBodyProps) {
         <div className='daorffo-font-regular font-white' id='trailer-body'>
             <MainNavbar 
                 id='trailer-navbar'
-                resourcesParentSrc='resources/MainPage/MainNavbar'
+                resourcesParentSrc='resources/TrailerPage'
                 className='hide-upperLogoD' 
 
                 desktopDirection='vertical'
+                logoHoverable
                 hamburgerAlwaysVisible
             />
 
