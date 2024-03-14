@@ -1,8 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useBetween } from 'use-between';
 
-// import MainNavbar from '../../MainPage/MainNavbar/MainNavbar'
-import TrailerNavbar from '../TrailerNavbar/TrailerNavbar';
+import MainNavbar from '../../common/MainNavbar/MainNavbar';
 import PictoNavbar from '../PictoNavbar/PictoNavbar';
 import GalleryView from '../GalleryView/GalleryView';
 
@@ -70,10 +69,14 @@ export function Body(props: TrailerBodyProps) {
 
     return (
         <div className='daorffo-font-regular font-white' id='trailer-body'>
-            <TrailerNavbar 
+            <MainNavbar 
                 id='trailer-navbar'
-                resourcesParentSrc='resources/MainPage/MainNavbar'
+                resourcesParentSrc='resources/TrailerPage'
                 className='hide-upperLogoD' 
+
+                desktopDirection='vertical'
+                logoHoverable
+                hamburgerAlwaysVisible
             />
 
             <div className={`trailer-layout level-${getLevel()}`}>

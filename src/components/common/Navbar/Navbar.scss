@@ -15,6 +15,22 @@
 
     & .nav-item {
         color: white;
+
+        &:hover {
+            color: colors.$dark-theme-secondary;
+        }
+    }
+
+    & .drop-item {
+        color: white;
+
+        &:hover {
+            color: colors.$dark-theme-secondary;
+        }
+    }
+
+    & .drop-content {
+        border-left-color: white;
     }
 }
 
@@ -33,6 +49,22 @@
 
     & .nav-item {
         color: colors.$light-theme-secondary;
+
+        &:hover {
+            color: colors.$light-theme-secondary;
+        }
+    }
+
+    & .drop-item {
+        color: colors.$light-theme-secondary;
+
+        &:hover {
+            color: colors.$light-theme-secondary;
+        }
+    }
+
+    & .drop-content {
+        border-left-color: colors.$light-theme-secondary;
     }
 }
 
@@ -83,6 +115,7 @@
 
 .navbar {
     align-items: center;
+    & * { text-align: center; }
 }
 
 .nav-item {
@@ -99,7 +132,7 @@
         align-items: center;
     }
 
-    .desktop-nav-horizontal & {
+    .desktop-nav-horisontal & {
         flex-direction: row;
         align-items: flex-start;
     }
@@ -110,8 +143,6 @@
 .drop-item {
     margin: -4px 0 15px 0px;
     text-decoration: none;
-
-    color: white;
 }
 
 .drop-content {
@@ -121,7 +152,9 @@
     flex-direction: column;
     justify-content: flex-start;
 
-    border-left: 2px solid white;
+    border-left-width: 2px;
+    border-left-style: solid;
+
     padding-left: 5px;
 
     transition: height .5s ease;
@@ -173,16 +206,11 @@
     width: 100px;
 
     z-index: 2;
+    transition: 500ms all ease;
 }
 
 .hamburgerD-closed {
     left: 0;
-    transition: 500ms left ease;
-}
-
-.hamburgerD-opened {
-    left: calc(25vw - 50px);
-    transition: 500ms left ease;
 }
 
 #hamburger {
@@ -190,8 +218,6 @@
     width: auto;
 
     object-fit: cover;
-
-    margin-left: -10px;
 }
 
 .navbar-wrapper {

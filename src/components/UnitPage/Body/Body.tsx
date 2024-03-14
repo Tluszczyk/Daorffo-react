@@ -2,7 +2,7 @@
 import { useEffect } from "react";
 
 // components
-import UnitNavbar from "../UnitNavbar/UnitNavbar";
+import MainNavbar from "../../common/MainNavbar/MainNavbar";
 
 // styles
 import "./Body.scss";
@@ -22,7 +22,17 @@ export const Body = (props: UnitBodyProps) => {
 	
 	return (
 		<div className="daorffo-font-regular font-black" id="unit-body">
-			<UnitNavbar />
+			<MainNavbar 
+				id="unit-navbar"
+				resourcesParentSrc="resources/UnitPage"
+				
+				theme="light"
+				desktopDirection="vertical"
+				
+				hamburgerAlwaysVisible
+				logoDeviceSensitive
+				upperNameVisible
+			/>
 
 			<div id="unit-main-page">
 				<div id="u1-image-and-logo-container">

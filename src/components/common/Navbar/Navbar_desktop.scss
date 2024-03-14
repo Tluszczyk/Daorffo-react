@@ -35,6 +35,8 @@
         margin: 25px 0;
     }
 
+    .upperLogoD { justify-content: flex-start; }
+
     .upperLogo {
         height: 100px;
     }
@@ -48,13 +50,18 @@
         margin-left: auto;
     }
 
+    .hamburgerD-opened {
+        left: 10vw;
+        transform: translate(-50%, 0);
+    }
+
     .desktop-nav-vertical.nav-closed {
         width: 0;
         overflow-x: hidden;
     }
 
     .desktop-nav-vertical.nav-opened { 
-        width: 50vw; 
+        width: 20vw; 
     }
 
     .desktop-nav-vertical.mobile-nav-opened {
