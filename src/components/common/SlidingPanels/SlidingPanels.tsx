@@ -1,57 +1,34 @@
 // modules
 import { useState, useEffect, useCallback } from "react";
 import useSwipe from "../../../common/useSwipe";
+import { ActiveSlidingPanelProvider } from "./ActiveSlidingPanelProvider";
 
 // components
-import SlidingPanel from "./SlidingPanel/SlidingPanel";
+import { WrapperProps } from "../../../common/commonProps";
 
 // styles
 import "./SlidingPanels.scss";
 import "./SlidingPanels_desktop.scss";
 import "./SlidingPanels_mobile.scss";
 
-interface SlidingPanelsProps {
-	src: string;
-	links: string[];
-	buttonDescriptions: string[];
-	contentTypes: ("image" | "gif" | "video")[];
-
+interface SlidingPanelsProps extends WrapperProps {
 	interval?: number;
 }
 
 const SlidingPanels = (props: SlidingPanelsProps) => {
 	const [activePanel, setActivePanel] = useState(0);
 
+	const panels = (props.children ?? []) as React.ReactNode[];
+	const numberOfPanels = panels.length;
+
 	const setNextPanelActive = useCallback(() => {
-		setActivePanel((activePanel + 1) % props.links.length);
-	}, [activePanel, props.links.length])
+		setActivePanel((activePanel + 1) % numberOfPanels);
+	}, [activePanel, numberOfPanels])
 
 	const setPreviousPanelActive = useCallback(() => {
-		setActivePanel((activePanel - 1 + props.links.length) % props.links.length)
-	}, [activePanel, props.links.length]);
-
-	const numberOfPanels = props.links.length;
-
-	const panels = [];
-
-	for (let i = 0; i < numberOfPanels; i++) {
-		var contentExtention = {
-			"image": "jpg",
-			"gif": "gif",
-			"video": "mp4"
-		}[props.contentTypes[i]];
-
-		panels.push(
-			<SlidingPanel
-				isActive={i === activePanel}
-				key={i}
-				contentType={props.contentTypes[i]}
-				panelSrc={`${props.src}/${i}.${contentExtention}`}
-				link={props.links[i]}
-				buttonDescription={props.buttonDescriptions[i]}
-			/>
-		);
-	}
+		setActivePanel((activePanel - 1 + numberOfPanels) % numberOfPanels)
+	}, [activePanel, numberOfPanels]);
+	
 
 	useEffect(() => {
 		const timer = setInterval(setNextPanelActive, props.interval ?? 5000);
@@ -78,7 +55,9 @@ const SlidingPanels = (props: SlidingPanelsProps) => {
 	return (
 		<div className="sliding-panels-container" {...swipeHandlers}>
 			<div className="sliding-panels" style={{ left: `${-activePanel*100}vw`}}>
-				{panels}
+				<ActiveSlidingPanelProvider activePanelId={activePanel}>
+					{panels}
+				</ActiveSlidingPanelProvider>
 			</div>
 			<div className="panel-dots">{panelDots}</div>
 		</div>
