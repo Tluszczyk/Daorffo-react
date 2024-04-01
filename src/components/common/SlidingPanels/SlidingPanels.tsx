@@ -14,6 +14,7 @@ interface SlidingPanelsProps {
 	src: string;
 	links: string[];
 	buttonDescriptions: string[];
+	contentTypes: ("image" | "gif" | "video")[];
 
 	interval?: number;
 }
@@ -34,11 +35,18 @@ const SlidingPanels = (props: SlidingPanelsProps) => {
 	const panels = [];
 
 	for (let i = 0; i < numberOfPanels; i++) {
+		var contentExtention = {
+			"image": "jpg",
+			"gif": "gif",
+			"video": "mp4"
+		}[props.contentTypes[i]];
+
 		panels.push(
 			<SlidingPanel
 				isActive={i === activePanel}
 				key={i}
-				panelSrc={`${props.src}/${i}.jpg`}
+				contentType={props.contentTypes[i]}
+				panelSrc={`${props.src}/${i}.${contentExtention}`}
 				link={props.links[i]}
 				buttonDescription={props.buttonDescriptions[i]}
 			/>
