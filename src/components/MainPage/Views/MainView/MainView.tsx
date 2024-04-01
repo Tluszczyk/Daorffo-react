@@ -17,6 +17,7 @@ const MainView = () => {
         <SlidingPanels
             src={`resources/MainPage/Views/MainView/SlidingPanels/`}
             links={["/about", "/services", "/contact", "/test"]}
+            contentTypes={["image", "video", "gif", "image"]}
             buttonDescriptions={["About", "Services", "Contact", "Test4"]}
         />
 
