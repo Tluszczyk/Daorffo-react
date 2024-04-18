@@ -1,5 +1,5 @@
 // modules
-import { useState, useEffect, useCallback } from "react";
+import { useState, useCallback } from "react";
 import useSwipe from "../../../common/useSwipe";
 import { SlidingPanelTimerProvider } from "./SlidingPanelTimerProvider";
 
