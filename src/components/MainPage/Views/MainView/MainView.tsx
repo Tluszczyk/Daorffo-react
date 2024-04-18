@@ -14,39 +14,39 @@ const MainView = () => {
         <SlidingPanels>
             <SlidingPanel 
                 panelSrc="resources/MainPage/Views/MainView/SlidingPanels/0.gif"
-                link="/about" buttonDescription="About" contentType="gif" key={0}
+                link="/about" buttonDescription="About" contentType="gif" length={6000} index={0} key={0}
             />
             <SlidingPanel 
                 panelSrc="resources/MainPage/Views/MainView/SlidingPanels/1.gif"
-                link="/services" buttonDescription="Services" contentType="gif" key={1}
+                link="/services" buttonDescription="Services" contentType="gif" length={6000} index={1} key={1}
             />
             <SlidingPanel 
                 panelSrc="resources/MainPage/Views/MainView/SlidingPanels/2.jpg"
-                link="/contact" buttonDescription="Contact" contentType="image" key={2}
+                link="/contact" buttonDescription="Contact" contentType="image" index={2} key={2}
             />
             <SlidingPanel 
                 panelSrc="resources/MainPage/Views/MainView/SlidingPanels/3.jpg"
-                link="/test" buttonDescription="Test" contentType="image" key={3}
+                link="/test" buttonDescription="Test" contentType="image" index={3} key={3}
             />
             <SlidingPanel 
                 panelSrc="resources/MainPage/Views/MainView/SlidingPanels/4.jpg"
-                link="/test" buttonDescription="Test" contentType="image" key={4}
+                link="/test" buttonDescription="Test" contentType="image" index={4} key={4}
             />
             <SlidingPanel 
                 panelSrc="resources/MainPage/Views/MainView/SlidingPanels/5.jpg"
-                link="/test" buttonDescription="Test" contentType="image" key={5}
+                link="/test" buttonDescription="Test" contentType="image" index={5} key={5}
             />
             <SlidingPanel 
                 panelSrc="resources/MainPage/Views/MainView/SlidingPanels/6.jpg"
-                link="/test" buttonDescription="Test" contentType="image" key={6}
+                link="/test" buttonDescription="Test" contentType="image" index={6} key={6}
             />
             <SlidingPanel 
                 panelSrc="resources/MainPage/Views/MainView/SlidingPanels/7.jpg"
-                link="/test" buttonDescription="Test" contentType="image" key={7}
+                link="/test" buttonDescription="Test" contentType="image" index={7} key={7}
             />
             <SlidingPanel 
                 panelSrc="resources/MainPage/Views/MainView/SlidingPanels/8.jpg"
-                link="/test" buttonDescription="Test" contentType="image" key={8}
+                link="/test" buttonDescription="Test" contentType="image" index={8} key={8}
             />
         </SlidingPanels>
 

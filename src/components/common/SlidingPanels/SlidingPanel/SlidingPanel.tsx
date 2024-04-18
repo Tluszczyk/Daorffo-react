@@ -1,5 +1,6 @@
 // modules
-// import { useActiveSlidingPanelId } from "../ActiveSlidingPanelProvider";
+import { useEffect } from "react";
+import { useSlidingPanelTimer } from "../SlidingPanelTimerProvider";
 
 // components
 import { Link } from "react-router-dom";
@@ -14,12 +15,24 @@ interface SlidingPanelProps {
 	link: string;
 	buttonDescription: string;
 	contentType: "image" | "gif" | "video";
-	key: number;
+	length?: number;
+	index: number;
 }
 
 const SlidingPanel = (props: SlidingPanelProps) => {
-	// const activeSlidingPanelId = useActiveSlidingPanelId();
-	// const isActive = activeSlidingPanelId === props.key;
+	const [activeSlidingPanelId, timeIsUpCallback] = useSlidingPanelTimer();
+
+	useEffect(() => {
+		var timer: NodeJS.Timeout | null = null;
+
+		if (activeSlidingPanelId === props.index)
+			timer = setTimeout(timeIsUpCallback, props.length ?? 3000);
+		
+		else if(timer) clearTimeout(timer);
+
+		return () => { if (timer) clearTimeout(timer); }
+
+	}, [activeSlidingPanelId, props.index, timeIsUpCallback]);
 
 	const content = (props.contentType === "image" || props.contentType === "gif") ?
 		<img className="sliding-panel-image" src={props.panelSrc} alt="panel" /> :
