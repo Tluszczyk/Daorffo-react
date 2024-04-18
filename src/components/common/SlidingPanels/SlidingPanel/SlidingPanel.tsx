@@ -32,7 +32,7 @@ const SlidingPanel = (props: SlidingPanelProps) => {
 
 		return () => { if (timer) clearTimeout(timer); }
 
-	}, [activeSlidingPanelId, props.index, timeIsUpCallback]);
+	}, [activeSlidingPanelId, props.index, timeIsUpCallback, props.length]);
 
 	const content = (props.contentType === "image" || props.contentType === "gif") ?
 		<img className="sliding-panel-image" src={props.panelSrc} alt="panel" /> :
