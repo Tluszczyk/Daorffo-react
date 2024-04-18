@@ -30,7 +30,7 @@ const SlidingPanel = (props: SlidingPanelProps) => {
 	return (
 		<div className="sliding-panel">
 			{ content }
-			<Link to={props.link} className="sliding-panel-button" > {props.buttonDescription} </Link>
+			<Link to={props.link} className="sliding-panel-button button-38" > {props.buttonDescription} </Link>
 		</div>
 	);
 };

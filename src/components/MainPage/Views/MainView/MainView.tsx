@@ -13,20 +13,40 @@ const MainView = () => {
     return <View className='snap-scroll-start' id="MainView">
         <SlidingPanels>
             <SlidingPanel 
-                panelSrc="resources/MainPage/Views/MainView/SlidingPanels/0.jpg"
-                link="/about" buttonDescription="About" contentType="image" key={0}
+                panelSrc="resources/MainPage/Views/MainView/SlidingPanels/0.gif"
+                link="/about" buttonDescription="About" contentType="gif" key={0}
             />
             <SlidingPanel 
-                panelSrc="resources/MainPage/Views/MainView/SlidingPanels/1.mp4"
-                link="/services" buttonDescription="Services" contentType="video" key={1}
+                panelSrc="resources/MainPage/Views/MainView/SlidingPanels/1.gif"
+                link="/services" buttonDescription="Services" contentType="gif" key={1}
             />
             <SlidingPanel 
-                panelSrc="resources/MainPage/Views/MainView/SlidingPanels/2.gif"
-                link="/contact" buttonDescription="Contact" contentType="gif" key={2}
+                panelSrc="resources/MainPage/Views/MainView/SlidingPanels/2.jpg"
+                link="/contact" buttonDescription="Contact" contentType="image" key={2}
             />
             <SlidingPanel 
                 panelSrc="resources/MainPage/Views/MainView/SlidingPanels/3.jpg"
                 link="/test" buttonDescription="Test" contentType="image" key={3}
+            />
+            <SlidingPanel 
+                panelSrc="resources/MainPage/Views/MainView/SlidingPanels/4.jpg"
+                link="/test" buttonDescription="Test" contentType="image" key={4}
+            />
+            <SlidingPanel 
+                panelSrc="resources/MainPage/Views/MainView/SlidingPanels/5.jpg"
+                link="/test" buttonDescription="Test" contentType="image" key={5}
+            />
+            <SlidingPanel 
+                panelSrc="resources/MainPage/Views/MainView/SlidingPanels/6.jpg"
+                link="/test" buttonDescription="Test" contentType="image" key={6}
+            />
+            <SlidingPanel 
+                panelSrc="resources/MainPage/Views/MainView/SlidingPanels/7.jpg"
+                link="/test" buttonDescription="Test" contentType="image" key={7}
+            />
+            <SlidingPanel 
+                panelSrc="resources/MainPage/Views/MainView/SlidingPanels/8.jpg"
+                link="/test" buttonDescription="Test" contentType="image" key={8}
             />
         </SlidingPanels>
 
