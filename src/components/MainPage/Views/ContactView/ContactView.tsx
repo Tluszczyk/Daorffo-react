@@ -82,7 +82,7 @@ const ContactView = forwardRef((props: ContactViewProps, ref) => {
                             <li>Extreme Motors Kraków<br/>ul. Księży Pijarów</li>
                         </ul>
                     </div>
-                    <a className="mediaDiv-link">Let's meet</a>
+                    <div className="mediaDiv-link">Let's meet</div>
                 </div>
 
                 <div className="mediaDiv" id="company-info">
