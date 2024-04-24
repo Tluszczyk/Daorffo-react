@@ -108,10 +108,10 @@ const ContactView = forwardRef((props: ContactViewProps, ref) => {
                         <a href="https://www.youtube.com/channel/UCBN_gp_9zMpltcPGab50mpQ" rel="noreferrer" target="_blank"> 
                             <HoverableImg dirPath="resources/common/dark/YT" className='mediaItem' />
                         </a>
-                        <a href="https://www.youtube.com/channel/UCBN_gp_9zMpltcPGab50mpQ" rel="noreferrer" target="_blank"> 
+                        <a href="https://www.linkedin.com/company/da-orffo/?originalSubdomain=pl" rel="noreferrer" target="_blank"> 
                             <HoverableImg dirPath="resources/common/dark/LI" className='mediaItem' />
                         </a>
-                        <a href="https://www.youtube.com/channel/UCBN_gp_9zMpltcPGab50mpQ" rel="noreferrer" target="_blank"> 
+                        <a href="https://www.behance.net/gallery/186589061/The-Life-Chariot-MEDEVAC-Trailer" rel="noreferrer" target="_blank"> 
                             <HoverableImg dirPath="resources/common/dark/BE" className='mediaItem' />
                         </a>
                     </div>
