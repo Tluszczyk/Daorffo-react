@@ -20,7 +20,6 @@ const SlidingPanels = (props: SlidingPanelsProps) => {
 	const numberOfPanels = panels.length;
 
 	const setNextPanelActive = useCallback(() => {
-		console.log("setNextPanelActive")
 		setActivePanel((activePanel + 1) % numberOfPanels);
 	}, [activePanel, numberOfPanels])
 

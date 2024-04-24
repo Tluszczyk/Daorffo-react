@@ -10,11 +10,12 @@ export const SlidingPanelTimerProvider = ({
         activePanelId: number;
         timeIsUpCallback: () => void,
         children: React.ReactNode;
-    }) => {console.log("SlidingPanelTimerProvider");return (
+    }) => (
         <SlidingPanelTimerContext.Provider value={[activePanelId, timeIsUpCallback]}>
             {children}
         </SlidingPanelTimerContext.Provider>
-)};
+    );
+;
 
 export const useSlidingPanelTimer = () => {
 	return useContext(SlidingPanelTimerContext);

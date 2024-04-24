@@ -1,0 +1,11 @@
+@media (max-width: 768px) {
+
+    #Contact {
+        height: fit-content;
+    }
+
+    #Contacts {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+    }
+}

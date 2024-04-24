@@ -1,0 +1,17 @@
+.contact-form {
+    width: 100%;
+
+    grid-auto-rows: 1fr;
+    
+    border: 3px solid white;
+    border-radius: 20px;
+
+    background-color: rgba(0, 0, 0, 0.555);
+
+    padding: 30px;
+    box-sizing: border-box;
+
+    margin-bottom: 0;
+
+    gap: 5%;
+}

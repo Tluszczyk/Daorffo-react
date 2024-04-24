@@ -1,10 +1,16 @@
 import {forwardRef, RefObject } from 'react'
 
-import "./ContactView.scss";
-import "./ContactView_desktop.css";
-import "./ContactView_mobile.css";
-
 import View from "../../../common/View/View";
+
+import ContactForm from '../../../common/ContactForm/ContactForm';
+import ContactFormElement from '../../../common/ContactForm/ContactFormElement/ContactFormElement';
+
+import HoverableImg from "../../../common/HoverableImg/HoverableImg";
+
+import "./ContactView_desktop.scss";
+import "./ContactView_mobile.scss";
+import "./ContactView.scss";
+
 import { StylableProps } from '../../../../common/commonProps';
  
 interface ContactViewProps extends StylableProps {}
@@ -16,27 +22,100 @@ const ContactView = forwardRef((props: ContactViewProps, ref) => {
 
             <div id="Contacts">
 
-                <div className="mediaDiv" id="media">
-                    <h3>See more</h3>
-                    <div id="mediaList">
-                        <a href="https://www.instagram.com/daorffo/" rel="noreferrer" target="_blank"> <p className="mediaItem" id="IGmedia"></p> </a>
-                        <a href="https://www.facebook.com/daorffo" rel="noreferrer" target="_blank"> <p className="mediaItem" id="FBmedia"></p> </a>
-                        <a href="https://www.youtube.com/channel/UCBN_gp_9zMpltcPGab50mpQ" rel="noreferrer" target="_blank"> <p className="mediaItem" id="YTmedia"></p> </a>
-                    </div>
+                <div className="mediaDiv" id="mail-and-phones">
+                    <span className='mediaDiv-heading'>Mail & phones</span>
+                    <p className='mediaDiv-info'>
+                        <span><b>ENG Piotrek: </b>+48 601 656 656</span><br />
+                        <span>piotr@gmail.com</span>
+                    </p>
+                    <p className='mediaDiv-info'>
+                        <span><b>PL Krzysztof: </b>+48 601 656 656</span><br />
+                        <span>krzysztof@gmail.com</span>
+                    </p>
+                    <a className="mediaDiv-link" href='mailto:daorffo@daorffo.com'>daorffo@daorffo.com</a>
                 </div>
 
-                <div className="mediaDiv" id="mail">
-                    <h3>Mail us</h3>
-                    <a href="mailto:daorffo@daorffo.com">daorffo@daorffo.com</a>
+                <div className="mediaDiv" id="contact-form">
+                    <ContactForm numberOfColumns={2}>
+                        <ContactFormElement
+                            gridColumnSpan = {2} 
+                            type='heading' value='Got questions?'
+                        />
+
+                        <ContactFormElement 
+                            gridColumnSpan = {1} required name='name'
+                            type='input' placeholder='Your Name'
+                        />
+
+                        <ContactFormElement
+                            gridColumnSpan = {1} required name='email'
+                            type='input' placeholder='Your E-Mail Address'
+                        />
+
+                        <ContactFormElement
+                            gridColumnSpan = {2} gridRowSpan = {2} required name='question'
+                            type='textarea' placeholder='Your question...'
+                        />
+
+                        <ContactFormElement
+                            gridColumnSpan = {2} name='additional info'
+                            type='input' placeholder='(Optional) What is your car? How do you travel?'
+                        />
+
+                        <ContactFormElement
+                            gridColumnSpan = {2}
+                            type='submit' value='Send'
+                        />
+                    </ContactForm>
                 </div>
 
                 <div className="mediaDiv" id="visitUs">
-                    <h3>Visit us</h3>
-                    <div className="address">
-                        <p>al.Prazmowskiego</p>
-                        <p id="postalCode">31-519 Krakow</p>
-                        <p>Poland</p>
+                    <div className='mediaDiv-block'>
+                        <span className='mediaDiv-heading'>Location:</span>
+                        <ul className='mediaDiv-info'>
+                            <li>Cracow, Poland</li>
+                        </ul>
                     </div>
+                    <div className='mediaDiv-block'>
+                        <span className='mediaDiv-heading'>Can be seen at:</span>
+                        <ul className='mediaDiv-info'>
+                            <li>Extreme Motors Kraków<br/>ul. Księży Pijarów</li>
+                        </ul>
+                    </div>
+                    <a className="mediaDiv-link">Let's meet</a>
+                </div>
+
+                <div className="mediaDiv" id="company-info">
+                    <span className='mediaDiv-heading'>Company Info</span>
+                    <span className='mediaDiv-info'>
+                        <span>
+                            <b>name:</b> Da Orffo Piotr Tłuszcz, Krzysztof Tłuszcz spółka cywilna;
+                            <b> billing address:</b> ul. Idzikowskiego 2, 31-519 Kraków, Poland; <br/>
+                            <b>NIP UE:</b> PL6751765226; 
+                            <b> REGION:</b> 522083418; 
+                        </span>
+                    </span>
+                </div>
+
+                <div className="mediaDiv" id="media">
+                    <div id="mediaList">
+                        <a href="https://www.instagram.com/daorffo/" rel="noreferrer" target="_blank"> 
+                            <HoverableImg dirPath="resources/common/dark/IG" className='mediaItem' />
+                        </a>
+                        <a href="https://www.facebook.com/daorffo" rel="noreferrer" target="_blank">
+                            <HoverableImg dirPath="resources/common/dark/FB" className='mediaItem' />
+                        </a>
+                        <a href="https://www.youtube.com/channel/UCBN_gp_9zMpltcPGab50mpQ" rel="noreferrer" target="_blank"> 
+                            <HoverableImg dirPath="resources/common/dark/YT" className='mediaItem' />
+                        </a>
+                        <a href="https://www.youtube.com/channel/UCBN_gp_9zMpltcPGab50mpQ" rel="noreferrer" target="_blank"> 
+                            <HoverableImg dirPath="resources/common/dark/LI" className='mediaItem' />
+                        </a>
+                        <a href="https://www.youtube.com/channel/UCBN_gp_9zMpltcPGab50mpQ" rel="noreferrer" target="_blank"> 
+                            <HoverableImg dirPath="resources/common/dark/BE" className='mediaItem' />
+                        </a>
+                    </div>
+                    <p className="mediaDiv-heading">See more</p>
                 </div>
             </div>
         </View>

@@ -12,70 +12,127 @@
 }
 
 #Contacts {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    display: grid;
 
     width: 100%;
+    height: 100%;
 }
 
 .mediaDiv {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: start;
+    justify-content: center;
 
-    justify-self: center;
+    margin: auto;
 
-    width: 30%;
+    width: fit-content;
+    height: 100%;
+
+    & .mediaDiv-heading {
+        font-size: 2em;
+        font-weight: bold;
+    }
+
+    & .mediaDiv-info {
+        font-size: 1.3em;
+
+        & > span {
+            height: min-content;
+            & > b {
+                font-weight: bold;
+            }
+        }
+    }
+
+    & .mediaDiv-link {
+        text-decoration: none;
+
+        width: 100%;
+        text-align: center;
+
+        font-size: 1.3em;
+        font-weight: bold;
+        
+        padding: 7px;
+        border-radius: 7px;
+
+        color: white;
+        background-color: rgba(255, 255, 255, 0.205);
+        
+        &:hover { 
+            color: orange; 
+            background-color: rgba(255, 255, 255, 0.438);
+        }
+    }
+
+    & .mediaDiv-block {
+        margin-bottom: 20px;
+    }
+}
+
+#contact-form {
+    height: 70%;
 }
 
 #mediaList {
+    width: fit-content;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+}
 
+#company-info {
+    flex-direction: row;
+    align-items: center;
+
+    & .mediaDiv-heading {
+        display: flex;
+        align-items: center;
+
+        font-size: 1.3em;
+        white-space: nowrap;
+    }
+
+    & .mediaDiv-info {
+        font-size: 1em;
+
+        min-height: 3em;
+
+        padding-left: 10px;
+        border-left: 3px solid white;
+        margin-left: 10px;
+    }
+}
+
+#media {
     width: 100%;
-}
 
-#IGmedia {
-    $base-src: "../../../../../public/resources/MainPage/Views/ContactView/MediaDiv/IG/icon-";
-    
-    background-image: url($base-src + "inactive.png");
-    &:hover{ background-image: url($base-src + "active.png"); }
-}
+    flex-direction: row;
+    align-items: center;
 
-#FBmedia {
-    $base-src: "../../../../../public/resources/MainPage/Views/ContactView/MediaDiv/FB/icon-";
+    & > .mediaDiv-heading {
+        display: flex;
+        align-items: center;
 
-    background-image: url($base-src + "inactive.png");
-    &:hover{ background-image: url($base-src + "active.png"); }
-}
-
-#YTmedia {
-    $base-src: "../../../../../public/resources/MainPage/Views/ContactView/MediaDiv/YT/icon-";
-
-    background-image: url($base-src + "inactive.png");
-    &:hover{ background-image: url($base-src + "active.png"); }
+        height: 3em;
+        font-size: 1.3em;
+        padding-left: 10px;
+        border-left: 3px solid white;
+        margin-left: 10px;
+    }
 }
 
 .mediaItem {
     background-size: 40px;
     background-repeat: no-repeat;
 
-    width: 40px;
-    height: 40px;
-    margin: 10px;
-}
+    width: 3rem;
+    height: 3rem;
 
-#mail>a {
-    color: var(--orange);
-    text-decoration: none;
-}
+    max-width: 40px;
+    max-height: 40px;
 
-.address {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    margin: 0 5px;
 }

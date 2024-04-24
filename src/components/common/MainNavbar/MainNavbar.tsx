@@ -107,7 +107,9 @@ function MainNavbar(props: MainNavbarProps) {
                 <div className="main-navbar-footer-media-container">
 
                     {mediaNames.map((name, index) => (
-                        <Link className="main-navbar-footer-media" to={mediaLinks[index]} key={name}><HoverableImg resourceSrc={`resources/common/${props.theme ?? "dark"}/${name}`} /></Link>
+                        <Link className="main-navbar-footer-media" to={mediaLinks[index]} key={name}>
+                            <HoverableImg dirPath={`resources/common/${props.theme ?? "dark"}/${name}`} />
+                        </Link>
                     ))}
                 </div>
                 <div className="main-navbar-footer-logo-wrapper" onMouseEnter={verticalLogoHoverHandler} onMouseLeave={verticalLogoUnhoverHandler}>

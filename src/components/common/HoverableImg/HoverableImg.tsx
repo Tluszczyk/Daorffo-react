@@ -11,7 +11,7 @@ import "./HoverableImg_mobile.scss";
 import { WrapperProps } from "../../../common/commonProps";
 
 interface HoverableImgProps extends WrapperProps {
-	resourceSrc: string
+	dirPath: string
 }
 
 const HoverableImg = (props: HoverableImgProps) => {
@@ -20,7 +20,7 @@ const HoverableImg = (props: HoverableImgProps) => {
 	const onMouseEnter = () => setActive(true);
 	const onMouseLeave = () => setActive(false);
 
-	const src = props.resourceSrc + "/icon-" + (active ? "active" : "inactive") + ".png";
+	const src = props.dirPath + "/icon-" + (active ? "active" : "inactive") + ".png";
 
 	return <img id={props.id} className={`hoverable-img ${props.className}`} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} src={src} alt="not found"/>
 };
