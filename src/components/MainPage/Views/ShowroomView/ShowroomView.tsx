@@ -37,10 +37,10 @@ const ShowroomView = forwardRef((props: ShowroomViewProps, ref) => {
                 alt="not found"
             />
 
-            <p>
+            <span>
                 {descriptions[index]} <br />
                 <span className='sub-header'>{subHeaders[index]}</span>
-            </p>
+            </span>
         </Link>
     )
 
