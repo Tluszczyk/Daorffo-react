@@ -1,7 +1,11 @@
+@media (min-width: 768px) {
+    .whyD {
+        margin-top: 100px;
+    }
+}
+
 .whyD {
     width: 90%;
-    
-    margin-top: 100px;
 
     display: flex;
     flex-direction: column;

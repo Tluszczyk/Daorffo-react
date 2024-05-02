@@ -1,4 +1,5 @@
 .floating-span {
+    display: block;
     top: 130px;
 
     align-self: start;
@@ -7,6 +8,7 @@
     position: sticky;      
     
     height: min-content;
+    padding: 10px;
 }
 
 .text-span {
