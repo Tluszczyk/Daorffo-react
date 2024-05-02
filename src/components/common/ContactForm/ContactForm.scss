@@ -1,5 +1,6 @@
 .contact-form {
-    width: 100%;
+    width: 90%;
+    margin: auto;
 
     grid-auto-rows: 1fr;
     
@@ -10,8 +11,6 @@
 
     padding: 30px;
     box-sizing: border-box;
-
-    margin-bottom: 0;
 
     gap: 5%;
 }
