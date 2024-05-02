@@ -1,6 +1,7 @@
 // components
 import SlidingPanels from '../../../common/SlidingPanels/SlidingPanels';
 import SlidingPanel from '../../../common/SlidingPanels/SlidingPanel/SlidingPanel';
+import NavbarStickyFilter from '../../../common/NavbarStickyFilter/NavbarStickyFilter';
 
 // styles
 import './MainView.css'
@@ -11,6 +12,8 @@ import View from "../../../common/View/View";
  
 const MainView = () => {
     return <View className='snap-scroll-start' id="MainView">
+        <NavbarStickyFilter />
+        
         <SlidingPanels>
             <SlidingPanel 
                 panelSrc="resources/MainPage/Views/MainView/SlidingPanels/0.gif"

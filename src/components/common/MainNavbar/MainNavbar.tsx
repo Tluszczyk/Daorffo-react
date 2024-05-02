@@ -79,7 +79,9 @@ function MainNavbar(props: MainNavbarProps) {
         "https://www.linkedin.com/company/da-orffo/?originalSubdomain=pl"
     ]
 
-    return (
+    return <>
+        <div className="navbar-filter" />
+
         <Navbar 
             id={props.id}
             resourcesParentSrc={props.resourcesParentSrc + "/MainNavbar"}
@@ -117,7 +119,7 @@ function MainNavbar(props: MainNavbarProps) {
                 </div>
             </div>
         </Navbar>
-    )
+    </>
 }
 
 export default MainNavbar
