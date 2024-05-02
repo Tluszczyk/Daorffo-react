@@ -1,5 +1,5 @@
 // modules
-import { useEffect, useState } from "react"; 
+import { useState } from "react"; 
 
 // components
 
@@ -15,7 +15,6 @@ interface ImageCarouselProps {
 }
 
 const ImageCarousel = (props: ImageCarouselProps) => {
-	const [rotatingPercent, setRotatingPercent] = useState(0);
 
 	var images = props.imageSrcs.map((src, index) => <img className="image-carousel-item" key={index} src={src} alt="not found" />);
 	images = images.concat(images);
