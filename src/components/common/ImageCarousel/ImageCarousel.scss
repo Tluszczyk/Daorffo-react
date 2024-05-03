@@ -1,16 +1,16 @@
 @keyframes carousel {
-    0% {
-        transform: translate3d(0, 0, 0);
-        -ms-transform: translate3d(0, 0, 0);
-        -webkit-transform: translate3d(0, 0, 0);
-        -moz-transform: translate3d(0, 0, 0);
-    }
-    100% {
-        transform: translate3d(-50%, 0, 0);
-        -ms-transform: translate3d(-50%, 0, 0);
-        -webkit-transform: translate3d(-50%, 0, 0);
-        -moz-transform: translate3d(-50%, 0, 0);
-    }
+    0% { transform: translate3d(0, 0, 0); }
+    100% { transform: translate3d(-50%, 0, 0); }
+}
+
+@-webkit-keyframes carousel {
+    0% { -webkit-transform: translate3d(0, 0, 0); }
+    100% { -webkit-transform: translate3d(-50%, 0, 0); }
+}
+
+@-moz-keyframes carousel {
+    0% { -moz-transform: translate3d(0, 0, 0); }
+    100% { -moz-transform: translate3d(-50%, 0, 0); }
 }
 
 @mixin blackGradient {
@@ -62,7 +62,9 @@
     transform-style: preserve-3d;
     -webkit-transform-style: preserve-3d;
 
-    will-change: transform, -webkit-transform, -moz-transform, -ms-transform;
+    will-change: transform, -webkit-transform, -moz-transform;
     
     animation: carousel 25s linear infinite;
+    -webkit-animation: carousel 25s linear infinite;
+    -moz-animation: carousel 25s linear infinite;
 }
