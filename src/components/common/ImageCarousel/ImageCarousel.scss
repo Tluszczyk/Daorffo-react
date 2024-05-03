@@ -59,6 +59,10 @@
     width: min-content;
     height: min-content;
     
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+
     will-change: transform, -webkit-transform, -moz-transform, -ms-transform;
+    
     animation: carousel 25s linear infinite;
 }
