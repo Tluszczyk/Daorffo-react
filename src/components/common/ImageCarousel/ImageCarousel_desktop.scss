@@ -1,3 +1,7 @@
 @media (min-width: 768px) {
-  .ImageCarousel {}
+	.imagecarousel-wrapper {
+		&::before, &::after {
+			width: 100px;
+		}
+	}
 }
