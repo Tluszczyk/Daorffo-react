@@ -59,5 +59,6 @@
     width: min-content;
     height: min-content;
     
+    will-change: transform, -webkit-transform, -moz-transform, -ms-transform;
     animation: carousel 25s linear infinite;
 }
