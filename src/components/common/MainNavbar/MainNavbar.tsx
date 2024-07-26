@@ -95,7 +95,6 @@ function MainNavbar(props: MainNavbarProps) {
             theme={props.theme ?? "dark"}
             transparent={props.transparent}
             desktopDirection={props.desktopDirection ?? "horisontal"}
-            noopener noreferrer
             addLogoTransitions={props.addLogoTransitions ?? false}
             hamburgerAlwaysVisible={props.hamburgerAlwaysVisible ?? false}
         >
