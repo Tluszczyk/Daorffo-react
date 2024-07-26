@@ -95,13 +95,13 @@ function MainNavbar(props: MainNavbarProps) {
             theme={props.theme ?? "dark"}
             transparent={props.transparent}
             desktopDirection={props.desktopDirection ?? "horisontal"}
-            
+            noopener noreferrer
             addLogoTransitions={props.addLogoTransitions ?? false}
             hamburgerAlwaysVisible={props.hamburgerAlwaysVisible ?? false}
         >
             {navDropdown}
             <Link className="nav-item pointerCursor" id="goToTrailers" to="/#Showroom" onClick={props.showroomOnClick}> trailers </Link>
-            <Link className="nav-item" to='shop'> shop </Link>
+            <a className="nav-item" href='https://www.campingear.eu'> shop </a>
             <Link className="nav-item" to='/'> <SoonInfoTip> adventure </SoonInfoTip> </Link>
             <Link className="nav-item scrollDown pointerCursor" to="/#Contact" onClick={props.contactOnClick}> contact </Link>
 
