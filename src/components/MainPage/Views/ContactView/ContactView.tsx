@@ -53,12 +53,12 @@ const ContactView = forwardRef((props: ContactViewProps, ref) => {
                         />
 
                         <ContactFormElement
-                            gridColumnSpan = {2} gridRowSpan = {2} required name='question'
+                            gridColumnSpan = {2} gridRowSpan = {2} required name='message'
                             type='textarea' placeholder='Your question...'
                         />
 
                         <ContactFormElement
-                            gridColumnSpan = {2} name='additional info'
+                            gridColumnSpan = {2} name='additional_info'
                             type='input' placeholder='(Optional) What is your car? How do you travel?'
                         />
 
