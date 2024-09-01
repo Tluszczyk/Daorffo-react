@@ -1,7 +1,7 @@
 {
   "name": "daorffo-react",
   "version": "0.1.0",
-  "homepage": "https://daorffo.com",
+  "homepage": "https://www.daorffo.com",
   "private": true,
   "dependencies": {
     "@types/node": "^16.11.43",
