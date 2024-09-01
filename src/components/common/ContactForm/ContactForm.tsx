@@ -1,5 +1,5 @@
 // modules
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 // components
 import ContactFormProvider, { useContactForm } from "./ContactFormProvider";
@@ -26,6 +26,14 @@ const ContactForm = (props: ContactFormProps) => {
 const ContactFormMiddleware = (props: ContactFormProps) => {
 	const { formValues } = useContactForm();
 	const [isLoading, setIsLoading] = useState(false);
+	const [ action, setAction ] = useState("");
+
+	useEffect(() => {
+		let body = Object.entries(formValues).map(([key, value]) => `${key}:${value}`).join("%0A");
+
+		setAction(`mailto:daorffo@daorffo.com?subject=Pytanie ze strony&body=${body}`);
+
+	}, [formValues]);
 
 	const onSubmit = (e: any) => {
 		e.preventDefault();
@@ -42,7 +50,7 @@ const ContactFormMiddleware = (props: ContactFormProps) => {
 			setIsLoading(false);
 		}).catch((err) => {
 			setIsLoading(false);
-			alert("Something went wrong. Please try again later.")
+			window.location.href = action;
 		})
 	};
 
