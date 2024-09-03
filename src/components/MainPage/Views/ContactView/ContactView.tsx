@@ -25,12 +25,12 @@ const ContactView = forwardRef((props: ContactViewProps, ref) => {
                 <div className="mediaDiv" id="mail-and-phones">
                     <span className='mediaDiv-heading'>Mail & phones</span>
                     <p className='mediaDiv-info'>
-                        <span><b>ENG Piotrek: </b>+48 601 656 656</span><br />
-                        <span>piotr@gmail.com</span>
+                        <span><b>ENG Piotrek: </b>+48 693 020 747</span><br />
+                        <span>piotr.tluszcz@daorffo.com</span>
                     </p>
                     <p className='mediaDiv-info'>
-                        <span><b>PL Krzysztof: </b>+48 601 656 656</span><br />
-                        <span>krzysztof@gmail.com</span>
+                        <span><b>PL Krzysztof: </b>+48 605 743 979</span><br />
+                        <span>krzysztof.tluszcz@daorffo.com</span>
                     </p>
                     <a className="mediaDiv-link" href='mailto:daorffo@daorffo.com'>daorffo@daorffo.com</a>
                 </div>
@@ -76,13 +76,13 @@ const ContactView = forwardRef((props: ContactViewProps, ref) => {
                             <li>Cracow, Poland</li>
                         </ul>
                     </div>
-                    <div className='mediaDiv-block'>
+                    {/* <div className='mediaDiv-block'>
                         <span className='mediaDiv-heading'>Can be seen at:</span>
                         <ul className='mediaDiv-info'>
                             <li>Extreme Motors Kraków<br/>ul. Księży Pijarów</li>
                         </ul>
                     </div>
-                    <div className="mediaDiv-link">Let's meet</div>
+                    <div className="mediaDiv-link">Let's meet</div> */}
                 </div>
 
                 <div className="mediaDiv" id="company-info">
