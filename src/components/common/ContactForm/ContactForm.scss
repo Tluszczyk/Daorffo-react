@@ -17,7 +17,7 @@
     gap: 5%;
 }
 
-.contact-form-sending {
+.contact-form-temporary-state {
     position: absolute;
 
     top: 0;
@@ -31,7 +31,46 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+
+.contact-form-sending {
+    @extend .contact-form-temporary-state;
 
     color: orange;
     background-color: rgba(0, 0, 0, 0.85);
+
+    animation: fadeIn 0.2s ease-in-out forwards;
+}
+
+
+.contact-form-sent {
+    @extend .contact-form-temporary-state;
+
+    color: white;
+    background-color: rgba(49, 124, 19, 0.85);
+
+    animation: loadingToSentTransition .2s ease-in-out forwards, fadeOut 0.2s ease-in-out forwards 1.8s;
+}
+
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+@keyframes loadingToSentTransition {
+    from { 
+        color: orange;
+        background-color: rgba(0, 0, 0, 0.85);
+    }
+    to { 
+        color: white;
+        background-color: rgba(49, 124, 19, 0.85);
+    }
 }

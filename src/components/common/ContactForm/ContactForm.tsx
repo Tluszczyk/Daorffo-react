@@ -25,7 +25,8 @@ const ContactForm = (props: ContactFormProps) => {
 
 const ContactFormMiddleware = (props: ContactFormProps) => {
 	const { formValues } = useContactForm();
-	const [isLoading, setIsLoading] = useState(false);
+	const [ isLoading, setIsLoading ] = useState(false);
+	const [ isSent, setIsSent ] = useState(false);
 	const [ action, setAction ] = useState("");
 
 	useEffect(() => {
@@ -48,6 +49,10 @@ const ContactFormMiddleware = (props: ContactFormProps) => {
 			body: JSON.stringify(formValues)
 		}).then(() => {
 			setIsLoading(false);
+
+			setIsSent(true);
+			setTimeout(() => setIsSent(false), 2000);
+
 		}).catch((err) => {
 			setIsLoading(false);
 			window.location.href = action;
@@ -61,6 +66,7 @@ const ContactFormMiddleware = (props: ContactFormProps) => {
 	}}>
 
 		{isLoading && <div className="contact-form-sending">Sending...</div>}
+		{isSent && <div className='contact-form-sent'>Message sent!</div>}
 
 		{props.children}
 	</form>;
