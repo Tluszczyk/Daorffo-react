@@ -80,7 +80,7 @@ const Navbar = (props: NavbarProps) => {
         <div className={`upperContainer ${upperContainerClass}`}>
             { ((props.hamburgerAlwaysVisible ?? false) || mobile) &&
                 <div className={`hamburgerD hamburgerD-${openedClassName}`} onClick={() => setOpened(!opened)} onMouseEnter={hamburgerHoverHandler} onMouseLeave={hamburgerUnhoverHandler} >
-                    <img id="hamburger" src={props.resourcesParentSrc+`/Hamburger/icon-${(opened || hamburgerHovered) ? 'active' : 'inactive'}.png`} alt="not found" />
+                    <img id="hamburger" src={props.resourcesParentSrc+`/Hamburger/icon-${(opened || hamburgerHovered) ? 'active' : 'inactive'}.png`} alt="Menu" />
                 </div>
             }
 
@@ -90,12 +90,12 @@ const Navbar = (props: NavbarProps) => {
                         id="upperLogo" 
                         className="pointerCursor" 
                         src={logoSrc}
-                        alt="not found"
+                        alt="Daorffo Logo"
                     />
                 </a>
                 {
                     !mobile && (props.upperNameVisible ?? false) &&
-                    <img id="upperName" className="mobile-invisible pointerCursor" src={upperNameImgSrc} alt="not found" />
+                    <img id="upperName" className="mobile-invisible pointerCursor" src={upperNameImgSrc} alt="Daorffo" />
                 }
             </div>
 

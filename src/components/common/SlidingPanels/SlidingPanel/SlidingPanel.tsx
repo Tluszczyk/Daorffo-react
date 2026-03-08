@@ -35,7 +35,7 @@ const SlidingPanel = (props: SlidingPanelProps) => {
 	}, [activeSlidingPanelId, props.index, timeIsUpCallback, props.length]);
 
 	const content = (props.contentType === "image" || props.contentType === "gif") ?
-		<img className="sliding-panel-image" src={props.panelSrc} alt="panel" /> :
+		<img className="sliding-panel-image" src={props.panelSrc} alt={props.buttonDescription} /> :
 		<video className="sliding-panel-image" autoPlay muted loop>
 			<source src={props.panelSrc} type="video/mp4" />
 		</video>;

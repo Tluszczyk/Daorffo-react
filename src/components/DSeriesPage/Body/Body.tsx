@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useBetween } from 'use-between';
+import { Helmet } from 'react-helmet-async';
 
 import MainNavbar from '../../common/MainNavbar/MainNavbar';
 import PictoNavbar from '../PictoNavbar/PictoNavbar';
@@ -63,12 +64,13 @@ export function Body(props: TrailerBodyProps) {
         window.scrollTo({top: 0, behavior: 'smooth'})
     }, [openedSection])
 
-    useEffect(() => {
-        document.title = props.pageTitle;
-    }, [props.pageTitle]);
-
     return (
-        <div className='daorffo-font-regular font-white' id='trailer-body'>
+        <main className='daorffo-font-regular font-white' id='trailer-body'>
+            <Helmet>
+                <title>{props.pageTitle}</title>
+                <meta name="description" content="Discover the Daorffo D-Series: The ultimate expedition trailer set up on the U1 chassis. Modular, durable, and ready for any adventure." />
+            </Helmet>
+            <h1 className="visually-hidden">Daorffo | D-Series Expedition Trailers</h1>
             <MainNavbar 
                 id='trailer-navbar'
                 resourcesParentSrc='resources/TrailerPage'
@@ -98,6 +100,6 @@ export function Body(props: TrailerBodyProps) {
                 }
 
             </div>
-        </div>
+        </main>
     )
 }

@@ -1,5 +1,5 @@
 // modules
-import { useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 
 // components
 import MainNavbar from "../../common/MainNavbar/MainNavbar";
@@ -16,12 +16,13 @@ interface UnitBodyProps {
 export const Body = (props: UnitBodyProps) => {
 	window.scrollTo({top: 0, behavior: 'smooth'})
 
-	useEffect(() => {
-        document.title = props.pageTitle;
-    }, [props.pageTitle]);
-	
 	return (
-		<div className="daorffo-font-regular font-black" id="unit-body">
+		<main className="daorffo-font-regular font-black" id="unit-body">
+            <Helmet>
+                <title>{props.pageTitle}</title>
+                <meta name="description" content="Daorffo U1: A modular off-road trailer base for diverse loads. Heavy-duty chassis, adjustable drawbar, and gas-regulated suspension." />
+            </Helmet>
+            <h1 className="visually-hidden">Daorffo U1 | Modular Off-Road Trailer Base</h1>
 			<MainNavbar 
 				id="unit-navbar"
 				resourcesParentSrc="resources/UnitPage"
@@ -37,16 +38,16 @@ export const Body = (props: UnitBodyProps) => {
 			<div id="unit-main-page">
 				<div id="u1-image-and-logo-container">
 					<div id="u1-image-container">
-						<img id="u1-image" src="resources/UnitPage/U1-image-and-logo-container/U1-render-frog.png" alt="Not found" />
+						<img id="u1-image" src="resources/UnitPage/U1-image-and-logo-container/U1-render-frog.png" alt="Daorffo U1 off-road trailer front view" />
 					</div>
 					<div id="u1-logo-container">
-						<img id="u1-logo" alt="Not found"/>
+						<img id="u1-logo" alt="Daorffo U1 Logo"/>
 					</div>
 				</div>
 
 				<div id="u1-description-container">
 					<div id="u1-description-logo-container">
-						<img id="u1-description-logo" src="resources/UnitPage/U1-description-container/U1.png" alt="Not found" />
+						<img id="u1-description-logo" src="resources/UnitPage/U1-description-container/U1.png" alt="U1 modular base" />
 					</div>
 					<div id="u1-description-header">
 						is a modular off-road trailer base for diverse loads.
@@ -62,7 +63,7 @@ export const Body = (props: UnitBodyProps) => {
 				<div id="u1-parameters-container">
 					<div id="u1-drawbar-container">
 						<div id="u1-drawbar-vehicles-container">
-							<img id="u1-drawbar-vehicles" src="resources/UnitPage/Parameters/U1-drawbar-examples.png" alt="Not found" />
+							<img id="u1-drawbar-vehicles" src="resources/UnitPage/Parameters/U1-drawbar-examples.png" alt="Daorffo U1 adjustable drawbar examples" />
 							<div id="u1-drawbar-description-container">
 								<span id="u1-drawbar-description">
 									drawbar is adjustable to different hitch heights
@@ -73,7 +74,7 @@ export const Body = (props: UnitBodyProps) => {
 
 					<div id="u1-parameters-description-container">
 						<div id="u1-parameters-description-image-container">
-							<img id="u1-parameters-description-image" src="resources/UnitPage/Parameters/U1-render-side.png" alt="Not found" />
+							<img id="u1-parameters-description-image" src="resources/UnitPage/Parameters/U1-render-side.png" alt="Daorffo U1 side view parameters" />
 						</div>
 						<div className="u1-parameters-description-parameters-horisontal-container">
 							<div className="u1-parameters-description-parameters-vertical-container">
@@ -114,7 +115,7 @@ export const Body = (props: UnitBodyProps) => {
 
 				<div id="u1-features-container">
 					<div id="u1-features-image-container">
-						<img id="u1-features-image" src="resources/UnitPage/Features/8.png" alt="Not found" />
+						<img id="u1-features-image" src="resources/UnitPage/Features/8.png" alt="Daorffo U1 versatile modular design" />
 					</div>
 
 					<div id="u1-features-description-container">
@@ -139,7 +140,7 @@ export const Body = (props: UnitBodyProps) => {
 
 				<div id="u1-summary-container">
 					<div id="u1-summary-image-container">
-						<img id="u1-summary-image" src="resources/UnitPage/Summary/U1-render-back.png" alt="Not found" />
+						<img id="u1-summary-image" src="resources/UnitPage/Summary/U1-render-back.png" alt="Daorffo U1 rear view" />
 					</div>
 
 					<div id="u1-summary-description-list-container">
@@ -181,6 +182,6 @@ export const Body = (props: UnitBodyProps) => {
 					</div>
 				</div>
 			</div>
-		</div>
+		</main>
 	);
 };

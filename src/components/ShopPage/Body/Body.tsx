@@ -1,5 +1,5 @@
 // modules
-import { useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 
 // components
 import ShopList from "../ShopList/ShopList";
@@ -17,19 +17,13 @@ interface ShopBodyProps {
 export const Body = (props: ShopBodyProps) => {
 	window.scrollTo({top: 0, behavior: 'smooth'})
 	
-	useEffect(() => {
-		document.title = props.pageTitle;
-	}, [props.pageTitle]);
-
 	return (
-		<div id="shop-body" className="daorffo-font-regular font-white">
-			{/* <Navbar 
-				id="shop-navbar"
-				resourcesParentSrc="resources/ShopPage"
-				logoDefaultSrc="/LogoSHOP.png" 
-				logoLink='.' theme="dark" 
-			/> */}
-
+		<main id="shop-body" className="daorffo-font-regular font-white">
+            <Helmet>
+                <title>{props.pageTitle}</title>
+                <meta name="description" content="Shop Daorffo off-road trailers and suspension kits. From modular bases to expedition-ready setups, find the perfect trailer for your journey." />
+            </Helmet>
+            <h1 className="visually-hidden">Daorffo Shop | Off-Road Trailers & Suspension</h1>
 			<div className="page" id="shop-page">
 				<ShopList>
 					<ShopListItem 
@@ -106,6 +100,6 @@ export const Body = (props: ShopBodyProps) => {
 					<a href="mailto:daorffo@daorffo.com">daorffo@daorffo.com</a>
 				</div>
 			</div>
-		</div>
+		</main>
 	);
 };

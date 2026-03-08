@@ -1,4 +1,5 @@
 import { useState, RefObject, useRef, useEffect } from 'react'
+import { Helmet } from 'react-helmet-async'
 
 import './Body_desktop.scss'
 import './Body.scss'
@@ -46,12 +47,35 @@ export function Body(props: MainBodyProps) {
         }
     }, [urlParameter, showroomViewScroll, whyViewScroll, contactViewScroll])
 
-    useEffect(() => {
-        document.title = props.pageTitle;
-    }, [props.pageTitle]);
+    const jsonLd = {
+        "@context": "https://schema.org/",
+        "@type": "Product",
+        "name": "Daorffo Off-Road Trailer",
+        "image": "https://www.daorffo.com/resources/MainPage/Views/MainView/bg-desktop.jpg",
+        "description": "Premium, heavy-duty off-road trailers designed for ultimate overland adventures. Built for durability and performance in any terrain.",
+        "brand": {
+            "@type": "Brand",
+            "name": "Daorffo"
+        },
+        "offers": {
+            "@type": "AggregateOffer",
+            "url": "https://www.daorffo.com/shop",
+            "priceCurrency": "EUR",
+            "lowPrice": "10000",
+            "offerCount": "3"
+        }
+    };
 
     return (
-        <div className='daorffo-font-regular font-white' id='main-body'>
+        <main className='daorffo-font-regular font-white' id='main-body'>
+            <Helmet>
+                <title>{props.pageTitle}</title>
+                <meta name="description" content="Explore Daorffo: Premium, heavy-duty off-road trailers designed for ultimate overland adventures. Built for durability and performance in any terrain." />
+                <script type="application/ld+json">
+                    {JSON.stringify(jsonLd)}
+                </script>
+            </Helmet>
+            <h1 className="visually-hidden">Daorffo | Premium Off-Road Overland Trailers</h1>
             <MainNavbar
                 id='main-navbar'
                 resourcesParentSrc='resources/MainPage'
@@ -78,6 +102,6 @@ export function Body(props: MainBodyProps) {
             />
             <ImagesView />
             <ContactView ref={contactViewRef} />
-        </div>
+        </main>
     )
 }

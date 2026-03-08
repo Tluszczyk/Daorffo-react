@@ -114,7 +114,7 @@ function MainNavbar(props: MainNavbarProps) {
                     ))}
                 </div>
                 <div className="main-navbar-footer-logo-wrapper" onMouseEnter={verticalLogoHoverHandler} onMouseLeave={verticalLogoUnhoverHandler}>
-                    <Link className="main-navbar-footer-logo" to='/'> <img src={verticalLogoSrc} alt="" /> </Link>
+                    <Link className="main-navbar-footer-logo" to='/'> <img src={verticalLogoSrc} alt="Daorffo Vertical Logo" /> </Link>
                 </div>
             </div>
         </Navbar>
