@@ -8,11 +8,24 @@ import './index_mobile.css';
 
 import App from './App';
 
-const root = ReactDOM.createRoot( document.getElementById('root') as HTMLElement );
-root.render(
-	<React.StrictMode>
-		<HelmetProvider>
-			<App />
-		</HelmetProvider>
-	</React.StrictMode>
-);
+const rootElement = document.getElementById('root') as HTMLElement;
+
+if (rootElement.hasChildNodes()) {
+	ReactDOM.hydrateRoot(
+		rootElement,
+		<React.StrictMode>
+			<HelmetProvider>
+				<App />
+			</HelmetProvider>
+		</React.StrictMode>
+	);
+} else {
+	const root = ReactDOM.createRoot(rootElement);
+	root.render(
+		<React.StrictMode>
+			<HelmetProvider>
+				<App />
+			</HelmetProvider>
+		</React.StrictMode>
+	);
+}

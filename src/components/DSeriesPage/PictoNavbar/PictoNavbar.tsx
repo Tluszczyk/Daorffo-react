@@ -71,7 +71,7 @@ const PictoNavbar = (props: PictoNavbarProps) => {
                         <Link to="/" id="logo-item">
                             <img 
                                 src={ logoSrc }
-                                id="logo" alt="not found" 
+                                id="logo" alt="Daorffo Home" 
                                 onMouseEnter={() => setLogoHovered(true)} onMouseLeave={() => setLogoHovered(false)}/>
                         </Link>
                     </div>
@@ -81,7 +81,7 @@ const PictoNavbar = (props: PictoNavbarProps) => {
                     <div className="pictogramsD">
                         <img 
                             id="picto-nav-arrow-left" className="picto-navbar-arrow" 
-                            src={leftArrowSrc} alt="not found" 
+                            src={leftArrowSrc} alt="Previous section" 
                             onMouseEnter={() => setLeftArrowHovered(true)} onMouseLeave={() => setLeftArrowHovered(false)}
                             onClick={prevSection}
                         />
@@ -90,7 +90,7 @@ const PictoNavbar = (props: PictoNavbarProps) => {
                         
                         <img 
                             id="picto-nav-arrow-right" className="picto-navbar-arrow" 
-                            src={rightArrowSrc} alt="not found" 
+                            src={rightArrowSrc} alt="Next section" 
                             onMouseEnter={() => setRightArrowHovered(true)} onMouseLeave={() => setRightArrowHovered(false)}
                             onClick={nextSection}
                         />

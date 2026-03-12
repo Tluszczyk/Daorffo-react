@@ -12,6 +12,6 @@ interface ViewHeaderProps extends WrapperProps {
 	headerTitle: string;
 }
 
-const ViewHeader = (props: ViewHeaderProps) => <div className="view-header">{props.headerTitle}</div>
+const ViewHeader = (props: ViewHeaderProps) => <h2 className="view-header">{props.headerTitle}</h2>
 
 export default ViewHeader;

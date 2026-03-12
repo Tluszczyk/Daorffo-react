@@ -24,7 +24,7 @@ const TrailerSubview2 = (props: TrailerSubview2Props) => {
         & Baggage Section <br/> <br/> <br/> <br/>
 
         <div className="text-graphic">
-            <img src="resources/TrailerPage/TrailerSubviews/TrailerSubview2/0.png" alt="not found"/>
+            <img src="resources/TrailerPage/TrailerSubviews/TrailerSubview2/0.png" alt="Daorffo trailer camping and utility features overview"/>
         </div>
     </FloatingSpan>
 

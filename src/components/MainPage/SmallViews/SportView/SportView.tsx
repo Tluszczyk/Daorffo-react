@@ -17,7 +17,7 @@ const SportView = () =>
                     All trailers are customizable in terms of the choice of shock absorbers. Choose from our dumper selection.
                 </span>
             </div>
-            <img id="sportI" src="resources/MainPage/SmallViews/SportView/img.png" alt="not found"/>
+            <img id="sportI" src="resources/MainPage/SmallViews/SportView/img.png" alt="Daorffo off-road trailer with high-clearance independent suspension on rugged terrain"/>
         </div>
     </View>
  

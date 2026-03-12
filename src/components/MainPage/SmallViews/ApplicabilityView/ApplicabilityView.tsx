@@ -7,7 +7,7 @@ import "./ApplicabilityView_mobile.css";
 const ApplicabilityView = () => 
     <View className="snap-scroll-center" id="applicabilityView">
         <div id="applicability">
-            <img id="applicationsI" src="resources/MainPage/SmallViews/ApplicabilityView/img.png" alt="not found" />
+            <img id="applicationsI" src="resources/MainPage/SmallViews/ApplicabilityView/img.png" alt="Daorffo Sport Utility Trailer (SUT) leveled on a steep rocky mountain pass" />
             <div id="applicationsSpan">
                 <h3 className="sectionH">Our SUT is always leveled!</h3>
                 <span className="sectionP">

@@ -36,7 +36,7 @@ const PictoNavItem = (props: PictoNavItemProps) => {
                     id={`${props.id}-item-img`}
                     src={srcPrefix + (props.active || hovering ? "active" : "inactive") + ".png"}
                     className="picto-nav-item"
-                    alt="not found"
+                    alt={`Daorffo D-Series icon: ${props.description}`}
                 />
             </div>
             {props.description!=="" && <p>{props.description}</p>}

@@ -10,10 +10,10 @@ export interface ViewProps extends WrapperProps {
 }
  
 const View = forwardRef((props: ViewProps, ref) => 
-    <div {...props} ref={ref as RefObject<HTMLDivElement>} className={`view ${props.className ?? ""}`}>
+    <section {...props} ref={ref as RefObject<HTMLDivElement>} className={`view ${props.className ?? ""}`}>
         {props.headertitle ? <ViewHeader headerTitle={props.headertitle} /> : null}
         {props.children}
-    </div>
+    </section>
 );
  
 export default View;

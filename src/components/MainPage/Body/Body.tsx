@@ -1,5 +1,5 @@
 import { useState, RefObject, useRef, useEffect } from 'react'
-import { Helmet } from 'react-helmet-async'
+import SEO from '../../common/SEO';
 
 import './Body_desktop.scss'
 import './Body.scss'
@@ -68,39 +68,54 @@ export function Body(props: MainBodyProps) {
 
     return (
         <main className='daorffo-font-regular font-white' id='main-body'>
-            <Helmet>
-                <title>{props.pageTitle}</title>
-                <meta name="description" content="Explore Daorffo: Premium, heavy-duty off-road trailers designed for ultimate overland adventures. Built for durability and performance in any terrain." />
+            <SEO 
+                title="Daorffo | Premium Off-Road Overland Trailers | Adventure Ready"
+                description="Daorffo designs and builds heavy-duty, off-road overland trailers for ultimate expeditions. Discover our modular U1 chassis and expedition-ready D-Series."
+                canonicalUrl="/"
+            >
                 <script type="application/ld+json">
                     {JSON.stringify(jsonLd)}
                 </script>
-            </Helmet>
-            <h1 className="visually-hidden">Daorffo | Premium Off-Road Overland Trailers</h1>
-            <MainNavbar
-                id='main-navbar'
-                resourcesParentSrc='resources/MainPage'
+            </SEO>
+            
+            <header>
+                <h1 className="visually-hidden">Daorffo | Premium Off-Road Overland Trailers</h1>
+                <MainNavbar
+                    id='main-navbar'
+                    resourcesParentSrc='resources/MainPage'
 
-                showroomOnClick={showroomViewScroll}
-                whyOnClick={whyViewScroll}
-                contactOnClick={contactViewScroll}
-                
-                transparent
-                
-                addLogoTransitions
-                
-                logoHoverable
-            />
+                    showroomOnClick={showroomViewScroll}
+                    whyOnClick={whyViewScroll}
+                    contactOnClick={contactViewScroll}
+                    
+                    transparent
+                    
+                    addLogoTransitions
+                    
+                    logoHoverable
+                />
+            </header>
+
             <MainView />
+            
             <ShowroomView ref={showroomViewRef}/>
+
             <WhyView ref={whyViewRef}/>
-            <WholeWidthImage id="topr" parentsrc='resources/MainPage/' />
+
+            <WholeWidthImage id="topr" parentsrc='resources/MainPage/' alt="Daorffo trailer on a high mountain ridge" />
+            
             <ApplicabilityView />
-            <WholeWidthImage className="snap-scroll-center" id="dessert" parentsrc='resources/MainPage/' />
+
+            <WholeWidthImage className="snap-scroll-center" id="dessert" parentsrc='resources/MainPage/' alt="Daorffo trailer in the middle of a vast desert" />
+            
             <SportView />
+
             <SummarisingView
-                wholeWidthImage={<WholeWidthImage id="chassis" parentsrc='resources/MainPage/' />} 
+                wholeWidthImage={<WholeWidthImage id="chassis" parentsrc='resources/MainPage/' alt="Detailed view of the Daorffo heavy-duty trailer chassis" />} 
             />
+
             <ImagesView />
+
             <ContactView ref={contactViewRef} />
         </main>
     )

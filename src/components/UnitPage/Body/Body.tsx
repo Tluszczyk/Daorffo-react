@@ -1,5 +1,5 @@
 // modules
-import { Helmet } from "react-helmet-async";
+import SEO from '../../common/SEO';
 
 // components
 import MainNavbar from "../../common/MainNavbar/MainNavbar";
@@ -18,34 +18,38 @@ export const Body = (props: UnitBodyProps) => {
 
 	return (
 		<main className="daorffo-font-regular font-black" id="unit-body">
-            <Helmet>
-                <title>{props.pageTitle}</title>
-                <meta name="description" content="Daorffo U1: A modular off-road trailer base for diverse loads. Heavy-duty chassis, adjustable drawbar, and gas-regulated suspension." />
-            </Helmet>
-            <h1 className="visually-hidden">Daorffo U1 | Modular Off-Road Trailer Base</h1>
-			<MainNavbar 
-				id="unit-navbar"
-				resourcesParentSrc="resources/UnitPage"
-				
-				theme="light"
-				desktopDirection="vertical"
-				
-				hamburgerAlwaysVisible
-				logoDeviceSensitive
-				upperNameVisible
-			/>
+            <SEO 
+                title="U1 Modular Off-Road Trailer Base | Versatile Heavy-Duty Chassis | Daorffo"
+                description="The Daorffo U1 is a modular off-road trailer base designed for diverse loads. Features an adjustable drawbar, gas-regulated suspension, and welded steel construction."
+                canonicalUrl="/unit"
+            />
+            
+            <header>
+                <h1 className="visually-hidden">Daorffo U1 | Modular Off-Road Trailer Base</h1>
+                <MainNavbar 
+                    id="unit-navbar"
+                    resourcesParentSrc="resources/UnitPage"
+                    
+                    theme="light"
+                    desktopDirection="vertical"
+                    
+                    hamburgerAlwaysVisible
+                    logoDeviceSensitive
+                    upperNameVisible
+                />
+            </header>
 
 			<div id="unit-main-page">
-				<div id="u1-image-and-logo-container">
+				<section id="u1-image-and-logo-container">
 					<div id="u1-image-container">
 						<img id="u1-image" src="resources/UnitPage/U1-image-and-logo-container/U1-render-frog.png" alt="Daorffo U1 off-road trailer front view" />
 					</div>
 					<div id="u1-logo-container">
 						<img id="u1-logo" alt="Daorffo U1 Logo"/>
 					</div>
-				</div>
+				</section>
 
-				<div id="u1-description-container">
+				<section id="u1-description-container">
 					<div id="u1-description-logo-container">
 						<img id="u1-description-logo" src="resources/UnitPage/U1-description-container/U1.png" alt="U1 modular base" />
 					</div>
@@ -58,9 +62,9 @@ export const Body = (props: UnitBodyProps) => {
 					<div id="u1-description-2">
 						We are open to business customer enquiries for the fitting of specialised transport products.
 					</div>
-				</div>
+				</section>
 
-				<div id="u1-parameters-container">
+				<section id="u1-parameters-container">
 					<div id="u1-drawbar-container">
 						<div id="u1-drawbar-vehicles-container">
 							<img id="u1-drawbar-vehicles" src="resources/UnitPage/Parameters/U1-drawbar-examples.png" alt="Daorffo U1 adjustable drawbar examples" />
@@ -111,9 +115,9 @@ export const Body = (props: UnitBodyProps) => {
 							</div>
 						</div>
 					</div>
-				</div>
+				</section>
 
-				<div id="u1-features-container">
+				<section id="u1-features-container">
 					<div id="u1-features-image-container">
 						<img id="u1-features-image" src="resources/UnitPage/Features/8.png" alt="Daorffo U1 versatile modular design" />
 					</div>
@@ -136,9 +140,9 @@ export const Body = (props: UnitBodyProps) => {
 							<li className="u1-features-list-item">... what else?</li>
 						</ul>
 					</div>
-				</div>
+				</section>
 
-				<div id="u1-summary-container">
+				<footer id="u1-summary-container">
 					<div id="u1-summary-image-container">
 						<img id="u1-summary-image" src="resources/UnitPage/Summary/U1-render-back.png" alt="Daorffo U1 rear view" />
 					</div>
@@ -180,7 +184,7 @@ export const Body = (props: UnitBodyProps) => {
 							</div>
 						</a>
 					</div>
-				</div>
+				</footer>
 			</div>
 		</main>
 	);

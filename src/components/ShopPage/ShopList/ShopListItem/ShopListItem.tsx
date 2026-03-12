@@ -21,7 +21,7 @@ const ShopListItem = (props: ShopListItemProps) => {
 		<div className="shop-list-item">
 			{	props.id &&
 				<div className="shop-list-item-image">
-					<img src={`resources/ShopPage/ShopList/${props.id}.png`} alt="Not found" />
+					<img src={`resources/ShopPage/ShopList/${props.id}.png`} alt={`Daorffo ${props.title}`} />
 				</div>
 			}
 
