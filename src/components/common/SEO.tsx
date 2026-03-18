@@ -19,6 +19,7 @@ const SEO: React.FC<SEOProps> = ({
   children 
 }) => {
   const fullCanonicalUrl = canonicalUrl ? `https://www.daorffo.com${canonicalUrl}` : 'https://www.daorffo.com';
+  const defaultOgImage = "https://www.daorffo.com/resources/MainPage/Views/MainView/bg-desktop.jpg";
 
   return (
     <Helmet>
@@ -30,12 +31,12 @@ const SEO: React.FC<SEOProps> = ({
       <meta property="og:description" content={description} />
       <meta property="og:url" content={fullCanonicalUrl} />
       <meta property="og:type" content={ogType} />
-      {ogImage && <meta property="og:image" content={ogImage} />}
+      <meta property="og:image" content={ogImage || defaultOgImage} />
       
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
-      {ogImage && <meta name="twitter:image" content={ogImage} />}
+      <meta property="twitter:image" content={ogImage || defaultOgImage} />
       
       {children}
     </Helmet>

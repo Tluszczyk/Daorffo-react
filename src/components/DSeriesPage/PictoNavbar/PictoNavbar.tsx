@@ -63,8 +63,10 @@ const PictoNavbar = (props: PictoNavbarProps) => {
         props.setOpenedSection(nextSection)
     }
 
+    var containerClasses = `level-${getLevel()} ${props.className ?? ""} upper-container ${props.transparent ? "transparent" : ""}`;
+
     return <>
-        <div className={`level-${getLevel()} ${props.className} upper-container ${props.transparent}`}>
+        <div className={containerClasses}>
             <div className={`picto-navbar level-${getLevel()}`}>
                 <div className="logoD-wrapper">
                     <div className="logoD">

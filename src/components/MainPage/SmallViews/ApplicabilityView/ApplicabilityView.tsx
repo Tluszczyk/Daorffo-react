@@ -9,12 +9,15 @@ const ApplicabilityView = () =>
         <div id="applicability">
             <img id="applicationsI" src="resources/MainPage/SmallViews/ApplicabilityView/img.png" alt="Daorffo Sport Utility Trailer (SUT) leveled on a steep rocky mountain pass" />
             <div id="applicationsSpan">
-                <h3 className="sectionH">Our SUT is always leveled!</h3>
+                <h3 className="sectionH">Custom Sport Utility Trailers Engineered for Any Terrain</h3>
                 <span className="sectionP">
-                    Sport Utility Trailer is made to adjust to any off-road car. That's why we encourage to use adjustable hitch height
-                    drawbar and the same set of wheels like in your car. The SUT will be well leveled and can go anywhere you can! <br/> <br/>
+                    Our custom sport utility trailers (SUT) are built to follow your vehicle's lead. With an adjustable 
+                    hitch height drawbar and wheels that can match your towing vehicle, your trailer stays perfectly 
+                    leveled no matter how rugged the terrain. This high-clearance design ensures your off-road overland 
+                    trailer can conquer the same 4x4 trails as your truck. <br/> <br/>
 
-                    Psst.. notice! Now you can have two more spare wheels in case of emergency! 🙂
+                    <strong>Bonus:</strong> By matching your trailer wheels to your car, you effectively carry two extra 
+                    spare wheels for emergency situations! 🙂
                 </span>
             </div>
         </div>

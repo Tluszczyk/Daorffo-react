@@ -20,9 +20,9 @@ const ShowroomView = forwardRef((props: ShowroomViewProps, ref) => {
         'D1 Trailer'
     ]
     const subHeaders = [
-        'Medical Evacuation Trailer',
-        'U1 Modular Base Trailer', 
-        'Expedition Set Up'
+        'A specialized medical evacuation trailer built on a rugged off-road chassis. Designed for extreme rescue missions, it ensures safe patient transport across the most demanding 4x4 trails and remote disaster zones.',
+        'The ultimate modular base trailer for versatile off-grid camping. This lightweight expedition trailer offers a high-clearance, customizable platform that serves as the perfect foundation for any custom sport utility setup.', 
+        'Our flagship expedition setup, engineered for long-term off-road overlanding. Featuring independent suspension and a lightweight design under 750kg, the D1 is the ultimate companion for serious 4x4 enthusiasts.'
     ]
 
     const models = modelNames.map((name, index) => <Link
@@ -34,7 +34,7 @@ const ShowroomView = forwardRef((props: ShowroomViewProps, ref) => {
             <img 
                 id={name} className='Model'
                 src={`resources/MainPage/Views/ShowroomView/${name}/img.png`}
-                alt={`Daorffo ${descriptions[index]} - ${subHeaders[index]}`}
+                alt={`Daorffo ${descriptions[index]} - Off-Road Trailer`}
             />
 
             <span>
@@ -45,7 +45,7 @@ const ShowroomView = forwardRef((props: ShowroomViewProps, ref) => {
     )
 
     return (
-        <View {...props} ref={ref as RefObject<HTMLDivElement>} className='snap-scroll-start' id="Showroom" headertitle='Showroom'>
+        <View {...props} ref={ref as RefObject<HTMLDivElement>} className='snap-scroll-start' id="Showroom" headertitle='Off-Road Overland Trailer Showroom'>
 
             <div id="Models"> {models} </div>
         </View>

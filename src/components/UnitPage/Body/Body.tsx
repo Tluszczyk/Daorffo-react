@@ -51,26 +51,26 @@ export const Body = (props: UnitBodyProps) => {
 
 				<section id="u1-description-container">
 					<div id="u1-description-logo-container">
-						<img id="u1-description-logo" src="resources/UnitPage/U1-description-container/U1.png" alt="U1 modular base" />
+						<img id="u1-description-logo" src="resources/UnitPage/U1-description-container/U1.png" alt="Daorffo U1 modular off-road chassis" />
 					</div>
 					<div id="u1-description-header">
-						is a modular off-road trailer base for diverse loads.
+						The Daorffo U1 is a versatile, modular off-road trailer base designed for heavy-duty performance and diverse loads.
 					</div>
 					<div id="u1-description-1">
-						Suspension solutions are used to evacuate wounded from the battlefield and have been tested to carry heavy and fragile materials and equipment.
+						Our advanced suspension solutions, originally engineered for battlefield medical evacuations, have been rigorously tested to safely carry heavy and fragile equipment across the most extreme terrain.
 					</div>
 					<div id="u1-description-2">
-						We are open to business customer enquiries for the fitting of specialised transport products.
+						We welcome custom enquiries from business clients looking for specialized off-road transport solutions and high-performance chassis fitting.
 					</div>
 				</section>
 
 				<section id="u1-parameters-container">
 					<div id="u1-drawbar-container">
 						<div id="u1-drawbar-vehicles-container">
-							<img id="u1-drawbar-vehicles" src="resources/UnitPage/Parameters/U1-drawbar-examples.png" alt="Daorffo U1 adjustable drawbar examples" />
+							<img id="u1-drawbar-vehicles" src="resources/UnitPage/Parameters/U1-drawbar-examples.png" alt="Daorffo U1 adjustable drawbar with various 4x4 vehicles" />
 							<div id="u1-drawbar-description-container">
 								<span id="u1-drawbar-description">
-									drawbar is adjustable to different hitch heights
+									The adjustable drawbar seamlessly adapts to various vehicle hitch heights for perfect leveling.
 								</span>
 							</div>
 						</div>
@@ -119,47 +119,47 @@ export const Body = (props: UnitBodyProps) => {
 
 				<section id="u1-features-container">
 					<div id="u1-features-image-container">
-						<img id="u1-features-image" src="resources/UnitPage/Features/8.png" alt="Daorffo U1 versatile modular design" />
+						<img id="u1-features-image" src="resources/UnitPage/Features/8.png" alt="Daorffo U1 versatile modular design applications" />
 					</div>
 
 					<div id="u1-features-description-container">
 						<span id="u1-features-description">
-							With its variable upper-body modular design the U1 trailer can be quickly and easily adapted to suit a range of purposes.
+							Thanks to its variable upper-body modular design, the U1 off-road chassis can be quickly adapted for various industrial and recreational purposes:
 						</span>
 					</div>
 
 					<div id="u1-features-list-container">
 						<ul id="u1-features-list">
-							<li className="u1-features-list-item">heavy materials transport</li>
-							<li className="u1-features-list-item">fragile equipment carriage</li>
-							<li className="u1-features-list-item">water tank and power generator supply</li>
-							<li className="u1-features-list-item">mobile workstation</li>
-							<li className="u1-features-list-item">loose cargo carriage</li>
-							<li className="u1-features-list-item">base camp for activities</li>
-							<li className="u1-features-list-item">mobile showroom</li>
-							<li className="u1-features-list-item">... what else?</li>
+							<li className="u1-features-list-item">Heavy materials & logistics transport</li>
+							<li className="u1-features-list-item">Fragile equipment & scientific carriage</li>
+							<li className="u1-features-list-item">Mobile water tank & power generator supply</li>
+							<li className="u1-features-list-item">Professional mobile workstation</li>
+							<li className="u1-features-list-item">Loose cargo & bulk carriage</li>
+							<li className="u1-features-list-item">Expedition base camp for outdoor activities</li>
+							<li className="u1-features-list-item">Mobile showroom & event unit</li>
+							<li className="u1-features-list-item">... and many more custom configurations.</li>
 						</ul>
 					</div>
 				</section>
 
 				<footer id="u1-summary-container">
 					<div id="u1-summary-image-container">
-						<img id="u1-summary-image" src="resources/UnitPage/Summary/U1-render-back.png" alt="Daorffo U1 rear view" />
+						<img id="u1-summary-image" src="resources/UnitPage/Summary/U1-render-back.png" alt="Daorffo U1 rear view and modular chassis detail" />
 					</div>
 
 					<div id="u1-summary-description-list-container">
 						<div className="u1-summary-description-element" id="u1-summary-description-list">
 							<div className="u1-summary-description-list-item">
-								welded steel construction									
+								Heavy-duty welded steel construction									
 							</div>
 							<div className="u1-summary-description-list-item">
-								adjustable drawbar
+								Precision adjustable drawbar
 							</div>
 							<div className="u1-summary-description-list-item">
-								multiple top modules
+								Interchangeable modular top modules
 							</div>
 							<div className="u1-summary-description-list-item">
-								gas-regulated off-road suspension
+								Gas-regulated independent off-road suspension
 							</div>
 						</div>
 					</div>

@@ -13,9 +13,27 @@
 
     .trailer-layout-mid {
         grid-column: 1 / span 1;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     
     .trailer-layout-right {
         grid-column: 1 / span 1;
+    }
+
+    .h3, h3 {
+        font-size: 1.4em !important;
+        text-align: center !important;
+        width: 100%;
+    }
+
+    .floating-span {
+        text-align: center !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 10px;
     }
 }

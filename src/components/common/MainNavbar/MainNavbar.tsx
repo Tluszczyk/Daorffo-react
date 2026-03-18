@@ -47,11 +47,11 @@ function MainNavbar(props: MainNavbarProps) {
 
     var dropItRef = 
         <div className={`drop-content ${openedDropdown ? 'nav-dropdown-opened' : 'nav-dropdown-closed'}`} id="drop-it" >
-            <Link className="drop-item pointerCursor" to="/#Why" onClick={props.whyOnClick} > why? </Link>
-            <Link className='drop-item' to='/'> <SoonInfoTip> mission </SoonInfoTip> </Link>
-            <Link className="drop-item" to='/'> <SoonInfoTip> team </SoonInfoTip> </Link>
-            <Link className="drop-item" to='/'> <SoonInfoTip> story </SoonInfoTip> </Link>
-            <Link className="drop-item" to='/'> <SoonInfoTip> friends </SoonInfoTip> </Link>
+            <Link className="drop-item pointerCursor" to="/#Why" onClick={props.whyOnClick} > Why? </Link>
+            <Link className='drop-item' to='/'> <SoonInfoTip> Mission </SoonInfoTip> </Link>
+            <Link className="drop-item" to='/'> <SoonInfoTip> Team </SoonInfoTip> </Link>
+            <Link className="drop-item" to='/'> <SoonInfoTip> Story </SoonInfoTip> </Link>
+            <Link className="drop-item" to='/'> <SoonInfoTip> Friends </SoonInfoTip> </Link>
         </div>
 
     var navDropdown = 
@@ -61,7 +61,7 @@ function MainNavbar(props: MainNavbarProps) {
                 className="nav-item"
                 id="drop-what"
                 onMouseEnter={() => setOpenedDropdown(true)}
-            > about us </Link>
+            > About Us </Link>
 
             {dropItRef}
         </div>
@@ -99,10 +99,10 @@ function MainNavbar(props: MainNavbarProps) {
             hamburgerAlwaysVisible={props.hamburgerAlwaysVisible ?? false}
         >
             {navDropdown}
-            <Link className="nav-item pointerCursor" id="goToTrailers" to="/#Showroom" onClick={props.showroomOnClick}> trailers </Link>
-            <a className="nav-item" href='https://www.campingear.eu'> shop </a>
-            <Link className="nav-item" to='/'> <SoonInfoTip> adventure </SoonInfoTip> </Link>
-            <Link className="nav-item scrollDown pointerCursor" to="/#Contact" onClick={props.contactOnClick}> contact </Link>
+            <Link className="nav-item pointerCursor" id="goToTrailers" to="/#Showroom" onClick={props.showroomOnClick}> Trailers </Link>
+            <a className="nav-item" href='https://www.campingear.eu'> Shop </a>
+            <Link className="nav-item" to='/'> <SoonInfoTip> Adventure </SoonInfoTip> </Link>
+            <Link className="nav-item scrollDown pointerCursor" to="/#Contact" onClick={props.contactOnClick}> Contact </Link>
 
             <div className="main-navbar-footer">
                 <div className="main-navbar-footer-media-container">

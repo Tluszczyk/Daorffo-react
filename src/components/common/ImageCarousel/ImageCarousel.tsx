@@ -15,7 +15,7 @@ interface ImageCarouselProps {
 
 const ImageCarousel = (props: ImageCarouselProps) => {
 
-	var images = props.imageSrcs.map((src, index) => <img className="image-carousel-item" key={index} src={src} alt="not found" />);
+	var images = props.imageSrcs.map((src, index) => <img className="image-carousel-item" key={index} src={src} alt="Daorffo Off-Road Trailer" />);
 	images = images.concat(images);
 
 	return (

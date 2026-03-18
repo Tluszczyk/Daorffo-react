@@ -3,6 +3,7 @@
     height: 100px;
 
     min-height: 100px;
+    margin: 0;
 
     display: flex;
     flex-direction: column;
@@ -10,7 +11,10 @@
     text-align: end;
     justify-content: center;
 
+    /* Push text higher to stay above the 100px separator line */
+    padding-bottom: 25px; 
+
     z-index: 11;
 
-    font-size: 3em;
+    font-size: 2.2em;
 }

@@ -19,7 +19,7 @@ const SubgalleryView = (props: SubgalleryViewProps) => {
         images.push(
             <div className="gallery-item-wrapper" key={itemId}>
                 <div className="gallery-item-filler"></div>
-                <img className="gallery-item" alt="file not found" src={filename} key={itemId} />
+                <img className="gallery-item" alt="Daorffo D-Series Off-Road Trailer" src={filename} key={itemId} />
             </div>
         )
     }

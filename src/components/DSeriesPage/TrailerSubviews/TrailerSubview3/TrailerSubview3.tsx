@@ -11,32 +11,30 @@ interface TrailerSubview3Props extends WrapperProps {}
  
 const TrailerSubview3 = (props: TrailerSubview3Props) => {
     var chassisSpan = <FloatingSpan className="trailer-layout-mid" id="trailer-subview-3-span-0" key={0} onClick={props.onClick}>
-        <div className="h3">Chassis Features</div> <br/>
+        <div className="h3">Heavy-Duty Chassis Features</div> <br/>
 
-        <i>The most important part of the trailer. <br/> Never go far without solid and reliable chassis!
-        <br/> After years of testing we came out with the solution that is well respected in the overland community. <br/>  <br/></i>
+        <i>The chassis is the heart of an expedition trailer. Never compromise on the foundation of your overlanding rig. After years of extreme testing, we've developed a solution respected across the global overland community.</i> <br/>  <br/>
 
         <ul>
-        <li><OrangeSpan>Galvanized and powder coated chassis (duplex)</OrangeSpan> to provide durability and resistance to damage and corrosion <br/> <br/></li>
+        <li><OrangeSpan>Galvanized and Powder Coated Chassis (Duplex)</OrangeSpan> – Maximum resistance to corrosion, rust, and physical damage on the trail. <br/> <br/></li>
 
-        <li> <OrangeSpan>Low frame weight </OrangeSpan> and <OrangeSpan> short trailer dimensions</OrangeSpan>
-        <br/> - ease of movement in the field, reversing and turning back<br/> <br/></li>
+        <li> <OrangeSpan>Ultra-Lightweight Frame</OrangeSpan> & <OrangeSpan>Compact Dimensions</OrangeSpan>
+        <br/> – Designed for effortless movement, reversing, and tight turns in challenging terrain.<br/> <br/></li>
 
-        <li><OrangeSpan>Independent suspension </OrangeSpan> and <OrangeSpan>drawbar with stabilizer</OrangeSpan>
-        <br/> - leveling unevenness of the terrain, no bouncing effect<br/> <br/></li>
+        <li><OrangeSpan>High-Performance Independent Suspension</OrangeSpan> & <OrangeSpan>Stabilized Drawbar</OrangeSpan>
+        <br/> – Seamlessly levels terrain unevenness and eliminates the "bouncing effect" common in standard trailers.<br/> <br/></li>
 
-        <li><OrangeSpan>Regulated stiffness and height of the double-spring shock absorbers (Coil-Overs) </OrangeSpan> <br/>
-        - suspension adapts itself to the road unevenness <br/>
-        - can be set manually responding to the equipment weight</li> <br/>
+        <li><OrangeSpan>Adjustable Coil-Over Shock Absorbers</OrangeSpan> <br/>
+        – Threaded bodies allow for manual adjustment of height and stiffness to match your load and terrain. <br/></li> <br/>
 
-        <li> <OrangeSpan>Storage space for fuel, gas, battery and water tank between wheels</OrangeSpan> - direct access, lower center of gravity <br/> <br/></li>
+        <li> <OrangeSpan>Optimal Weight Distribution</OrangeSpan> – Integrated storage for fuel, gas, and batteries between the wheels lowers the center of gravity. <br/> <br/></li>
 
-        <li><OrangeSpan>Equipment fastened on steel chassis guards</OrangeSpan>
-        <br/> - protection against damage</li>
+        <li><OrangeSpan>Steel Chassis Guards</OrangeSpan>
+        <br/> – Protects critical equipment and tanks against impact and trail debris.</li>
 
         </ul>
 
-        <br/><br/><br/> <OrangeSpan>d1|Chassis</OrangeSpan>  can be sold separately for your own upper body arrangement. In the new design the steel sheet chassis construction is 3D cut and welded.  <br/> <br/>
+        <br/><br/><br/> The <OrangeSpan>d1|Chassis</OrangeSpan> is available separately for custom build-outs. Our new 3D CNC-cut and precision-welded steel construction ensures unmatched structural integrity. <br/> <br/>
     </FloatingSpan>
 
     return [chassisSpan]

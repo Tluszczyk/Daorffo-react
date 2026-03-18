@@ -69,8 +69,8 @@ export function Body(props: MainBodyProps) {
     return (
         <main className='daorffo-font-regular font-white' id='main-body'>
             <SEO 
-                title="Daorffo | Premium Off-Road Overland Trailers | Adventure Ready"
-                description="Daorffo designs and builds heavy-duty, off-road overland trailers for ultimate expeditions. Discover our modular U1 chassis and expedition-ready D-Series."
+                title="Daorffo | Premium Lightweight Off-Road Overland Trailers | Adventure Ready"
+                description="Daorffo designs and builds heavy-duty, off-road overland trailers for ultimate expeditions. Discover our lightweight, high-clearance expedition trailers and modular U1 chassis."
                 canonicalUrl="/"
             >
                 <script type="application/ld+json">
@@ -79,7 +79,7 @@ export function Body(props: MainBodyProps) {
             </SEO>
             
             <header>
-                <h1 className="visually-hidden">Daorffo | Premium Off-Road Overland Trailers</h1>
+                <h1 className="visually-hidden">Daorffo | Premium Lightweight Off-Road Overland Trailers</h1>
                 <MainNavbar
                     id='main-navbar'
                     resourcesParentSrc='resources/MainPage'

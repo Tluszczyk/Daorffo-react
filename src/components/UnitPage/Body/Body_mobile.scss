@@ -105,7 +105,7 @@
 
 	.u1-summary-description-list-item {
 		font-size: 1em;
-		text-align: end;
+		text-align: center;
 	}
 
 	#u1-summary-footer-container {
@@ -114,13 +114,27 @@
 
 		margin-top: 40px;
 		gap: 50px;
+		text-align: center;
 	}
 
 	#u1-summary-price-description {
-		font-size: 3em;
+		font-size: 1.5em; /* Reduced from 3em for better mobile fit */
 	}
 
 	#u1-summary-contact-description {
-		font-size: 3em;
+		font-size: 1.5em; /* Reduced from 3em for better mobile fit */
 	}
+
+    /* Ensure description headers and content are centered on mobile */
+    #u1-description-header, #u1-description-1, #u1-description-2, #u1-features-description {
+        text-align: center;
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    #u1-features-list {
+        text-align: center;
+        list-style-position: inside;
+        padding: 0;
+    }
 }

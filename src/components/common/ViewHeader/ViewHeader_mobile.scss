@@ -1,6 +1,24 @@
 @media (max-width: 768px) {
     .view-header {
+        position: sticky;
+        top: 0;
+        z-index: 10; /* Keep it below the navbar but above the content */
+        
+        display: flex;
+        justify-content: center;
         align-items: center;
         text-align: center;
+        
+        width: 100%;
+        height: 100px;
+        margin: 0;
+        
+        font-size: 1.2em; /* Smaller font to ensure it fits between hamburger and logo */
+        padding: 0 100px; /* Leave space for hamburger (left) and logo (right) */
+        box-sizing: border-box;
+
+        /* Dark gradient to ensure title is legible over content */
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.8) 70%, rgba(0, 0, 0, 0) 100%);
+        pointer-events: none; /* Allow clicks to pass through to links underneath */
     }
 }

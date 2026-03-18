@@ -22,7 +22,7 @@ const HoverableImg = (props: HoverableImgProps) => {
 
 	const src = props.dirPath + "/icon-" + (active ? "active" : "inactive") + ".png";
 
-	return <img id={props.id} className={`hoverable-img ${props.className}`} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} src={src} alt="not found"/>
+	return <img id={props.id} className={`hoverable-img ${props.className}`} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} src={src} alt="Daorffo Off-Road Trailer"/>
 };
 
 export default HoverableImg;

@@ -10,27 +10,27 @@ interface TrailerSubview0Props extends WrapperProps {}
  
 const TrailerSubview0 = (props: TrailerSubview0Props) => {
     var overviewSpan = <FloatingSpan className="trailer-layout-mid" id="trailer-subview-0-span-0" key={0} onClick={props.onClick}>
-        <div><img width="300" alt="No resource found" src="resources/TrailerPage/TrailerSubviews/TrailerSubview0/img-0.png"/></div>
+        <div><img width="300" alt="Daorffo D1 Off-Road Expedition Trailer" src="resources/TrailerPage/TrailerSubviews/TrailerSubview0/img-0.png"/></div>
 
-        <h3>About</h3>
+        <h3>The D1 Expedition Trailer</h3>
 
-        The main goal of D.Series was to be compact, light, durable and comfortable. <br/> <br/>
+        The core mission of the D-Series was to create an expedition trailer that is compact, lightweight, durable, and comfortable. <br/> <br/>
 
-        The <OrangeSpan>daorffo|d1</OrangeSpan> trailer consist of the d1 off-road chassis and the rectangular upper body with drop-down sides, which provide easy access  to equipment and working tops all around the trailer.
-        <br/> We just prefer to keep our stuff in the right height so we don't need to bend down too much! <br/> <br/> <br/> <br/>
+        The <OrangeSpan>daorffo|d1</OrangeSpan> trailer combines our high-clearance off-road chassis with a versatile upper body featuring drop-down sides. This design ensures easy access to all your overlanding gear and provides convenient workspaces at an ergonomic height.
+        <br/> We believe your equipment should be at your fingertips, not at your feet! <br/> <br/> <br/> <br/>
 
         <OrangeSpan>Category:</OrangeSpan> O1 <br/>
-        Maximum permissible laden weight (MPLW) (DMC):
-        <li>homologated as "up to 550 kg" </li>
-        <li>homologated as "up to 750 kg"</li> <br/>
+        Gross Vehicle Weight (GVW):
+        <li>Homologated up to 550 kg for ultimate maneuverability.</li>
+        <li>Homologated up to 750 kg for maximum load capacity.</li> <br/>
         <br/> <br/>
 
-        <OrangeSpan>Dimensions:</OrangeSpan> <br/>
-        length (with drawbar) ~ 333 cm <br/>
-        width = 158 cm <br/>
-        height (no tent) = 160 cm <br/>
-        working top height = 90 cm <br/>
-        suspension travel = 20 cm <br/> <br/> <br/>
+        <OrangeSpan>Dimensions & Specs:</OrangeSpan> <br/>
+        Length (including drawbar) ~ 333 cm <br/>
+        Width = 158 cm <br/>
+        Height (chassis + body) = 160 cm <br/>
+        Working Top Height = 90 cm <br/>
+        Independent Suspension Travel = 20 cm <br/> <br/> <br/>
 
         {/* <OrangeSpan>Prices:</OrangeSpan> <br/>
         <li>Basic Version from 12 500 euro</li>

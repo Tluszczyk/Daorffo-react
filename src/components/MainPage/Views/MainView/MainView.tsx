@@ -29,27 +29,27 @@ const MainView = () => {
             />
             <SlidingPanel 
                 panelSrc="resources/MainPage/Views/MainView/SlidingPanels/3.jpg"
-                link="/test" buttonDescription="Test" contentType="image" index={3} key={3}
+                link="/#Showroom" buttonDescription="Explore" contentType="image" index={3} key={3}
             />
             <SlidingPanel 
                 panelSrc="resources/MainPage/Views/MainView/SlidingPanels/4.jpg"
-                link="/test" buttonDescription="Test" contentType="image" index={4} key={4}
+                link="/#Showroom" buttonDescription="Explore" contentType="image" index={4} key={4}
             />
             <SlidingPanel 
                 panelSrc="resources/MainPage/Views/MainView/SlidingPanels/5.jpg"
-                link="/test" buttonDescription="Test" contentType="image" index={5} key={5}
+                link="/#Showroom" buttonDescription="Explore" contentType="image" index={5} key={5}
             />
             <SlidingPanel 
                 panelSrc="resources/MainPage/Views/MainView/SlidingPanels/6.jpg"
-                link="/test" buttonDescription="Test" contentType="image" index={6} key={6}
+                link="/#Showroom" buttonDescription="Explore" contentType="image" index={6} key={6}
             />
             <SlidingPanel 
                 panelSrc="resources/MainPage/Views/MainView/SlidingPanels/7.jpg"
-                link="/test" buttonDescription="Test" contentType="image" index={7} key={7}
+                link="/#Showroom" buttonDescription="Explore" contentType="image" index={7} key={7}
             />
             <SlidingPanel 
                 panelSrc="resources/MainPage/Views/MainView/SlidingPanels/8.jpg"
-                link="/test" buttonDescription="Test" contentType="image" index={8} key={8}
+                link="/#Showroom" buttonDescription="Explore" contentType="image" index={8} key={8}
             />
         </SlidingPanels>
 

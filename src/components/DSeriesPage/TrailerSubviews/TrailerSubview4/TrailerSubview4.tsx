@@ -11,23 +11,23 @@ interface TrailerSubview4Props extends WrapperProps {}
  
 const TrailerSubview4 = (props: TrailerSubview4Props) => {
     var drivingSpan = <FloatingSpan className="trailer-layout-mid" id="trailer-subview-4-span-0" key={0} onClick={props.onClick}>
-        <div className="h3">Driving Features</div> <br/>
+        <div className="h3">Advanced Off-Road Driving Features</div> <br/>
 
-        <OrangeSpan>Frame:</OrangeSpan> <br/> spatial frame, stainless, CNC cut, bent and welded - flexibility and high resistance to overload <br/> <br/>
+        <OrangeSpan>Precision-Engineered Frame:</OrangeSpan> <br/> Spatial, CNC-cut, and 3D-welded construction provides maximum flexibility and resistance to overload on extreme trails. <br/> <br/>
 
-        <OrangeSpan>Drawbar:</OrangeSpan> <br/> adjustable - fit for variable height of the hook in the vehicle<br/> <br/>
+        <OrangeSpan>Adjustable Drawbar:</OrangeSpan> <br/> Easily fits various 4x4 vehicle hitch heights for perfect horizontal leveling. <br/> <br/>
 
-        <OrangeSpan>Hitch:</OrangeSpan> <br/> stabilized ball hitch - the trailer is holding the track, leveling tilts in curves and in sloping terrain <br/> <br/>
+        <OrangeSpan>Stabilized Hitch:</OrangeSpan> <br/> Ensures precise tracking and levels side-tilts during high-speed curves and sloping terrain. <br/> <br/>
 
-        <OrangeSpan>Chassis:</OrangeSpan> <br/> Independent suspension, longitudinal trailing arms - high ground clearance, smooth work in uneven terrain <br/> <br/>
+        <OrangeSpan>Independent Suspension:</OrangeSpan> <br/> Longitudinal trailing arms provide high ground clearance and smooth performance on uneven terrain. <br/> <br/>
 
-        <OrangeSpan>Shock absorber:</OrangeSpan> <br/> coilover shock absorbers with threaded bodies - height adjustment and softness of shock absorption <br/> <br/>
+        <OrangeSpan>Premium Coil-Overs:</OrangeSpan> <br/> Threaded shock bodies allow for precise manual adjustment of height and damping softness. <br/> <br/>
 
-        <OrangeSpan>Brakes:</OrangeSpan> <br/> parking brake / maneuvering - safe detaching of the trailer in an inclined area <br/> <br/>
+        <OrangeSpan>Reliable Braking System:</OrangeSpan> <br/> Integrated parking and maneuvering brake for safe detachment even on inclined surfaces. <br/> <br/>
 
-        <OrangeSpan>Supports:</OrangeSpan> <br/> jockey wheel with lock and folded rear supports - manual leveling of the trailer <br/> <br/>
+        <OrangeSpan>Leveling Supports:</OrangeSpan> <br/> Includes a locking jockey wheel and foldable rear supports for stable manual leveling at camp. <br/> <br/>
 
-        <OrangeSpan>Wheels:</OrangeSpan> <br/> same as in the towing vehicle (our size 265/75 R16) with replaceable hub - option of changing the trailer wheels with the car wheels<br/> <br/>
+        <OrangeSpan>Vehicle-Matched Wheels:</OrangeSpan> <br/> Available with hubs matching your towing vehicle (standard: 265/75 R16) for complete spare wheel compatibility. <br/> <br/>
     </FloatingSpan>
 
     return [drivingSpan]

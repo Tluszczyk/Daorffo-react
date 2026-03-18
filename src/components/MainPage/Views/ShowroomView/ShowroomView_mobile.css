@@ -1,6 +1,6 @@
 @media (max-width: 768px) {
     #Showroom {
-        overflow-x: hidden;
+        overflow: visible; /* overflow: hidden or overflow-x: hidden breaks position: sticky */
 
         /* margin-top: 85vh; */
         /* padding: 10px 0 0 0; */
@@ -16,6 +16,10 @@
     #Models > a {
         /* grid-column-start: 2; */
         margin: 20px 0;
+    }
+
+    .model-with-description {
+        font-size: 1.5em; /* Smaller titles in showroom on mobile */
     }
 
     #model-with-description-unit {

@@ -13,72 +13,69 @@ interface TrailerSubview2Props extends WrapperProps {}
 
 const TrailerSubview2 = (props: TrailerSubview2Props) => {
     var overviewSpan = <FloatingSpan className="trailer-layout-mid" id="trailer-subview-2-span-0" key={0} onClick={props.onClick}>
-        <div className="h3">Camping. Utility Features</div> <br/> <br/>
+        <div className="h3">The Active Camp Center</div> <br/> <br/>
 
-        Did you reach your destination? Let's set a camp <br/>
-        and discover all the sections around your active camp center. <br/> <br/> <br/> <br/>
+        Ready to set up camp? Discover the specialized sections designed around your <OrangeSpan>Active Camp Center</OrangeSpan>: <br/> <br/> <br/> <br/>
 
-        Kitchen Section <br/> <br/>
-        Tools Section <br/> <br/>
-        Equipment Section <br/> <br/>
-        & Baggage Section <br/> <br/> <br/> <br/>
+        1. Kitchen Section <br/> <br/>
+        2. Tools Section <br/> <br/>
+        3. Inventory Section <br/> <br/>
+        4. Baggage Section <br/> <br/> <br/> <br/>
 
         <div className="text-graphic">
-            <img src="resources/TrailerPage/TrailerSubviews/TrailerSubview2/0.png" alt="Daorffo trailer camping and utility features overview"/>
+            <img src="resources/TrailerPage/TrailerSubviews/TrailerSubview2/0.png" alt="Daorffo D1 Active Camp Center - All-around gear access"/>
         </div>
     </FloatingSpan>
 
     var kitchenSpan = <FloatingSpan className="trailer-layout-mid" id="trailer-subview-2-span-1" key={1} onClick={props.onClick}>
-        <div className="h3">Kitchen Section</div> <br/> <br/>
+        <div className="h3">Integrated Kitchen Section</div> <br/> <br/>
 
-        <span className="italic">In 2014 on the Hungarian border traffic we couldn’t have a better opportunity to fold out the kitchen worktop, play music and prepare coffee for us and the cars around.</span>
+        <span className="italic">From brewing morning coffee to preparing gourmet camp meals, our kitchen section is built for convenience.</span>
         <br/> <br/> <br/>
-        Kitchen section gives you <OrangeSpan>150cm worktop</OrangeSpan> to feel free space while preparing any food or drinks.<br/> <br/>
+        Enjoy a <OrangeSpan>150cm worktop</OrangeSpan> providing ample space for food prep and drinks.<br/> <br/>
 
-        <OrangeSpan>90cm kitchen shelf</OrangeSpan> with rubber attachments to keep the dishes, cutlery, cutting board, bottles, boxes and other stuff at your fingertips.<br/> <br/>
+        The <OrangeSpan>90cm kitchen shelf</OrangeSpan> features rubber attachments to keep dishes, cutlery, and essentials organized and at your fingertips.<br/> <br/>
 
-        <OrangeSpan>Place for a double torch gas stove</OrangeSpan>  with gas installation underneath the shelves.<br/> <br/>
+        Space for a <OrangeSpan>double-burner gas stove</OrangeSpan> with integrated gas lines for a clean, efficient setup.<br/> <br/>
 
-        Easy access to a <OrangeSpan>fridge</OrangeSpan> on a sliding supports.<br/> <br/>
+        Quick access to your <OrangeSpan>portable fridge</OrangeSpan> on heavy-duty sliding supports.<br/> <br/>
 
-        On demand, we will install <OrangeSpan>sink with a tap.</OrangeSpan>
+        On demand, we can install a <OrangeSpan>sink with a water tap</OrangeSpan> for ultimate comfort.
     </FloatingSpan>
 
     var toolsSpan = <FloatingSpan className="trailer-layout-mid" id="trailer-subview-2-span-2" key={2} onClick={props.onClick}>
-        <div className="h3">Tools Section</div> <br/>
-        <span className="italic">We will need an axe! …and a shovel!</span> <br/> <br/> <br/>
+        <div className="h3">Rapid-Access Tools Section</div> <br/>
+        <span className="italic">Efficiency in the wild is priceless!</span> <br/> <br/> <br/>
 
-        <OrangeSpan>Quick access to the tools is a must! </OrangeSpan> <br/>
-        Why not to have them all in the sight? <br/> <br/>
+        <OrangeSpan>Immediate access to your tools</OrangeSpan> is critical when navigating the trail. Keep everything visible and organized. <br/> <br/>
 
-        <OrangeSpan>Customize your Tools Section to your needs.</OrangeSpan> Fishing equipment? Hunting riffles? Tripod with
-        a cooking pot? Yes! Let’s fit them there too! <br/> <br/>
+        <OrangeSpan>Customizable for your mission.</OrangeSpan> Whether you need mounts for fishing gear, hunting rifles, or tactical equipment, we can tailor this section to your specific needs. <br/> <br/>
 
-        ...and the faces of security guards every time we open this side for border control. Worthless! :D
+        And seeing the reaction of border security when you open this section is a bonus! :D
     </FloatingSpan>
 
     var inventorySpan = <FloatingSpan className="trailer-layout-mid" id="trailer-subview-2-span-3" key={3} onClick={props.onClick}>
-        <div className="h3">Inventory Section</div> <br/> <br/> <br/>
-        <OrangeSpan>120x70x50 cm inventory space </OrangeSpan>for bigger stuff you don’t want to worry about with access from the front and from the kitchen side. <br/><br/>
+        <div className="h3">Massive Inventory Section</div> <br/> <br/> <br/>
+        Featuring <OrangeSpan>120x70x50 cm of internal inventory space</OrangeSpan> for large equipment, accessible from both the front and the kitchen side. <br/><br/>
 
-        We keep here <OrangeSpan>the fridge on the sliding supports</OrangeSpan>, but whenether we decide to take the fridge to the car we exchange it for a storage boxes. <br/><br/>
+        This area holds the <OrangeSpan>fridge on heavy-duty sliders</OrangeSpan>, which can easily be swapped for storage boxes if needed. <br/><br/>
 
-        <OrangeSpan>Electrical installation</OrangeSpan> keeps the fridge connected to the power.<br/><br/>
+        Integrated <OrangeSpan>electrical installation</OrangeSpan> ensures your cooling system stays powered throughout your journey.<br/><br/>
 
-        Bottled water, additional tents and bags can go there as well.<br/><br/>
+        Perfect for additional water storage, spare bags, and bulk camping gear.<br/><br/>
     </FloatingSpan>
 
     var baggageSpan = <FloatingSpan className="trailer-layout-mid" id="trailer-subview-2-span-4" key={4} onClick={props.onClick}>
-        <div className="h3"> Baggage Section</div> <br/>
-        <span className="italic">…the last but not least.</span> <br/><br/><br/>
+        <div className="h3">Optimized Baggage Section</div> <br/>
+        <span className="italic">…everything in its place.</span> <br/><br/><br/>
 
-        <OrangeSpan>Two sliding drawers</OrangeSpan> for loose equipment like shoes, clothes, cooking pots and paper towel. <br/><br/>
+        <OrangeSpan>Two Heavy-Duty Sliding Drawers</OrangeSpan> – Perfect for clothes, cooking gear, and small loose equipment. <br/><br/>
 
-        <OrangeSpan>Large shelf</OrangeSpan> for camping table and 4 folding chairs with a belt attachment.<br/><br/>
+        <OrangeSpan>Large Shelf Storage</OrangeSpan> – Designed to fit a camping table and four folding chairs with secure belt attachments.<br/><br/>
 
-        <OrangeSpan>Power Control Panel</OrangeSpan> to control battery status,  lights inside and outside the trailer and couple power plugs.<br/><br/>
+        <OrangeSpan>Power Control Panel</OrangeSpan> – Monitor battery status and manage both interior and exterior lighting from one location.<br/><br/>
 
-        <OrangeSpan>Small storage space</OrangeSpan> at your service. We like to fit there small extinguisher and a camping flashlight.
+        <OrangeSpan>Quick-Access Storage</OrangeSpan> – Ideal for safety gear like fire extinguishers and tactical flashlights.
     </FloatingSpan>
 
     var floatingNavbar = <FloatingNabvar 
