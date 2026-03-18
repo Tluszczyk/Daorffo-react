@@ -19,7 +19,7 @@ const SEO: React.FC<SEOProps> = ({
   children 
 }) => {
   const fullCanonicalUrl = canonicalUrl ? `https://www.daorffo.com${canonicalUrl}` : 'https://www.daorffo.com';
-  const defaultOgImage = "https://www.daorffo.com/resources/MainPage/Views/MainView/bg-desktop.jpg";
+  const defaultOgImage = "https://www.daorffo.com/resources/MainPage/Views/MainView/bg-desktop.webp";
 
   return (
     <Helmet>

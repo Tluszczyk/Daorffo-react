@@ -23,7 +23,7 @@ const TrailerSubview2 = (props: TrailerSubview2Props) => {
         4. Baggage Section <br/> <br/> <br/> <br/>
 
         <div className="text-graphic">
-            <img src="resources/TrailerPage/TrailerSubviews/TrailerSubview2/0.png" alt="Daorffo D1 Active Camp Center - All-around gear access"/>
+            <img src="resources/TrailerPage/TrailerSubviews/TrailerSubview2/0.webp" alt="Daorffo D1 Active Camp Center - All-around gear access" width="790" height="877" loading="lazy"/>
         </div>
     </FloatingSpan>
 

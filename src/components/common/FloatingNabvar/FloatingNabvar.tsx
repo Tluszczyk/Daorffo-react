@@ -27,8 +27,8 @@ const FloatingNabvar = (props: FloatingNabvarProps) => {
 			id={props.id + "-item-" + index}
 			key={index}
 
-			activeIconSrc={`${props.iconsSrcs}/active/${index}.png`}
-			inactiveIconSrc={`${props.iconsSrcs}/inactive/${index}.png`}
+			activeIconSrc={`${props.iconsSrcs}/active/${index}.webp`}
+			inactiveIconSrc={`${props.iconsSrcs}/inactive/${index}.webp`}
 
 			subviewIndex={props.subviewIndex}
 			spanIndex={index}

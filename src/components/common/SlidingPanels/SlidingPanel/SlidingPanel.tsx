@@ -17,6 +17,7 @@ interface SlidingPanelProps {
 	contentType: "image" | "gif" | "video";
 	length?: number;
 	index: number;
+	isHero?: boolean;
 }
 
 const SlidingPanel = (props: SlidingPanelProps) => {
@@ -35,7 +36,13 @@ const SlidingPanel = (props: SlidingPanelProps) => {
 	}, [activeSlidingPanelId, props.index, timeIsUpCallback, props.length]);
 
 	const content = (props.contentType === "image" || props.contentType === "gif") ?
-		<img className="sliding-panel-image" src={props.panelSrc} alt={props.buttonDescription} /> :
+		<img 
+			className="sliding-panel-image" 
+			src={props.panelSrc} 
+			alt={props.buttonDescription} 
+			loading={props.isHero ? "eager" : "lazy"}
+			{...(props.isHero ? { fetchpriority: "high" } : {})}
+		/> :
 		<video className="sliding-panel-image" autoPlay muted loop>
 			<source src={props.panelSrc} type="video/mp4" />
 		</video>;

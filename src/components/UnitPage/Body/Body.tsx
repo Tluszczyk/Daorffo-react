@@ -42,7 +42,7 @@ export const Body = (props: UnitBodyProps) => {
 			<div id="unit-main-page">
 				<section id="u1-image-and-logo-container">
 					<div id="u1-image-container">
-						<img id="u1-image" src="resources/UnitPage/U1-image-and-logo-container/U1-render-frog.png" alt="Daorffo U1 off-road trailer front view" />
+						<img id="u1-image" src="resources/UnitPage/U1-image-and-logo-container/U1-render-frog.webp" alt="Daorffo U1 off-road trailer front view" width="1920" height="1392" loading="lazy" />
 					</div>
 					<div id="u1-logo-container">
 						<img id="u1-logo" alt="Daorffo U1 Logo"/>
@@ -51,7 +51,7 @@ export const Body = (props: UnitBodyProps) => {
 
 				<section id="u1-description-container">
 					<div id="u1-description-logo-container">
-						<img id="u1-description-logo" src="resources/UnitPage/U1-description-container/U1.png" alt="Daorffo U1 modular off-road chassis" />
+						<img id="u1-description-logo" src="resources/UnitPage/U1-description-container/U1.webp" alt="Daorffo U1 modular off-road chassis" width="125" height="110" loading="lazy" />
 					</div>
 					<div id="u1-description-header">
 						The Daorffo U1 is a versatile, modular off-road trailer base designed for heavy-duty performance and diverse loads.
@@ -67,7 +67,7 @@ export const Body = (props: UnitBodyProps) => {
 				<section id="u1-parameters-container">
 					<div id="u1-drawbar-container">
 						<div id="u1-drawbar-vehicles-container">
-							<img id="u1-drawbar-vehicles" src="resources/UnitPage/Parameters/U1-drawbar-examples.png" alt="Daorffo U1 adjustable drawbar with various 4x4 vehicles" />
+							<img id="u1-drawbar-vehicles" src="resources/UnitPage/Parameters/U1-drawbar-examples.webp" alt="Daorffo U1 adjustable drawbar with various 4x4 vehicles" width="357" height="469" loading="lazy" />
 							<div id="u1-drawbar-description-container">
 								<span id="u1-drawbar-description">
 									The adjustable drawbar seamlessly adapts to various vehicle hitch heights for perfect leveling.
@@ -78,7 +78,7 @@ export const Body = (props: UnitBodyProps) => {
 
 					<div id="u1-parameters-description-container">
 						<div id="u1-parameters-description-image-container">
-							<img id="u1-parameters-description-image" src="resources/UnitPage/Parameters/U1-render-side.png" alt="Daorffo U1 side view parameters" />
+							<img id="u1-parameters-description-image" src="resources/UnitPage/Parameters/U1-render-side.webp" alt="Daorffo U1 side view parameters" width="1920" height="1081" loading="lazy" />
 						</div>
 						<div className="u1-parameters-description-parameters-horisontal-container">
 							<div className="u1-parameters-description-parameters-vertical-container">
@@ -119,7 +119,7 @@ export const Body = (props: UnitBodyProps) => {
 
 				<section id="u1-features-container">
 					<div id="u1-features-image-container">
-						<img id="u1-features-image" src="resources/UnitPage/Features/8.png" alt="Daorffo U1 versatile modular design applications" />
+						<img id="u1-features-image" src="resources/UnitPage/Features/8.webp" alt="Daorffo U1 versatile modular design applications" width="1920" height="1372" loading="lazy" />
 					</div>
 
 					<div id="u1-features-description-container">
@@ -144,7 +144,7 @@ export const Body = (props: UnitBodyProps) => {
 
 				<footer id="u1-summary-container">
 					<div id="u1-summary-image-container">
-						<img id="u1-summary-image" src="resources/UnitPage/Summary/U1-render-back.png" alt="Daorffo U1 rear view and modular chassis detail" />
+						<img id="u1-summary-image" src="resources/UnitPage/Summary/U1-render-back.webp" alt="Daorffo U1 rear view and modular chassis detail" width="1360" height="2048" loading="lazy" />
 					</div>
 
 					<div id="u1-summary-description-list-container">

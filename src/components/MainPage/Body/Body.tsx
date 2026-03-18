@@ -51,7 +51,7 @@ export function Body(props: MainBodyProps) {
         "@context": "https://schema.org/",
         "@type": "Product",
         "name": "Daorffo Off-Road Trailer",
-        "image": "https://www.daorffo.com/resources/MainPage/Views/MainView/bg-desktop.jpg",
+        "image": "https://www.daorffo.com/resources/MainPage/Views/MainView/bg-desktop.webp",
         "description": "Premium, heavy-duty off-road trailers designed for ultimate overland adventures. Built for durability and performance in any terrain.",
         "brand": {
             "@type": "Brand",

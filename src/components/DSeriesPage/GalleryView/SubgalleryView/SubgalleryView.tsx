@@ -14,7 +14,7 @@ const SubgalleryView = (props: SubgalleryViewProps) => {
     var images = []
 
     for (let itemId = 0; itemId < props.itemCount; itemId++) {
-        let filename = parentPath + `${itemId}.jpg`
+        let filename = parentPath + `${itemId}.webp`
 
         images.push(
             <div className="gallery-item-wrapper" key={itemId}>

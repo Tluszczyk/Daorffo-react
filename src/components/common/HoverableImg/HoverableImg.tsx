@@ -20,7 +20,7 @@ const HoverableImg = (props: HoverableImgProps) => {
 	const onMouseEnter = () => setActive(true);
 	const onMouseLeave = () => setActive(false);
 
-	const src = props.dirPath + "/icon-" + (active ? "active" : "inactive") + ".png";
+	const src = props.dirPath + "/icon-" + (active ? "active" : "inactive") + ".webp";
 
 	return <img id={props.id} className={`hoverable-img ${props.className}`} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} src={src} alt="Daorffo Off-Road Trailer"/>
 };

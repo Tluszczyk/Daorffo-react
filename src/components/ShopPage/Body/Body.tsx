@@ -35,6 +35,8 @@ export const Body = (props: ShopBodyProps) => {
                             title="Da Orffo | Life Chariot"
                             price="19 000 € net"
                             aboutLink="https://www.linkedin.com/company/da-orffo/"
+                            width={1000}
+                            height={1000}
                             descriptionContent={
                                 <ul>
                                     <li>medical evacuation passenger trailer</li>
@@ -54,6 +56,8 @@ export const Body = (props: ShopBodyProps) => {
                             title="Da Orffo | D1 Trailer"
                             price="from 16 000 € net"
                             aboutLink="dSeries"
+                            width={1000}
+                            height={1000}
                             descriptionContent={
                                 <ul>
                                     <li>expedition set up on U1 chassis</li>
@@ -71,6 +75,8 @@ export const Body = (props: ShopBodyProps) => {
                             title="Da Orffo | Unit 1 Trailer"
                             price="from 10500 € net"
                             aboutLink="unit"
+                            width={1000}
+                            height={1000}
                             descriptionContent={
                                 <>
                                     <ul>
@@ -88,6 +94,8 @@ export const Body = (props: ShopBodyProps) => {
                             id="chassis"
                             title="Da Orffo Suspension Kit"
                             price="4250 € net"
+                            width={835}
+                            height={470}
                             descriptionContent={
                                 <ul>
                                     <li>2x Swing Arm</li>

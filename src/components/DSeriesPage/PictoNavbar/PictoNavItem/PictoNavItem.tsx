@@ -34,7 +34,7 @@ const PictoNavItem = (props: PictoNavItemProps) => {
             <div className="subpage-button" id={`${props.id}-item`} style={props.style}>
                 <img 
                     id={`${props.id}-item-img`}
-                    src={srcPrefix + (props.active || hovering ? "active" : "inactive") + ".png"}
+                    src={srcPrefix + (props.active || hovering ? "active" : "inactive") + ".webp"}
                     className="picto-nav-item"
                     alt={`Daorffo D-Series icon: ${props.description}`}
                 />

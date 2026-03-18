@@ -10,7 +10,7 @@ interface TrailerSubview0Props extends WrapperProps {}
  
 const TrailerSubview0 = (props: TrailerSubview0Props) => {
     var overviewSpan = <FloatingSpan className="trailer-layout-mid" id="trailer-subview-0-span-0" key={0} onClick={props.onClick}>
-        <div><img width="300" alt="Daorffo D1 Off-Road Expedition Trailer" src="resources/TrailerPage/TrailerSubviews/TrailerSubview0/img-0.png"/></div>
+        <div><img width="373" height="129" loading="lazy" alt="Daorffo D1 Off-Road Expedition Trailer" src="resources/TrailerPage/TrailerSubviews/TrailerSubview0/img-0.webp"/></div>
 
         <h3>The D1 Expedition Trailer</h3>
 

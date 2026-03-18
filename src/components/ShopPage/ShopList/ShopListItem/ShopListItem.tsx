@@ -14,6 +14,8 @@ interface ShopListItemProps extends WrapperProps {
 	price?: string;
 	aboutLink?: string;
 	descriptionContent?: React.ReactNode;
+	width: number;
+	height: number;
 }
 
 const ShopListItem = (props: ShopListItemProps) => {
@@ -21,7 +23,13 @@ const ShopListItem = (props: ShopListItemProps) => {
 		<div className="shop-list-item">
 			{	props.id &&
 				<div className="shop-list-item-image">
-					<img src={`resources/ShopPage/ShopList/${props.id}.png`} alt={`Daorffo ${props.title}`} />
+					<img 
+						src={`resources/ShopPage/ShopList/${props.id}.webp`} 
+						alt={`Daorffo ${props.title}`} 
+						width={props.width}
+						height={props.height}
+						loading="lazy"
+					/>
 				</div>
 			}
 

@@ -24,6 +24,8 @@ const ImagesView = () => {
                     "https://www.instagram.com/p/CzEHz8FM2kQ/media",
                     "https://www.instagram.com/p/Cy1L4gDMLqK/media",
                 ]}
+                width={1080}
+                height={1080}
             />
 
         </View>

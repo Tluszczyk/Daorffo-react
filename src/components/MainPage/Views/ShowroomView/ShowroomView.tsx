@@ -33,7 +33,7 @@ const ShowroomView = forwardRef((props: ShowroomViewProps, ref) => {
         >
             <img 
                 id={name} className='Model'
-                src={`resources/MainPage/Views/ShowroomView/${name}/img.png`}
+                src={`resources/MainPage/Views/ShowroomView/${name}/img.webp`}
                 alt={`Daorffo ${descriptions[index]} - Off-Road Trailer`}
             />
 

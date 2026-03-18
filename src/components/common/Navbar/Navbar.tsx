@@ -72,15 +72,15 @@ const Navbar = (props: NavbarProps) => {
 
     var logoSrc =   props.resourcesParentSrc + '/Logo/' + 
                     (props.logoDeviceSensitive ? (mobile ? 'mobile' : 'desktop') : 'default') + '-horisontal-' + 
-                    (props.logoHoverable ? (logoHovered ? 'active' : 'inactive') : 'default') + '.png';
+                    (props.logoHoverable ? (logoHovered ? 'active' : 'inactive') : 'default') + '.webp';
 
-    var upperNameImgSrc = props.resourcesParentSrc + '/Logo/name.png';
+    var upperNameImgSrc = props.resourcesParentSrc + '/Logo/name.webp';
 
     return <div id={props.id} className={`navbar-wrapper ${openedClassName} ${props.theme}`} onClick={e=>{if(opened) setOpened(false)}}>
         <div className={`upperContainer ${upperContainerClass}`}>
             { ((props.hamburgerAlwaysVisible ?? false) || mobile) &&
                 <div className={`hamburgerD hamburgerD-${openedClassName}`} onClick={() => setOpened(!opened)} onMouseEnter={hamburgerHoverHandler} onMouseLeave={hamburgerUnhoverHandler} >
-                    <img id="hamburger" src={props.resourcesParentSrc+`/Hamburger/icon-${(opened || hamburgerHovered) ? 'active' : 'inactive'}.png`} alt="Menu" />
+                    <img id="hamburger" src={props.resourcesParentSrc+`/Hamburger/icon-${(opened || hamburgerHovered) ? 'active' : 'inactive'}.webp`} alt="Menu" />
                 </div>
             }
 

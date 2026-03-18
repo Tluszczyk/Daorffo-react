@@ -19,7 +19,7 @@ const SportView = () =>
                     overlanding requirements.
                 </span>
             </div>
-            <img id="sportI" src="resources/MainPage/SmallViews/SportView/img.png" alt="Daorffo off-road trailer with high-clearance independent suspension on rugged terrain"/>
+            <img id="sportI" src="resources/MainPage/SmallViews/SportView/img.webp" alt="Daorffo off-road trailer with high-clearance independent suspension on rugged terrain" width="960" height="635" loading="lazy"/>
         </div>
     </View>
  

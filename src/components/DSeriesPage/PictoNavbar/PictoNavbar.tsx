@@ -48,10 +48,10 @@ const PictoNavbar = (props: PictoNavbarProps) => {
         active={getLevel() > 0 && index === props.getOpenedSection()}
     />)
 
-    var logoSrc = "resources/TrailerPage/PictoNavbar/Logo/" + (mobile ? "Mobile/" : "Desktop/") + "icon-" + (logoHovered ? "active" : "inactive") + ".png"
+    var logoSrc = "resources/TrailerPage/PictoNavbar/Logo/" + (mobile ? "Mobile/" : "Desktop/") + "icon-" + (logoHovered ? "active" : "inactive") + ".webp"
 
-    var leftArrowSrc = "resources/TrailerPage/PictoNavbar/Arrows/left-" + (leftArrowHovered ? "active" : "inactive") + ".png"
-    var rightArrowSrc = "resources/TrailerPage/PictoNavbar/Arrows/right-" + (rightArrowHovered ? "active" : "inactive") + ".png"
+    var leftArrowSrc = "resources/TrailerPage/PictoNavbar/Arrows/left-" + (leftArrowHovered ? "active" : "inactive") + ".webp"
+    var rightArrowSrc = "resources/TrailerPage/PictoNavbar/Arrows/right-" + (rightArrowHovered ? "active" : "inactive") + ".webp"
 
     var prevSection = () => {
         var prevSection = (pictoItemsDescriptions.length + props.getOpenedSection() - 1) % pictoItemsDescriptions.length

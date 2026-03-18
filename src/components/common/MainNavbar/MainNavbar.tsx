@@ -68,7 +68,7 @@ function MainNavbar(props: MainNavbarProps) {
 
     var verticalLogoSrc =   props.resourcesParentSrc + '/MainNavbar/Logo/' + 
                             (props.logoDeviceSensitive ? (mobile ? 'mobile' : 'desktop') : 'default') + '-vertical-' + 
-                            (props.logoHoverable ? (verticalLogoHovered ? 'active' : 'inactive') : 'default') + '.png';
+                            (props.logoHoverable ? (verticalLogoHovered ? 'active' : 'inactive') : 'default') + '.webp';
 
     var mediaNames = ["FB", "IG", "YT", "BE", "LI"]
     var mediaLinks = [

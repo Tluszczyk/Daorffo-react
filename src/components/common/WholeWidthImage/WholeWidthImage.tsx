@@ -9,7 +9,7 @@ interface WholeWidthImageProps extends WrapperProps {
 const WholeWidthImage = (props: WholeWidthImageProps) => <img 
         {...props} 
         className={"wholeWidthImage" + (props.className ? " " + props.className : "")}
-        src={props.parentsrc +"WholeWidthImages/WholeWidthImage-"+props.id+"/img.png"}
+        src={props.parentsrc +"WholeWidthImages/WholeWidthImage-"+props.id+"/img.webp"}
         alt={props.alt || "Daorffo off-road trailer image"}
     />
  
