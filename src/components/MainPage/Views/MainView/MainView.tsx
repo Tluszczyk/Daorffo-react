@@ -16,12 +16,12 @@ const MainView = () => {
         
         <SlidingPanels>
             <SlidingPanel 
-                panelSrc="resources/MainPage/Views/MainView/SlidingPanels/0.gif"
-                link="/about" buttonDescription="About" contentType="gif" length={6000} index={0} key={0} isHero={true}
+                panelSrc="resources/MainPage/Views/MainView/SlidingPanels/0.webp"
+                link="/about" buttonDescription="About" contentType="image" length={6000} index={0} key={0} isHero={true}
             />
             <SlidingPanel 
-                panelSrc="resources/MainPage/Views/MainView/SlidingPanels/1.gif"
-                link="/services" buttonDescription="Services" contentType="gif" length={6000} index={1} key={1}
+                panelSrc="resources/MainPage/Views/MainView/SlidingPanels/1.webp"
+                link="/services" buttonDescription="Services" contentType="image" length={6000} index={1} key={1}
             />
             <SlidingPanel 
                 panelSrc="resources/MainPage/Views/MainView/SlidingPanels/2.webp"
