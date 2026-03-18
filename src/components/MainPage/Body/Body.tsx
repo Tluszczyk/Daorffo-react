@@ -52,7 +52,7 @@ export function Body(props: MainBodyProps) {
         "@type": "Product",
         "name": "Daorffo Off-Road Trailer",
         "image": "https://www.daorffo.com/resources/MainPage/Views/MainView/bg-desktop.webp",
-        "description": "Premium, heavy-duty off-road trailers designed for ultimate overland adventures. Built for durability and performance in any terrain.",
+        "description": "Heavy-duty off-road trailers designed for ultimate overland adventures. Built for durability and performance in any terrain.",
         "brand": {
             "@type": "Brand",
             "name": "Daorffo"
@@ -69,7 +69,7 @@ export function Body(props: MainBodyProps) {
     return (
         <main className='daorffo-font-regular font-white' id='main-body'>
             <SEO 
-                title="Daorffo | Premium Lightweight Off-Road Overland Trailers | Adventure Ready"
+                title="Daorffo | Lightweight Off-Road Overland Trailers | Adventure Ready"
                 description="Daorffo designs and builds heavy-duty, off-road overland trailers for ultimate expeditions. Discover our lightweight, high-clearance expedition trailers and modular U1 chassis."
                 canonicalUrl="/"
             >
@@ -79,7 +79,7 @@ export function Body(props: MainBodyProps) {
             </SEO>
             
             <header>
-                <h1 className="visually-hidden">Daorffo | Premium Lightweight Off-Road Overland Trailers</h1>
+                <h1 className="visually-hidden">Daorffo | Lightweight Off-Road Overland Trailers</h1>
                 <MainNavbar
                     id='main-navbar'
                     resourcesParentSrc='resources/MainPage'
